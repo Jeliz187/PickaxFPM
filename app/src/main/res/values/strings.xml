@@ -10,4 +10,7 @@
     <string name="find_origin">Find Origin</string>
     <string name="find_dest">Find Destination</string>
     <string name="find_aircraft">Find Aircraft</string>
+    <string name="title_activity_new_flight_plan">NewFlightPlan</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
