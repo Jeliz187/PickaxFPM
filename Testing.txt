@@ -2,3 +2,5 @@ Simple text file for testing.
 Try to add some lines and commit. 
 
 This line was written by Daniel
+
+And this one by Ruben
