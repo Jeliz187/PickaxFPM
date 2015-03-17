@@ -8,11 +8,43 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/flight_plan"
+        android:text="@string/create_fp"
         android:id="@+id/flightplan"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="97dp" />
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_fp"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/flightplan"
+        android:layout_toEndOf="@+id/flightplan" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_res"
+        android:id="@+id/button2"
+        android:layout_below="@+id/flightplan"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_prefs"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_flight"
+        android:id="@+id/button4"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/button3"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

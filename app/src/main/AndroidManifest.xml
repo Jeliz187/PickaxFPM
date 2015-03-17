@@ -17,8 +17,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewFlightPlan"
-            android:label="@string/title_activity_new_flight_plan" >
+            android:name=".CreateFlightPlan"
+            android:label="@string/title_activity_create_flight_plan" >
         </activity>
     </application>
 

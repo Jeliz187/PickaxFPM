@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Flight Plan Management System</string>
 
-    <string name="flight_plan">Flight Plan</string>
+    <string name="create_fp">Create Flight Plan</string>
+    <string name="manage_fp">Manage Flight Plans</string>
+    <string name="manage_res">Manage Resources</string>
+    <string name="set_prefs">Set Preferences</string>
+    <string name="start_flight">Start Flight</string>
+
     <string name="origin">Origin</string>
     <string name="dest">Destination</string>
     <string name="aircraft">Aircraft</string>
@@ -10,7 +15,6 @@
     <string name="find_origin">Find Origin</string>
     <string name="find_dest">Find Destination</string>
     <string name="find_aircraft">Find Aircraft</string>
-    <string name="title_activity_new_flight_plan">NewFlightPlan</string>
+    <string name="title_activity_create_flight_plan">Create Flight Plan</string>
 
-    <string name="hello_world">Hello world!</string>
 </resources>
