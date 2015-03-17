@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Flight Plan Management System</string>
+
+    <string name="flight_plan">Flight Plan</string>
+    <string name="origin">Origin</string>
+    <string name="dest">Destination</string>
+    <string name="aircraft">Aircraft</string>
+    <string name="submit">Submit</string>
+    <string name="action_settings">Settings</string>
+</resources>
