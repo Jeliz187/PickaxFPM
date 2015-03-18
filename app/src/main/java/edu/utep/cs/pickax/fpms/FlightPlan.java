@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * Created by ruben on 3/17/15.
  */
 public class FlightPlan {
-
+    //Fields needed for the flight plan
     private String flightPlanName;
     private final String type = "IFR";
     private char aircraftID;
