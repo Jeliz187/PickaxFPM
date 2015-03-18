@@ -18,7 +18,7 @@ public class FlightPlan {
     private Date flightDate;
     private int departureTime;
     private int cruisingAlt;
-    //private LinkedList<Tuple> route; //We need to elaborate
+    //private Route route; //Make a Route Class
     private int estTimeEnroute;
     private int fuelOnBoard;
     private LinkedList<String> altAirports;
@@ -28,6 +28,6 @@ public class FlightPlan {
     private int aircraftColor;
     private String destContactInfo;
     private String remarks;
-    private boolean TGFApproval;
+    private boolean TGFApproval = false;
 
 }
