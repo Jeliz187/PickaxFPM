@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/home/ruben/AndroidStudioProjects/PickaxFPM/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/ruben/AndroidStudioProjects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-713527e32b8f1d21ebe17e84a46e99ae790ebb9e.jar" />
-    </item>
-    <item
-        jar="/home/ruben/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/ruben/AndroidStudioProjects/PickaxFPM/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-6a87398d705f4cde1e0fb3f1a1c0ef4a39041119.jar" />
-    </item>
-    <item
-        jar="/home/ruben/AndroidStudioProjects/PickaxFPM/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/home/ruben/AndroidStudioProjects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-03a409477eece49ca57f68100503ca467103fe1a.jar" />
-    </item>
-    <item
-        jar="/home/ruben/AndroidStudioProjects/PickaxFPM/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="C:\Users\tech\AndroidStudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/home/ruben/AndroidStudioProjects/PickaxFPM/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-b04ffba0d6a71fa7fad8d26f8364f620b7d1c8df.jar" />
+        <dex dex="C:\Users\tech\AndroidStudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ddbaa3f2d22067ee2b9482f64a75c560e1cffc7d.jar" />
+    </item>
+    <item
+        jar="C:\Users\tech\AndroidStudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\tech\AndroidStudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-8abbf174769de4617b8c8739c19f0637a6623c6e.jar" />
+    </item>
+    <item
+        jar="C:\Users\tech\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\tech\AndroidStudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-ccab737924d6bbd7a0bdca71ee5af14a4c121ac0.jar" />
+    </item>
+    <item
+        jar="C:\Users\tech\AndroidStudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\tech\AndroidStudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-4bbff18097aec36da9f310d89bc12f52cdeedceb.jar" />
     </item>
 
 </items>
