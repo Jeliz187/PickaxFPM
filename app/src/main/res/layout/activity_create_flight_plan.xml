@@ -1,51 +1,248 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.utep.cs.pickax.fpms.CreateFlightPlan"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="edu.utep.cs.pickax.fpms.CreateFlightPlan">
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ett"
+            android:hint="@string/name"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_type"
+            android:text="@string/flight_type_IFR"
+            android:inputType="none"
+            android:layout_below="@+id/ett"
+            android:hint="@string/type"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_aircraft_id"
+            android:layout_below="@+id/et_type"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_airspeed"
+            android:hint="@string/true_airspeed"
+            android:layout_below="@+id/sp_aircraft_id"
+            android:layout_alignParentStart="true"
+            android:inputType="numberDecimal"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_departure"
+            android:layout_below="@+id/et_airspeed"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_dest"
+            android:layout_below="@+id/sp_departure"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:hint="@string/flight_date"
+            android:id="@+id/et_date_of_flight"
+            android:layout_below="@+id/sp_dest"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_calendar"
+            android:layout_alignBottom="@+id/et_date_of_flight"
+            android:layout_alignEnd="@id/et_date_of_flight"
+            android:src="@android:drawable/ic_menu_my_calendar"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:id="@+id/et_depart_time"
+            android:hint="@string/depart_time"
+            android:layout_below="@+id/et_date_of_flight" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_time_zone"
+            android:layout_alignBottom="@id/et_depart_time"
+            android:layout_alignEnd="@id/et_depart_time"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_cruising_altitude"
+            android:hint="@string/cruising_altitude"
+            android:layout_below="@+id/et_depart_time"
+            android:inputType="number"/>
+
+        <TextView style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_route"
+            android:layout_below="@+id/et_cruising_altitude"
+            android:text="@string/route"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg_route_options"
+            android:layout_below="@+id/tv_route">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shortest_route"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fastest_route"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/archived_route"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_route"/>
+            </RadioGroup>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/estimated_time_enroute"
+            android:id="@+id/et_estimated_time"
+            android:layout_below="@id/rg_route_options"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/fuel_on_board"
+            android:id="@+id/et_fuel_on_board"
+            android:layout_below="@id/et_estimated_time"/>
+
+        <TextView style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_alt_airports"
+            android:layout_below="@+id/et_fuel_on_board"
+            android:text="@string/alternative_airports"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_alt_airport1"
+            android:layout_below="@id/tv_alt_airports"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_alt_airport2"
+            android:layout_below="@id/sp_alt_airport1"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_alt_airport3"
+            android:layout_below="@id/sp_alt_airport2"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/pilot_name"
+            android:id="@+id/et_pilot_name"
+            android:layout_below="@id/sp_alt_airport3"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/contact_info"
+            android:id="@+id/et_contact_info"
+            android:layout_below="@id/et_pilot_name"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_number_onboard"
+            android:entries="@array/number_onboard"
+            android:layout_below="@id/et_contact_info"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/aircraft_color"
+            android:id="@+id/et_aircraft_color"
+            android:inputType="none"
+            android:layout_below="@id/sp_number_onboard"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/dest_contact_info"
+            android:id="@+id/et_dest_contact_info"
+            android:layout_below="@id/et_aircraft_color"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="@string/remarks"
+            android:id="@+id/et_remarks"
+            android:layout_below="@id/et_dest_contact_info"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        android:id="@+id/tv_name"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_below="@+id/tv_name"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_home"
+            android:text="@string/home"
+            android:layout_below="@+id/et_remarks"
+            android:layout_alignParentStart="true"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/type"
-        android:id="@+id/tv_type"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_save"
+            android:text="@string/save"
+            android:layout_below="@id/et_remarks"
+            android:layout_toEndOf="@id/btn_home"/>
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/et_type"
-        android:text="@string/flight_type_IFR"
-        android:editable="false"
-        android:layout_below="@+id/tv_type"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_submit"
+            android:text="@string/submit"
+            android:layout_below="@id/et_remarks"
+            android:layout_toEndOf="@id/btn_save"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/aircraft_id"
-        android:id="@+id/tv_aircraft_id"
-        android:layout_below="@+id/et_type"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_clear"
+            android:text="@string/clear"
+            android:layout_below="@id/et_remarks"
+            android:layout_toEndOf="@id/btn_submit"/>
 
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

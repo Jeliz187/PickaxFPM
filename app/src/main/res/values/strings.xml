@@ -21,6 +21,27 @@
     <string name="name">Name</string>
     <string name="type">type</string>
     <string name="aircraft_id">Aircraft ID</string>
+    <string name="true_airspeed">True Airspeed (Knots)</string>
+    <string name="flight_date">Date of Flight</string>
+    <string name="depart_time">Departure Time (24Hr)</string>
+    <string name="route">Route</string>
+    <string name="shortest_route">Shortest Route</string>
+    <string name="fastest_route">Fastest Route</string>
+    <string name="archived_route">Archived Route</string>
+    <string name="custom_route">Custom Route</string>
+    <string name="cruising_altitude">Cruising Altitude</string>
+    <string name="estimated_time_enroute">Estimated Time Enroute</string>
+    <string name="fuel_on_board">Fuel on Board</string>
+    <string name="alternative_airports">Alternative Airports</string>
+    <string name="pilot_name">Pilot Name</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="number_onboard">Number Onboard</string>
+    <string name="aircraft_color">Color of Aircraft</string>
+    <string name="dest_contact_info">Destination Contact Information</string>
+    <string name="remarks">Remarks</string>
+    <string name="home">Home</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
 
 
 </resources>
