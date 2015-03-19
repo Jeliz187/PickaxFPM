@@ -17,4 +17,10 @@
     <string name="find_aircraft">Find Aircraft</string>
     <string name="title_activity_create_flight_plan">Create Flight Plan</string>
 
+    <string name="flight_type_IFR">IFR</string>string>
+    <string name="name">Name</string>
+    <string name="type">type</string>
+    <string name="aircraft_id">Aircraft ID</string>
+
+
 </resources>

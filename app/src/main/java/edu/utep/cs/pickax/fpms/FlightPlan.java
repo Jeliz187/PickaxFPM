@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * Created by ruben on 3/17/15.
  */
 public class FlightPlan {
-
+    //Fields needed for the flight plan
     private String flightPlanName;
     private final String type = "IFR";
     private char aircraftID;
@@ -18,7 +18,7 @@ public class FlightPlan {
     private Date flightDate;
     private int departureTime;
     private int cruisingAlt;
-    //private LinkedList<Tuple> route; //We need to elaborate
+    //private Route route; //Make a Route Class
     private int estTimeEnroute;
     private int fuelOnBoard;
     private LinkedList<String> altAirports;
@@ -28,7 +28,7 @@ public class FlightPlan {
     private int aircraftColor;
     private String destContactInfo;
     private String remarks;
-    private boolean TGFApproval;
+    private boolean TGFApproval = false;
 
     public FlightPlan(String flightPlanName1, char aircraftID1, String acTypeAndSpecialEquipment1,
                       int airspeed1, String departurePoint1, String destination1, Date flightDate1,
