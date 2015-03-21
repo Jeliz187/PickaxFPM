@@ -42,6 +42,7 @@
     <string name="home">Home</string>
     <string name="save">Save</string>
     <string name="clear">Clear</string>
+    <string name="at_and_se">Aircraft Type and Special Equipment</string>
 
 
 </resources>
