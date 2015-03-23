@@ -54,6 +54,7 @@ public class FlightPlan {
         remarks = remarks1;
     }
 
+    //Getter methods
     public String getFlightPlanName() {
         return flightPlanName;
     }
@@ -120,5 +121,74 @@ public class FlightPlan {
 
     public String getRemarks(){
         return remarks;
+    }
+
+    //Setter methods
+    public void setFlightPlanName(String flightPlanName2) {
+        flightPlanName = flightPlanName2;
+    }
+
+    public void setAircraftID(char aircraftID2){
+        aircraftID = aircraftID2;
+    }
+
+    public void setAcTypeAndSpecialEquipment(String acTypeAndSpecialEquipment2){
+        acTypeAndSpecialEquipment = acTypeAndSpecialEquipment2;
+    }
+
+    public void setAirspeed(int airspeed2){
+        airspeed = airspeed2;
+    }
+
+    public void setDeparturePoint(String departurePoint2){
+        departurePoint = departurePoint2;
+    }
+
+    public void setDestination(String destination2){
+        destination = destination2;
+    }
+
+    public void setFlightDate(Date flightDate2){
+        flightDate = flightDate2;
+    }
+
+    public void setDepartureTime(int departureTime2){
+        departureTime = departureTime2;
+    }
+
+    public void setCruisingAlt(int cruisingAlt2){
+        cruisingAlt = cruisingAlt2;
+    }
+
+    public void setEstTimeEnroute(int estTimeEnroute2){
+        estTimeEnroute = estTimeEnroute2;
+    }
+
+    public void setFuelOnBoard(int fuelOnBoard2){
+        fuelOnBoard = fuelOnBoard2;
+    }
+
+    public void setPilotName(String pilotName2){
+        pilotName = pilotName2;
+    }
+
+    public void setContactInfo(String contactInfo2){
+        contactInfo = contactInfo2;
+    }
+
+    public void setPassengersOnBoard(int passengersOnBoard2){
+        passengersOnBoard = passengersOnBoard2;
+    }
+
+    public void setAircraftColor(int aircraftColor2){
+        aircraftColor = aircraftColor2;
+    }
+
+    public void setDestContactInfo(String destContactInfo2){
+        destContactInfo = destContactInfo2;
+    }
+
+    public void setRemarks(String remarks2){
+        remarks = remarks2;
     }
 }
