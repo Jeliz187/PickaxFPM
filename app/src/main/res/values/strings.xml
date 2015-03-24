@@ -43,6 +43,9 @@
     <string name="save">Save</string>
     <string name="clear">Clear</string>
     <string name="at_and_se">Aircraft Type and Special Equipment</string>
+    <string name="title_activity_archived_routes">ArchivedRoutes</string>
+
+    <string name="hello_world">Hello world!</string>
 
 
 </resources>

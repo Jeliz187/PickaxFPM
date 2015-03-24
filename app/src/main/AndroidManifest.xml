@@ -20,6 +20,14 @@
             android:name=".CreateFlightPlan"
             android:label="@string/title_activity_create_flight_plan" >
         </activity>
+        <activity
+            android:name=".ArchivedRoutes"
+            android:label="@string/title_activity_archived_routes"
+            android:parentActivityName=".Start" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.utep.cs.pickax.fpms.CreateFlightPlan" />
+        </activity>
     </application>
 
 </manifest>
