@@ -28,6 +28,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.utep.cs.pickax.fpms.CreateFlightPlan" />
         </activity>
+        <activity
+            android:name=".RouteDetails"
+            android:label="@string/title_activity_route_details"
+            android:parentActivityName=".Start" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.utep.cs.pickax.fpms.Start" />
+        </activity>
     </application>
 
 </manifest>

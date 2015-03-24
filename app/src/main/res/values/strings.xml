@@ -46,10 +46,6 @@
     <string name="title_activity_archived_routes">ArchivedRoutes</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="departuredest">Departure Point - Destination</string>
-    <string name="distance">Distance</string>
-    <string name="speed">Speed</string>
-    <string name="number_waypoints">Number of Waypoints</string>
 
 
 </resources>
