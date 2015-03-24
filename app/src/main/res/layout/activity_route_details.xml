@@ -1,5 +1,4 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,8 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Name"
+        android:text="@string/name"
         android:id="@+id/RouteName"
         android:layout_marginStart="45dp"
         android:layout_alignParentTop="true"
@@ -23,8 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Distance"
+        android:text="@string/distance"
         android:id="@+id/RouteDistance"
         android:layout_alignTop="@+id/RouteName"
         android:layout_alignParentEnd="true"
@@ -33,7 +30,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@color/abc_background_cache_hint_selector_material_light"
         android:text="Route Detials"
         android:id="@+id/RouteDetails"
         android:layout_alignParentTop="true"

@@ -7,6 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name=".Start"
             android:label="@string/app_name" >
@@ -16,26 +17,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".CreateFlightPlan"
             android:label="@string/title_activity_create_flight_plan" >
         </activity>
+
         <activity
             android:name=".ArchivedRoutes"
             android:label="@string/title_activity_archived_routes"
-            android:parentActivityName=".Start" >
+            android:parentActivityName=".CreateFlightPlan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.utep.cs.pickax.fpms.CreateFlightPlan" />
         </activity>
-        <activity
-            android:name=".RouteDetails"
-            android:label="@string/title_activity_route_details"
-            android:parentActivityName=".Start" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.utep.cs.pickax.fpms.Start" />
-        </activity>
+
     </application>
 
 </manifest>

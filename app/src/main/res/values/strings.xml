@@ -43,9 +43,12 @@
     <string name="save">Save</string>
     <string name="clear">Clear</string>
     <string name="at_and_se">Aircraft Type and Special Equipment</string>
-    <string name="title_activity_archived_routes">ArchivedRoutes</string>
+    <string name="title_activity_archived_routes">Archived Routes</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="departuredest">Departure Point - Destination</string>
+    <string name="distance">Distance</string>
+    <string name="speed">Speed</string>
+    <string name="number_waypoints">Number of Waypoints</string>
 
 
 </resources>

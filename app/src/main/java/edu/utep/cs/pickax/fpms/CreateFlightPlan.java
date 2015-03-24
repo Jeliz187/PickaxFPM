@@ -1,9 +1,11 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
@@ -15,6 +17,13 @@ public class CreateFlightPlan extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_flight_plan);
         RadioButton archivedFP = (RadioButton)findViewById(R.id.rb_archived);
+        archivedFP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(CreateFlightPlan.this, ArchivedRoutes.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
 
