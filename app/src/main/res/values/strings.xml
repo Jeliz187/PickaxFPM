@@ -49,6 +49,7 @@
     <string name="distance">Distance</string>
     <string name="speed">Speed</string>
     <string name="number_waypoints">Number of Waypoints</string>
+    <string name="title_activity_route_details">Route Details</string>
 
 
 </resources>

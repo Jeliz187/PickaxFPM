@@ -24,6 +24,11 @@
         </activity>
 
         <activity
+            android:name=".RouteDetails"
+            android:label="@string/title_activity_route_details" >
+        </activity>
+
+        <activity
             android:name=".ArchivedRoutes"
             android:label="@string/title_activity_archived_routes"
             android:parentActivityName=".CreateFlightPlan" >

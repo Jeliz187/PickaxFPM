@@ -1,9 +1,11 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class ArchivedRoutes extends ActionBarActivity {
@@ -20,6 +22,13 @@ public class ArchivedRoutes extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_archived_routes, menu);
         return true;
+    }
+
+
+    //Need to pass info pertaining to the route selected
+    public void showRouteDetails(View v) {
+        Intent myIntent = new Intent(ArchivedRoutes.this, RouteDetails.class);
+        startActivity(myIntent);
     }
 
     @Override
