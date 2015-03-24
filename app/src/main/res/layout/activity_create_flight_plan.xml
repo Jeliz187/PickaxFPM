@@ -128,18 +128,22 @@
             android:id="@+id/rg_route_options"
             android:layout_below="@+id/tv_route">
             <RadioButton
+                android:id="@+id/rb_shortest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/shortest_route"/>
             <RadioButton
+                android:id="@+id/rb_fastest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/fastest_route"/>
             <RadioButton
+                android:id="@+id/rb_archived"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/archived_route"/>
             <RadioButton
+                android:id="@+id/rb_custom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/custom_route"/>
