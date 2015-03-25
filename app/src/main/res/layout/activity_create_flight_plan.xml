@@ -22,8 +22,9 @@
             <EditText
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/ett"
+                android:id="@+id/et_name"
                 android:hint="@string/name"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true" />
 
             <EditText
@@ -36,7 +37,7 @@
                 android:cursorVisible="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:layout_below="@+id/ett"
+                android:layout_below="@+id/et_name"
                 android:hint="@string/type"
                 android:layout_alignParentStart="true" />
 
@@ -176,7 +177,7 @@
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:hint="@string/fuel_on_board"
-                android:id="@+id/et_fuel_on_board"
+                android:id="@+id/et_fuel_onboard"
                 android:layout_below="@id/et_estimated_time"/>
 
             <TextView
@@ -184,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_alt_airports"
-                android:layout_below="@+id/et_fuel_on_board"
+                android:layout_below="@+id/et_fuel_onboard"
                 android:text="@string/alternative_airports"/>
             <Spinner
                 android:layout_width="wrap_content"
@@ -283,6 +284,7 @@
                 android:layout_below="@id/et_remarks"
                 android:layout_toEndOf="@id/btn_submit"/>
 
-            </RelativeLayout>
+        </RelativeLayout>
         </ScrollView>
+
 </RelativeLayout>
