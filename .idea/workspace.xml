@@ -216,6 +216,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -2076,7 +2082,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427539646169</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fix table for archived route, added action to show route details">
+      <created>1427539763069</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1427539763069</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
