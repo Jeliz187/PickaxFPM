@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -31,12 +32,6 @@
         android:textSize="20dp"
         android:textStyle="bold" />
 
-    <View style="@style/Divider"
-        android:background="@android:color/darker_gray"
-        android:layout_alignParentEnd="false"
-        android:layout_below="@+id/RouteDistance" />
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,7 +48,9 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
 
                 <TextView
                     android:layout_height="match_parent"
@@ -67,54 +64,40 @@
                     android:gravity="center"
                     android:weightSum="20"
                     android:singleLine="false"
-                    android:elegantTextHeight="false" />
+                    android:elegantTextHeight="false"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_height="match_parent"
                     android:text="Longitude"
                     android:gravity="center"
-                    android:weightSum="20"/>
+                    android:weightSum="20"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_height="wrap_content"
                     android:text="Course"
                     android:gravity="center"
-                    android:weightSum="20"/>
+                    android:weightSum="20"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_height="wrap_content"
                     android:text="Distance"
                     android:gravity="center"
-                    android:weightSum="20"/>
+                    android:weightSum="20"
+                    android:textStyle="bold" />
             </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
+            <View style="@style/Divider"
+                android:background="@android:color/darker_gray"
+                android:layout_alignParentEnd="false"
+                android:layout_below="@+id/RouteDistance" />
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"></TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"> </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableRow>
 
         </TableLayout>
     </ScrollView>

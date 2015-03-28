@@ -18,7 +18,7 @@
     <string name="find_aircraft">Find Aircraft</string>
     <string name="title_activity_create_flight_plan">Create Flight Plan</string>
 
-    <string name="flight_type_IFR">IFR</string>string>
+    <string name="flight_type_IFR">IFR</string>
     <string name="name">Name</string>
     <string name="type">type</string>
     <string name="aircraft_id">Aircraft ID</string>
@@ -32,6 +32,7 @@
     <string name="custom_route">Custom Route</string>
     <string name="cruising_altitude">Cruising Altitude</string>
     <string name="estimated_time_enroute">Estimated Time Enroute</string>
+    <string name="ete">ETE</string>
     <string name="fuel_on_board">Fuel on Board</string>
     <string name="alternative_airports">Alternative Airports</string>
     <string name="pilot_name">Pilot Name</string>
@@ -46,11 +47,12 @@
     <string name="at_and_se">Aircraft Type and Special Equipment</string>
     <string name="title_activity_archived_routes">Archived Routes</string>
 
-    <string name="departuredest">Departure Point - Destination</string>
+    <string name="departuredest">Departure \n- \nDestination</string>
     <string name="distance">Distance</string>
     <string name="speed">Speed</string>
-    <string name="number_waypoints">Number of Waypoints</string>
+    <string name="number_waypoints">Number \nof \nWaypoints</string>
     <string name="title_activity_route_details">Route Details</string>
+    <string name="clander_discription">A clickable Calender image</string>
 
 
 </resources>
