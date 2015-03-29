@@ -1,4 +1,4 @@
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="edu.utep.cs.pickax.fpms.CreateFlightPlan">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
 
         <RelativeLayout
@@ -286,6 +282,5 @@
                 android:layout_toEndOf="@id/btn_submit"/>
 
         </RelativeLayout>
-        </ScrollView>
+</ScrollView>
 
-</RelativeLayout>

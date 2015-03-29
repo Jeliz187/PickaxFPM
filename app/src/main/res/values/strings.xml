@@ -24,7 +24,7 @@
     <string name="aircraft_id">Aircraft ID</string>
     <string name="true_airspeed">True Airspeed (Knots)</string>
     <string name="flight_date">Date of Flight</string>
-    <string name="depart_time">Departure Time (24Hr)</string>
+    <string name="depart_time">Departure \nTime \n(24Hr)</string>
     <string name="route">Route</string>
     <string name="shortest_route">Shortest Route</string>
     <string name="fastest_route">Fastest Route</string>
@@ -53,6 +53,10 @@
     <string name="number_waypoints">Number \nof \nWaypoints</string>
     <string name="title_activity_route_details">Route Details</string>
     <string name="clander_discription">A clickable Calender image</string>
+    <string name="title_activity_custom_routes">Custom Routes</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_manage_flight_plans">Manage Flight Plans</string>
 
 
 </resources>

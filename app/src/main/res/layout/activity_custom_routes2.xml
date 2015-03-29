@@ -1,0 +1,216 @@
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="edu.utep.cs.pickax.fpms.CustomRoutes"
+    android:fillViewport="true"
+    android:id="@+id/title_activity_custom_routes2">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/name"
+                android:id="@+id/textView" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tl_archived"
+                android:weightSum="100"
+                android:stretchColumns="0,1,2,3,4,5">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_name_col"
+                        android:text=""
+                        android:layout_column="0"
+                        android:textStyle="bold"
+                        style="@style/cell_padding"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:text="Latitude"
+                        android:id="@+id/tv_departure_dest_col"
+                        android:layout_column="1"
+                        android:textStyle="bold"
+                        style="@style/cell_padding"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:text="Longitude"
+                        android:id="@+id/tv_dist_col"
+                        android:layout_column="2"
+                        android:textStyle="bold"
+                        style="@style/cell_padding"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:text="True Course"
+                        android:id="@+id/tv_speed_col"
+                        android:layout_column="3"
+                        android:textStyle="bold"
+                        style="@style/cell_padding"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:text="Distance"
+                        android:id="@+id/tv_estimated_time_enroute_col"
+                        android:layout_column="4"
+                        android:textStyle="bold"
+                        style="@style/cell_padding"
+                        android:gravity="center_horizontal" />
+
+                </TableRow>
+
+                <View
+                    style="@style/Divider"
+                    android:background="@android:color/darker_gray" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:id="@+id/test_archived_routes3"
+                    android:stretchColumns="0,1,2,3,4,5,6">
+
+                    <LinearLayout>
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="DEPARTURE"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="Waypoint Lat"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="Waypoint Long"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="Course"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="0000 mi"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:id="@+id/test_archived_routes"
+                    android:stretchColumns="0,1,2,3,4,5,6">
+
+                    <LinearLayout>
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="NEW \nWAYPOINT"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="Waypoint Lat"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="Waypoint Long"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="Course"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="0000 mi"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/test_archived_routes2"
+                    android:stretchColumns="0,1,2,3,4,5,6">
+
+                    <LinearLayout>
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text="ADD"
+                            android:textSize="10sp" />
+                        <Button
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:text="DELETE"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="20dp"
+                    android:id="@+id/test_archived_routes5"
+                    android:stretchColumns="0,1,2,3,4,5,6">
+
+                    <LinearLayout>
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="DESTINATION"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="Waypoint Lat"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="Waypoint Long"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="Course"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:text="0000 mi"
+                        style="@style/cell_padding"
+                        android:layout_gravity="center" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</HorizontalScrollView>

@@ -1,44 +1,23 @@
 package edu.utep.cs.pickax.fpms;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 
-public class Start extends ActionBarActivity {
+public class CustomRoutes extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
-        Button flightPlan = (Button)findViewById(R.id.btn_create_fp);
-        flightPlan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(Start.this, CreateFlightPlan.class);
-                startActivity(myIntent);
-            }
-        });
-
-        Button mng_flight_plan = (Button)findViewById(R.id.btn_manage_fp);
-        mng_flight_plan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mngfp = new Intent(Start.this, ManageFlightPlans.class);
-                startActivity(mngfp);
-            }
-        });
+        setContentView(R.layout.activity_custom_routes2);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_start, menu);
+        getMenuInflater().inflate(R.menu.menu_custom_routes, menu);
         return true;
     }
 
