@@ -28,8 +28,8 @@ public class Start extends ActionBarActivity {
         mng_flight_plan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mngfp = new Intent(Start.this, ManageFlightPlans.class);
-                startActivity(mngfp);
+                Intent myIntent = new Intent(Start.this, ManageFlightPlans.class);
+                startActivity(myIntent);
             }
         });
     }

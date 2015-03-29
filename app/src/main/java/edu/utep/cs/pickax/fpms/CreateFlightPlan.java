@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -78,6 +79,38 @@ public class CreateFlightPlan extends ActionBarActivity {
 
             }
         });
+
+        Spinner ac_id = (Spinner) findViewById(R.id.sp_aircraft_id);
+        ArrayAdapter<CharSequence> ac_id_adapter = ArrayAdapter.createFromResource(this, R.array.array_aircraft_id, android.R.layout.simple_spinner_dropdown_item);
+        ac_id.setAdapter(ac_id_adapter);
+
+        Spinner dest = (Spinner) findViewById(R.id.sp_dest);
+        ArrayAdapter<CharSequence> dest_adapter = ArrayAdapter.createFromResource(this, R.array.array_dept_dest, android.R.layout.simple_spinner_dropdown_item);
+        dest.setAdapter(dest_adapter);
+
+        Spinner depart = (Spinner) findViewById(R.id.sp_departure);
+        ArrayAdapter<CharSequence> depart_adapter = ArrayAdapter.createFromResource(this, R.array.array_dept_dest, android.R.layout.simple_spinner_dropdown_item);
+        depart.setAdapter(depart_adapter);
+
+        Spinner time_zone = (Spinner) findViewById(R.id.sp_time_zone);
+        ArrayAdapter<CharSequence> time_zone_adapter = ArrayAdapter.createFromResource(this, R.array.array_time_zone, android.R.layout.simple_spinner_dropdown_item);
+        time_zone.setAdapter(time_zone_adapter);
+
+        Spinner alt_airport1 = (Spinner) findViewById(R.id.sp_alt_airport1);
+        ArrayAdapter<CharSequence> alt_airport1_adapter = ArrayAdapter.createFromResource(this, R.array.array_airport_code, android.R.layout.simple_spinner_dropdown_item);
+        alt_airport1.setAdapter(alt_airport1_adapter);
+
+        Spinner alt_airport2 = (Spinner) findViewById(R.id.sp_alt_airport2);
+        ArrayAdapter<CharSequence> alt_aiport2_adapter = ArrayAdapter.createFromResource(this, R.array.array_airport_code, android.R.layout.simple_spinner_dropdown_item);
+        alt_airport2.setAdapter(alt_aiport2_adapter);
+
+        Spinner alt_airport3 = (Spinner) findViewById(R.id.sp_alt_airport3);
+        ArrayAdapter<CharSequence> alt_airport3_adapter = ArrayAdapter.createFromResource(this, R.array.array_airport_code, android.R.layout.simple_spinner_dropdown_item);
+        alt_airport3.setAdapter(alt_airport3_adapter);
+
+//        Spinner ac_id = (Spinner) findViewById(R.id.sp_aircraft_id);
+//        ArrayAdapter<CharSequence> ac_id_adapter = ArrayAdapter.createFromResource(this, R.array.aircraft_id, android.R.layout.simple_spinner_dropdown_item);
+//        ac_id.setAdapter(ac_id_adapter);
     }
 
     @Override
@@ -118,4 +151,5 @@ public class CreateFlightPlan extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

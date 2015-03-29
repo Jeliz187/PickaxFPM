@@ -57,6 +57,45 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_manage_flight_plans">Manage Flight Plans</string>
+    <string name="name_v21">Name</string>
+    <string name="departure_city">City of Departure</string>
+    <string name="dest_city">City of Destination</string>
+    <string name="alt_ap1">Alternate Airport 1</string>
+    <string name="alt_ap3">Alternate Airport 3</string>
+    <string name="alt_ap2">Alternate Airport 2</string>
 
+    <string-array name="array_aircraft_id">
+        <item>Choose your Aircraft</item>
+        <item>Aircraft 1</item>
+        <item>Aircraft 2</item>
+        <item>Aircraft 3</item>
+        <item>Aircraft 4</item>
+    </string-array>
 
+    <string-array name="array_dept_dest">
+        <item>Choose City</item>
+        <item>El Paso</item>
+        <item>Las Cruses</item>
+        <item>Alamogordo</item>
+        <item>Santa Fe</item>
+        <item>Albuquerque</item>
+    </string-array>
+
+    <string-array name="array_time_zone">
+        <item>Choose Time Zone</item>
+        <item>Mountain</item>
+        <item>Central</item>
+        <item>Pacific</item>
+        <item>Eastern</item>
+    </string-array>
+
+    <string-array name="array_airport_code">
+        <item>Choose Airport</item>
+        <item>ELP</item>
+        <item>LRU</item>
+        <item>SAF</item>
+        <item>ABQ</item>
+        <item>ALM</item>
+    </string-array>
+    
 </resources>
