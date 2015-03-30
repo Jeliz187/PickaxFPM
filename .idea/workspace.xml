@@ -11,7 +11,7 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <target>android-22</target>
+        <target>android-21</target>
       </config>
     </shared>
     <layouts>
@@ -46,15 +46,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dea81e53-5506-4b78-adb8-13691b713417" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Jacob\StudioProjects\PickaxFPM\app\src\main\res\layout-v21\activity_custom_routes2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/CreateFlightPlan.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/CreateFlightPlan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_flight_plan.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_flight_plan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_21_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_3.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Flight Plan Management System.iws" />
@@ -94,6 +89,26 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="PickaxFPM" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="Flight Plan Management System" />
   </component>
@@ -102,8 +117,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.08">
-              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+            <state vertical-scroll-proportion="-7.04">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -111,14 +126,14 @@
       </file>
       <file leaf-file-name="activity_start.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.4827585">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -136,13 +151,9 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/CreateFlightPlan.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="46" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+              <caret line="122" column="67" selection-start-line="122" selection-start-column="67" selection-end-line="122" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1960#2208#0" expanded="true" />
-                <element signature="e#2207#2208#0" expanded="true" />
-                <element signature="e#2309#2451#0" expanded="true" />
-                <element signature="e#2450#2451#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,48 +161,26 @@
       </file>
       <file leaf-file-name="activity_create_flight_plan.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_flight_plan.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.4122137">
+              <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+              <folding>
+                <element signature="e#1201#1226#0" expanded="true" />
+                <element signature="e#1386#1403#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41603053">
-              <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
-              <folding>
-                <element signature="e#231#266#0" expanded="true" />
-                <element signature="e#292#327#0" expanded="true" />
-                <element signature="e#351#384#0" expanded="true" />
-                <element signature="e#411#444#0" expanded="true" />
-                <element signature="e#984#998#0" expanded="true" />
-                <element signature="e#1201#1226#0" expanded="true" />
-                <element signature="e#1434#1448#0" expanded="true" />
-                <element signature="e#2145#2164#0" expanded="true" />
-                <element signature="e#2371#2394#0" expanded="true" />
-                <element signature="e#2680#2704#0" expanded="true" />
-                <element signature="e#3299#3318#0" expanded="true" />
-                <element signature="e#3785#3806#0" expanded="true" />
-                <element signature="e#4555#4576#0" expanded="true" />
-                <element signature="e#5014#5041#0" expanded="true" />
-                <element signature="e#5394#5409#0" expanded="true" />
-                <element signature="e#5903#5927#0" expanded="true" />
-                <element signature="e#6154#6177#0" expanded="true" />
-                <element signature="e#6405#6429#0" expanded="true" />
-                <element signature="e#6655#6677#0" expanded="true" />
-                <element signature="e#6867#6899#0" expanded="true" />
-                <element signature="e#7377#7400#0" expanded="true" />
-                <element signature="e#7725#7755#0" expanded="true" />
-                <element signature="e#8073#8090#0" expanded="true" />
-                <element signature="e#8596#8613#0" expanded="true" />
-                <element signature="e#9120#9137#0" expanded="true" />
-                <element signature="e#9569#9589#0" expanded="true" />
-                <element signature="e#9839#9861#0" expanded="true" />
-                <element signature="e#10350#10374#0" expanded="true" />
-                <element signature="e#10810#10837#0" expanded="true" />
-                <element signature="e#11045#11062#0" expanded="true" />
-                <element signature="e#11441#11455#0" expanded="true" />
-                <element signature="e#11657#11671#0" expanded="true" />
-                <element signature="e#11874#11890#0" expanded="true" />
-                <element signature="e#12092#12107#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -208,14 +197,14 @@
       </file>
       <file leaf-file-name="activity_route_details.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route_details.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
               <folding />
             </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -224,7 +213,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -233,13 +224,8 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-              <folding>
-                <element signature="e#574#813#0" expanded="false" />
-                <element signature="e#812#813#0" expanded="false" />
-                <element signature="e#935#1175#0" expanded="false" />
-                <element signature="e#1174#1175#0" expanded="false" />
-              </folding>
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1473,10 +1459,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_manage_flight_plans.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_archived_routes.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-v21/activity_create_flight_plan.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/CreateFlightPlan.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_flight_plan.xml" />
       </list>
     </option>
@@ -1693,9 +1680,40 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fpms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PickaxFPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PickaxFPM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
@@ -1711,7 +1729,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1739,7 +1756,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.ArchivedRoutes">
+  <component name="RunManager" selected="Android Application.app">
     <configuration default="false" name="ArchivedRoutes" type="AndroidRunConfigurationType" factoryName="Android Application" temporary="true">
       <module name="app" />
       <option name="ACTIVITY_CLASS" value="edu.utep.cs.pickax.fpms.ArchivedRoutes" />
@@ -1913,7 +1930,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -2101,12 +2118,18 @@
       <option name="project" value="LOCAL" />
       <updated>1427601192823</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed spinners in create a flight plan. Adjusted layout.">
+      <created>1427668956229</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1427668956229</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32703003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2124,7 +2147,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20415778" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2164,52 +2187,39 @@
     <MESSAGE value="Added Archived Routes screen, fixed menu" />
     <MESSAGE value="Fix Route Details rendering" />
     <MESSAGE value="Fix table for archived route, added action to show route details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix table for archived route, added action to show route details" />
+    <MESSAGE value="Fixed spinners in create a flight plan. Adjusted layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed spinners in create a flight plan. Adjusted layout." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/ManageFlightPlans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_flight_plan.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
           <folding>
-            <element signature="e#231#266#0" expanded="true" />
-            <element signature="e#292#327#0" expanded="true" />
-            <element signature="e#351#384#0" expanded="true" />
-            <element signature="e#411#444#0" expanded="true" />
-            <element signature="e#984#998#0" expanded="true" />
             <element signature="e#1201#1226#0" expanded="true" />
-            <element signature="e#1434#1448#0" expanded="true" />
-            <element signature="e#2145#2164#0" expanded="true" />
-            <element signature="e#2371#2394#0" expanded="true" />
-            <element signature="e#2680#2704#0" expanded="true" />
-            <element signature="e#3299#3318#0" expanded="true" />
-            <element signature="e#3785#3806#0" expanded="true" />
-            <element signature="e#4555#4576#0" expanded="true" />
-            <element signature="e#5014#5041#0" expanded="true" />
-            <element signature="e#5394#5409#0" expanded="true" />
-            <element signature="e#5903#5927#0" expanded="true" />
-            <element signature="e#6154#6177#0" expanded="true" />
-            <element signature="e#6405#6429#0" expanded="true" />
-            <element signature="e#6655#6677#0" expanded="true" />
-            <element signature="e#6867#6899#0" expanded="true" />
-            <element signature="e#7377#7400#0" expanded="true" />
-            <element signature="e#7725#7755#0" expanded="true" />
-            <element signature="e#8073#8090#0" expanded="true" />
-            <element signature="e#8596#8613#0" expanded="true" />
-            <element signature="e#9120#9137#0" expanded="true" />
-            <element signature="e#9569#9589#0" expanded="true" />
-            <element signature="e#9839#9861#0" expanded="true" />
-            <element signature="e#10350#10374#0" expanded="true" />
-            <element signature="e#10810#10837#0" expanded="true" />
-            <element signature="e#11045#11062#0" expanded="true" />
-            <element signature="e#11441#11455#0" expanded="true" />
-            <element signature="e#11657#11671#0" expanded="true" />
-            <element signature="e#11874#11890#0" expanded="true" />
-            <element signature="e#12092#12107#0" expanded="true" />
+            <element signature="e#1386#1403#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2450,14 +2460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2473,9 +2475,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_custom_routes2.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="153" column="51" selection-start-line="153" selection-start-column="51" selection-end-line="153" selection-end-column="51" />
@@ -2488,11 +2487,11 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_archived_routes.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_archived_routes.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
@@ -2511,6 +2510,9 @@
           </folding>
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/FlightPlan.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2521,9 +2523,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_manage_flight_plans.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
@@ -2538,23 +2537,28 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route_details.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_route_details.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="97" column="58" selection-start-line="97" selection-start-column="58" selection-end-line="97" selection-end-column="58" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/ManageFlightPlans.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2566,42 +2570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-          <folding>
-            <element signature="e#574#813#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#935#1175#0" expanded="false" />
-            <element signature="e#1174#1175#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.4827585">
-          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.08">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -2614,64 +2586,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_start.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/CreateFlightPlan.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="46" selection-start-line="96" selection-start-column="46" selection-end-line="96" selection-end-column="46" />
+          <caret line="122" column="67" selection-start-line="122" selection-start-column="67" selection-end-line="122" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1960#2208#0" expanded="true" />
-            <element signature="e#2207#2208#0" expanded="true" />
-            <element signature="e#2309#2451#0" expanded="true" />
-            <element signature="e#2450#2451#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_flight_plan.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41603053">
-          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        <state vertical-scroll-proportion="-7.04">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_flight_plan.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4122137">
+          <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
           <folding>
-            <element signature="e#231#266#0" expanded="true" />
-            <element signature="e#292#327#0" expanded="true" />
-            <element signature="e#351#384#0" expanded="true" />
-            <element signature="e#411#444#0" expanded="true" />
-            <element signature="e#984#998#0" expanded="true" />
             <element signature="e#1201#1226#0" expanded="true" />
-            <element signature="e#1434#1448#0" expanded="true" />
-            <element signature="e#2145#2164#0" expanded="true" />
-            <element signature="e#2371#2394#0" expanded="true" />
-            <element signature="e#2680#2704#0" expanded="true" />
-            <element signature="e#3299#3318#0" expanded="true" />
-            <element signature="e#3785#3806#0" expanded="true" />
-            <element signature="e#4555#4576#0" expanded="true" />
-            <element signature="e#5014#5041#0" expanded="true" />
-            <element signature="e#5394#5409#0" expanded="true" />
-            <element signature="e#5903#5927#0" expanded="true" />
-            <element signature="e#6154#6177#0" expanded="true" />
-            <element signature="e#6405#6429#0" expanded="true" />
-            <element signature="e#6655#6677#0" expanded="true" />
-            <element signature="e#6867#6899#0" expanded="true" />
-            <element signature="e#7377#7400#0" expanded="true" />
-            <element signature="e#7725#7755#0" expanded="true" />
-            <element signature="e#8073#8090#0" expanded="true" />
-            <element signature="e#8596#8613#0" expanded="true" />
-            <element signature="e#9120#9137#0" expanded="true" />
-            <element signature="e#9569#9589#0" expanded="true" />
-            <element signature="e#9839#9861#0" expanded="true" />
-            <element signature="e#10350#10374#0" expanded="true" />
-            <element signature="e#10810#10837#0" expanded="true" />
-            <element signature="e#11045#11062#0" expanded="true" />
-            <element signature="e#11441#11455#0" expanded="true" />
-            <element signature="e#11657#11671#0" expanded="true" />
-            <element signature="e#11874#11890#0" expanded="true" />
-            <element signature="e#12092#12107#0" expanded="true" />
+            <element signature="e#1386#1403#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

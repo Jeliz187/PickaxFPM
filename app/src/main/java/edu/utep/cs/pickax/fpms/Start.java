@@ -15,6 +15,7 @@ public class Start extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
         Button flightPlan = (Button)findViewById(R.id.btn_create_fp);
         flightPlan.setOnClickListener(new View.OnClickListener() {
             @Override
