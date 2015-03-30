@@ -33,6 +33,33 @@ public class Start extends ActionBarActivity {
                 startActivity(myIntent);
             }
         });
+
+        Button mng_resources = (Button)findViewById(R.id.btn_manage_res);
+        mng_resources.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(Start.this, ManageResources.class);
+                startActivity(myIntent);
+            }
+        });
+
+        Button usr_pref = (Button)findViewById(R.id.btn_set_prefs);
+        usr_pref.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(Start.this, View_SetPreferences.class);
+                startActivity(myIntent);
+            }
+        });
+
+        Button start_flight = (Button)findViewById(R.id.btn_start_flight);
+        start_flight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(Start.this, View_StartFlight.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
 

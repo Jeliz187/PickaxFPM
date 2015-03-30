@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,6 +66,15 @@ public class CreateFlightPlan extends ActionBarActivity {
             }
         });
 
+        rb_custom = (RadioButton)findViewById(R.id.rb_custom);
+        rb_custom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(CreateFlightPlan.this, CustomRoutes.class);
+                startActivity(myIntent);
+            }
+        });
+
         Button btnHome = (Button)findViewById(R.id.btn_home);
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,9 +91,28 @@ public class CreateFlightPlan extends ActionBarActivity {
             }
         });
 
+
         Spinner ac_id = (Spinner) findViewById(R.id.sp_aircraft_id);
         ArrayAdapter<CharSequence> ac_id_adapter = ArrayAdapter.createFromResource(this, R.array.array_aircraft_id, android.R.layout.simple_spinner_dropdown_item);
         ac_id.setAdapter(ac_id_adapter);
+
+        ac_id.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == parent.getCount()-1) {
+                    Intent i = new Intent();
+                    i.setClass(CreateFlightPlan.this, CreateAircraft.class);
+                    startActivity(i);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+
+            }
+        });
+
 
         Spinner dest = (Spinner) findViewById(R.id.sp_dest);
         ArrayAdapter<CharSequence> dest_adapter = ArrayAdapter.createFromResource(this, R.array.array_dept_dest, android.R.layout.simple_spinner_dropdown_item);

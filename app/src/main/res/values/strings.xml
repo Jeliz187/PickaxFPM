@@ -64,13 +64,14 @@
     <string name="alt_ap3">Alternate Airport 3</string>
     <string name="alt_ap2">Alternate Airport 2</string>
     <string name="ac_used">Aircraft Being Used</string>
+    <string name="hint_depart_time">Departure Time (24hr)</string>
 
     <string-array name="array_aircraft_id">
         <item>Choose Aircraft</item>
         <item>Aircraft 1</item>
         <item>Aircraft 2</item>
         <item>Aircraft 3</item>
-        <item>Aircraft 4</item>
+        <item>Add New</item>
     </string-array>
 
     <string-array name="array_dept_dest">
@@ -98,5 +99,21 @@
         <item>ABQ</item>
         <item>ALM</item>
     </string-array>
-    
+
+    <!-- Create aircraft strings-->
+    <string name="title_activity_create_aircraft">Aircraft</string>
+    <string name="ac_nickname">enter aircraft nickname</string>
+    <string name="title_activity_manage_resources">Manage Resources</string>
+    <string name="routes">Routes</string>
+    <string name="waypoints">Waypoints</string>
+    <string name="title_activity_view__set_preferences">Set Preferences</string>
+    <string name="display_waypoints">Display Waypoints</string>
+    <string name="flight_preferences">Flight Preferences</string>
+    <string name="terr_above_alt">terriain above altitude (feet)</string>
+    <string name="avoid_water">Avoid Flying Over Water</string>
+    <string name="map_view_pref">Map View Preferences</string>
+    <string name="display_topo_map">Display Topographical Map</string>
+    <string name="title_activity_view__start_flight">Start Flight</string>
+    <string name="narrow_flight_date">Date \n of \n Flight</string>
+
 </resources>
