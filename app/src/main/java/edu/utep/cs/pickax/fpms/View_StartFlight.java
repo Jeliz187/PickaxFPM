@@ -30,7 +30,6 @@ public class View_StartFlight extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 //TODO: add alert if there is no flight plan selected
-                Log.d("SF", "Start flight pressed");
                 Intent myIntent = new Intent(View_StartFlight.this, InFlight.class);
                 startActivity(myIntent);
             }

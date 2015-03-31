@@ -7,9 +7,7 @@ heading
  */
 package edu.utep.cs.pickax.fpms;
 
-import android.app.IntentService;
-import android.content.Intent;
-import android.os.AsyncTask;
+import android.os.CountDownTimer;
 import android.util.Log;
 
 import java.util.Random;
@@ -23,13 +21,14 @@ public class CoordinateProvider {
     static private double[] currentCoordinates = elpasoCoordinates;
 
     public CoordinateProvider() {
-        Thread t = new Thread() {
-            @Override
-            public void run() {
+        new CountDownTimer(Long.MAX_VALUE, 1000) {
+            public void onTick(long millisUntilFinished) {
                 generateCoordinates();
             }
-        };
-        t.start();
+            public void onFinish() {
+                Log.d(TAG, "countdown done?");
+            }
+        }.start();
     }
 
     static double[] getCurrentCoordinates() {
@@ -53,28 +52,11 @@ public class CoordinateProvider {
     }
 
     public void generateCoordinates() {
-        Log.d(TAG, "In loop");
-        while (true) {
-            boolean limitLat = true;
-            boolean limitLon = true;
-            try {
-                Thread.sleep((long)1000);
-            } catch (InterruptedException e) {
-                Log.d(TAG, "exception in sleep");
-            }
-            if (currentCoordinates[LATITUDE] < albuquerqueCoordinates[LATITUDE]) {
-                currentCoordinates[LATITUDE] += 0.005;
-                limitLat = false;
-            }
-            if (currentCoordinates[LONGITUDE] > albuquerqueCoordinates[LONGITUDE]) {
-                currentCoordinates[LONGITUDE] -= 0.0001;
-                limitLon = false;
-            }
-
-            if(limitLat & limitLon) {
-                Log.d(TAG, "Done looping");
-                return;
-            }
+        if (currentCoordinates[LATITUDE] < albuquerqueCoordinates[LATITUDE]) {
+            currentCoordinates[LATITUDE] += 0.005;
+        }
+        if (currentCoordinates[LONGITUDE] > albuquerqueCoordinates[LONGITUDE]) {
+            currentCoordinates[LONGITUDE] -= 0.0001;
         }
     }
 }

@@ -13,13 +13,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-
+//TODO: Stop timers when leaving activity
 public class InFlight extends ActionBarActivity {
     private final String TAG = "INFLIGHT";
     private static TextView speed;
     private static TextView altitude;
     private static TextView remainingFuel;
     private static TextView heading;
+    private static TextView coordinatesLat;
+    private static TextView coordinatesLon;
+    private static TextView coordinatesLat2;
+    private static TextView coordinatesLon2;
+    private static TextView eta;
+    private static TextView rta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +36,17 @@ public class InFlight extends ActionBarActivity {
         altitude = (TextView)findViewById(R.id.tv_current_altitude);
         remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
         heading = (TextView)findViewById(R.id.tv_current_heading);
+        coordinatesLat = (TextView)findViewById(R.id.tv_current_coordinates_lat);
+        coordinatesLon = (TextView)findViewById(R.id.tv_current_coordinates_lon);
+        //Redundant coordinate textviews for weather map card
+        coordinatesLat2 = (TextView)findViewById(R.id.tv_current_coordinates_lat2);
+        coordinatesLon2 = (TextView)findViewById(R.id.tv_current_coordinates_lon2);
+        eta = (TextView)findViewById(R.id.ETA);
+        rta = (TextView)findViewById(R.id.RTA);
 
-        new CountDownTimer(Long.MAX_VALUE,1000) {
+        CoordinateProvider c = new CoordinateProvider();
+
+        new CountDownTimer(Long.MAX_VALUE, 1000) {
             public void onTick(long millisUntilFinished) {
                 updateLabels();
             }
@@ -47,6 +62,16 @@ public class InFlight extends ActionBarActivity {
         speed.setText(""+CoordinateProvider.getCurrentSpeed());
         altitude.setText(""+CoordinateProvider.getCurrentAltitude());
         heading.setText(""+CoordinateProvider.getCurrentHeading());
+        remainingFuel.setText("?");
+
+        double[] coordPair = CoordinateProvider.getCurrentCoordinates();
+        coordinatesLat.setText("Latitude: "+coordPair[0]);
+        coordinatesLon.setText("Longitude: "+coordPair[1]);
+        coordinatesLat2.setText("Latitude: "+coordPair[0]);
+        coordinatesLon2.setText("Longitude: "+coordPair[1]);
+
+        eta.setText("ETA: ?");
+        rta.setText("RTA: ?");
     }
 
     @Override
