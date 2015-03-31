@@ -3,9 +3,11 @@ InFlght handles realtime data display and the Google Glass
  */
 package edu.utep.cs.pickax.fpms;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -23,17 +25,28 @@ public class InFlight extends ActionBarActivity {
         final TextView remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
         final TextView heading = (TextView)findViewById(R.id.tv_current_heading);
 
-        CoordinateProvider c = new CoordinateProvider();
-        c.doInBackground();
+        Intent mServiceIntent = new Intent(this, CoordinateProvider.class);
+        mServiceIntent.setData(null);
+        this.startService(mServiceIntent);
 
-        AsyncTask v = new AsyncTask() {
+        Thread updater = new Thread() {
             @Override
-            protected Object doInBackground(Object[] params) {
-                while(true) {
-                    speed.setText(""+CoordinateProvider.getCurrentSpeed());
+            public void run() {
+                try {
+                    Thread.sleep((long)1000);
+                } catch (InterruptedException e) {
+                    Log.d("SLEEP", "exception in sleep");
                 }
+                heading.setText(""+CoordinateProvider.getCurrentHeading());
+                speed.setText(""+CoordinateProvider.getCurrentSpeed());
+                altitude.setText(""+CoordinateProvider.getCurrentAltitude());
+                heading.setText(""+CoordinateProvider.getCurrentHeading());
+                remainingFuel.setText("...");
             }
         };
+
+        updater.start();
+
 
     }
 
