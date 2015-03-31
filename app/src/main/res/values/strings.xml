@@ -115,5 +115,10 @@
     <string name="display_topo_map">Display Topographical Map</string>
     <string name="title_activity_view__start_flight">Start Flight</string>
     <string name="narrow_flight_date">Date \n of \n Flight</string>
+    <string name="title_activity_in_flight">In Flight</string>
 
+    <string name="current_airspeed">Current Airspeed (knots)</string>
+    <string name="current_altitude">Current Altitude</string>
+    <string name="remaining_fuel">Remaining Fuel (gallons)</string>
+    <string name="current_heading">Current Heading (degrees)</string>
 </resources>

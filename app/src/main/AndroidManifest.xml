@@ -68,6 +68,14 @@
             android:name=".View_StartFlight"
             android:label="@string/title_activity_view__start_flight" >
         </activity>
+        <activity
+            android:name=".InFlight"
+            android:label="@string/title_activity_in_flight"
+            android:parentActivityName=".Start" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.utep.cs.pickax.fpms.Start" />
+        </activity>
     </application>
 
 </manifest>

@@ -1,47 +1,47 @@
+/*
+InFlght handles realtime data display and the Google Glass
+ */
 package edu.utep.cs.pickax.fpms;
 
-import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
 
-public class View_StartFlight extends ActionBarActivity {
+public class InFlight extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_flight);
+        setContentView(R.layout.activity_in_flight);
 
-        Button home = (Button)findViewById(R.id.btn_home);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        final TextView speed = (TextView)findViewById(R.id.tv_current_speed);
+        final TextView altitude = (TextView)findViewById(R.id.tv_current_altitude);
+        final TextView remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
+        final TextView heading = (TextView)findViewById(R.id.tv_current_heading);
 
-        Button startFlight = (Button)findViewById(R.id.btn_start_flight);
-        startFlight.setOnClickListener(new View.OnClickListener() {
+        CoordinateProvider c = new CoordinateProvider();
+        c.doInBackground();
+
+        AsyncTask v = new AsyncTask() {
             @Override
-            public void onClick(View v) {
-                //TODO: add alert if there is no flight plan selected
-                Log.d("SF", "Start flight pressed");
-                Intent myIntent = new Intent(View_StartFlight.this, InFlight.class);
-                startActivity(myIntent);
+            protected Object doInBackground(Object[] params) {
+                while(true) {
+                    speed.setText(""+CoordinateProvider.getCurrentSpeed());
+                }
             }
-        });
+        };
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_start_flight, menu);
+        getMenuInflater().inflate(R.menu.menu_in_flight, menu);
         return true;
     }
 
