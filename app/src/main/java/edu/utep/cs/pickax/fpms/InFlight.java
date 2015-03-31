@@ -5,6 +5,7 @@ package edu.utep.cs.pickax.fpms;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,42 +15,39 @@ import android.widget.TextView;
 
 
 public class InFlight extends ActionBarActivity {
+    private final String TAG = "INFLIGHT";
+    private static TextView speed;
+    private static TextView altitude;
+    private static TextView remainingFuel;
+    private static TextView heading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_flight);
 
-        final TextView speed = (TextView)findViewById(R.id.tv_current_speed);
-        final TextView altitude = (TextView)findViewById(R.id.tv_current_altitude);
-        final TextView remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
-        final TextView heading = (TextView)findViewById(R.id.tv_current_heading);
+        speed = (TextView)findViewById(R.id.tv_current_speed);
+        altitude = (TextView)findViewById(R.id.tv_current_altitude);
+        remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
+        heading = (TextView)findViewById(R.id.tv_current_heading);
 
-        Intent mServiceIntent = new Intent(this, CoordinateProvider.class);
-        mServiceIntent.setData(null);
-        this.startService(mServiceIntent);
-
-        Thread updater = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep((long)1000);
-                } catch (InterruptedException e) {
-                    Log.d("SLEEP", "exception in sleep");
-                }
-                heading.setText(""+CoordinateProvider.getCurrentHeading());
-                speed.setText(""+CoordinateProvider.getCurrentSpeed());
-                altitude.setText(""+CoordinateProvider.getCurrentAltitude());
-                heading.setText(""+CoordinateProvider.getCurrentHeading());
-                remainingFuel.setText("...");
+        new CountDownTimer(Long.MAX_VALUE,1000) {
+            public void onTick(long millisUntilFinished) {
+                updateLabels();
             }
-        };
-
-        updater.start();
-
+            public void onFinish() {
+                Log.d(TAG, "countdown done?");
+            }
+        }.start();
 
     }
 
+    private static void updateLabels() {
+        heading.setText("" + CoordinateProvider.getCurrentHeading());
+        speed.setText(""+CoordinateProvider.getCurrentSpeed());
+        altitude.setText(""+CoordinateProvider.getCurrentAltitude());
+        heading.setText(""+CoordinateProvider.getCurrentHeading());
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
