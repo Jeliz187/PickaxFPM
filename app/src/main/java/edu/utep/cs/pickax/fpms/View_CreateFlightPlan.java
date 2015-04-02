@@ -29,7 +29,6 @@ public class View_CreateFlightPlan extends ActionBarActivity {
     private EditText et_airspeed;
     private DatePicker datepick;
 
-
     private EditText et_dateOfFlight;
     private EditText et_departTime;
     private EditText et_cruisingAltitude;
@@ -64,8 +63,8 @@ public class View_CreateFlightPlan extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_flight_plan);
-        initializeViews();
-        initializeSpinners();
+        initializeViews(); //Create references to views
+        initializeSpinners(); //Set the adapters for the spinners
 
         rb_archived.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +91,8 @@ public class View_CreateFlightPlan extends ActionBarActivity {
             }
         });
 
+        //Using the info on the Create Flight Plan screen, create a new FlightPlan object
+        //TODO: error checking
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,6 +126,9 @@ public class View_CreateFlightPlan extends ActionBarActivity {
 
     }
 
+    /**
+     * Sets the adapters for each of the spinners
+     */
     private void initializeSpinners() {
         ac_id.setAdapter(makeAdapter(R.array.array_aircraft_id));
 
@@ -141,10 +145,19 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         sp_altAirport3.setAdapter(makeAdapter(R.array.array_airport_code));
     }
 
+    /**
+     * Sets the adapter using the given array resource
+     * @param arrayResID ID of the array resource to use
+     * @return the correct array adapter
+     */
     private ArrayAdapter<CharSequence> makeAdapter(int arrayResID) {
         return ArrayAdapter.createFromResource(this, arrayResID, android.R.layout.simple_spinner_dropdown_item);
     }
 
+    /**
+     * Computes the Date from the DatePicker
+     * @return the Date object specified by the DatePicker 'datepick'
+     */
     private Date getDate() {
         int day = datepick.getDayOfMonth();
         int month = datepick.getMonth();
@@ -156,6 +169,9 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         return calendar.getTime();
     }
 
+    /**
+     * Creates references to all the relevant views
+     */
     private void initializeViews() {
         et_name= (EditText) findViewById(R.id.et_name);
         et_ATandSE = (EditText) findViewById(R.id.et_at_and_se);

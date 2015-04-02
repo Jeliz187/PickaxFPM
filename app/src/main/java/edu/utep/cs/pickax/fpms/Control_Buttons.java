@@ -8,6 +8,8 @@ import android.view.View;
  */
 public class Control_Buttons {
 
+    //For any home button, returns a onClickListener that returns to the previous activity
+    //TODO: Make it return to the start activity
     public static View.OnClickListener btnListenerHome(Activity a) {
         final Activity activity = a;
         return new View.OnClickListener() {

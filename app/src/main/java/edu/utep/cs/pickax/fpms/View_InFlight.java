@@ -30,6 +30,7 @@ public class View_InFlight extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_flight);
 
+        //TODO: initialize views in separate method
         speed = (TextView)findViewById(R.id.tv_current_speed);
         altitude = (TextView)findViewById(R.id.tv_current_altitude);
         remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
@@ -42,8 +43,10 @@ public class View_InFlight extends ActionBarActivity {
         eta = (TextView)findViewById(R.id.ETA);
         rta = (TextView)findViewById(R.id.RTA);
 
+        //Create instance of Model_CoordinateProvider to start coordinate generation
         Model_CoordinateProvider c = new Model_CoordinateProvider();
 
+        //Use a CountDownTimer to constantly update labels
         new CountDownTimer(Long.MAX_VALUE, 1000) {
             public void onTick(long millisUntilFinished) {
                 updateLabels();
@@ -55,6 +58,10 @@ public class View_InFlight extends ActionBarActivity {
 
     }
 
+    /**
+     * Labels are on "cards" that contain same info as Google Glass cards
+     * This method updates the values on the labels using the Model_CoordinateProvider
+     */
     private static void updateLabels() {
         heading.setText("" + Model_CoordinateProvider.getCurrentHeading());
         speed.setText(""+ Model_CoordinateProvider.getCurrentSpeed());
