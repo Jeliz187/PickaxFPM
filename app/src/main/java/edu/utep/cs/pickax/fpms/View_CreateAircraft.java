@@ -4,14 +4,23 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 
 public class View_CreateAircraft extends ActionBarActivity {
+    private Button btnHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_aircraft);
+        initializeViews();
+
+        btnHome.setOnClickListener(Control_Buttons.btnListenerHome(this));
+    }
+
+    private void initializeViews() {
+        btnHome = (Button) findViewById(R.id.btn_home);
     }
 
     @Override

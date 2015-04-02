@@ -10,22 +10,18 @@ import android.widget.Button;
 
 
 public class View_StartFlight extends ActionBarActivity {
+    private Button btnHome;
+    private Button btnStartFlight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_flight);
+        initializeViews();
 
-        Button home = (Button)findViewById(R.id.btn_home);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        btnHome.setOnClickListener(Control_Buttons.btnListenerHome(this));
 
-        Button startFlight = (Button)findViewById(R.id.btn_start_flight);
-        startFlight.setOnClickListener(new View.OnClickListener() {
+        btnStartFlight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //TODO: add alert if there is no flight plan selected
@@ -34,6 +30,11 @@ public class View_StartFlight extends ActionBarActivity {
             }
         });
 
+    }
+
+    private void initializeViews() {
+        btnHome = (Button) findViewById(R.id.btn_home);
+        btnStartFlight = (Button)findViewById(R.id.btn_start_flight);
     }
 
     @Override
