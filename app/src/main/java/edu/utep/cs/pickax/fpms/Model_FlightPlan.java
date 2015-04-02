@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Created by ruben on 3/17/15.
  */
-public class FlightPlan {
+public class Model_FlightPlan {
     //Fields needed for the flight plan
     private String flightPlanName;
     private final String type = "IFR";
@@ -30,11 +30,11 @@ public class FlightPlan {
     private String remarks;
     private boolean TGFApproval = false;
 
-    public FlightPlan(String flightPlanName1, char aircraftID1, String acTypeAndSpecialEquipment1,
-                      int airspeed1, String departurePoint1, String destination1, Date flightDate1,
-                      int departureTime1, int cruisingAlt1, int estTimeEnroute1, int fuelOnBoard1,
-                      String pilotName1, String contactInfo1, int passengersOnBoard1, int aircraftColor1,
-                      String destContactInfo1, String remarks1){
+    public Model_FlightPlan(String flightPlanName1, char aircraftID1, String acTypeAndSpecialEquipment1,
+                            int airspeed1, String departurePoint1, String destination1, Date flightDate1,
+                            int departureTime1, int cruisingAlt1, int estTimeEnroute1, int fuelOnBoard1,
+                            String pilotName1, String contactInfo1, int passengersOnBoard1, int aircraftColor1,
+                            String destContactInfo1, String remarks1){
         flightPlanName = flightPlanName1;
         aircraftID = aircraftID1;
         acTypeAndSpecialEquipment = acTypeAndSpecialEquipment1;

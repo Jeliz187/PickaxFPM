@@ -12,7 +12,7 @@ import android.util.Log;
 
 import java.util.Random;
 
-public class CoordinateProvider {
+public class Model_CoordinateProvider {
     private static final String TAG = "COORD_PROVIDER";
     private static final Random r = new Random(System.currentTimeMillis());
     private static final int LATITUDE = 0, LONGITUDE = 1;
@@ -20,7 +20,7 @@ public class CoordinateProvider {
     static private double[] albuquerqueCoordinates = {35.043036, -106.616076};
     static private double[] currentCoordinates = elpasoCoordinates;
 
-    public CoordinateProvider() {
+    public Model_CoordinateProvider() {
         new CountDownTimer(Long.MAX_VALUE, 1000) {
             public void onTick(long millisUntilFinished) {
                 generateCoordinates();

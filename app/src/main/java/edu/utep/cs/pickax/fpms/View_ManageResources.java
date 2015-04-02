@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class ManageResources extends ActionBarActivity {
+public class View_ManageResources extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class ManageResources extends ActionBarActivity {
         mng_aircraft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(ManageResources.this, CreateAircraft.class);
+                Intent myIntent = new Intent(View_ManageResources.this, View_CreateAircraft.class);
                 startActivity(myIntent);
             }
         });
@@ -29,7 +29,7 @@ public class ManageResources extends ActionBarActivity {
         mng_routes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(ManageResources.this, RouteDetails.class);
+                Intent myIntent = new Intent(View_ManageResources.this, View_RouteDetails.class);
                 startActivity(myIntent);
             }
         });
@@ -38,7 +38,7 @@ public class ManageResources extends ActionBarActivity {
 //        mng_waypoints.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent myIntent = new Intent(ManageResources.this, Waypoints.class);
+//                Intent myIntent = new Intent(View_ManageResources.this, Waypoints.class);
 //                startActivity(myIntent);
 //            }
 //        });

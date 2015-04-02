@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Start"
+            android:name=".View_Start"
             android:label="@string/title_activity_start" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,64 +17,64 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateFlightPlan"
+            android:name=".View_CreateFlightPlan"
             android:label="@string/title_activity_create_flight_plan" >
         </activity>
         <activity
-            android:name=".RouteDetails"
+            android:name=".View_RouteDetails"
             android:label="@string/title_activity_route_details" >
         </activity>
         <activity
-            android:name=".ArchivedRoutes"
+            android:name=".View_ArchivedRoutes"
             android:label="@string/title_activity_archived_routes"
-            android:parentActivityName=".CreateFlightPlan" >
+            android:parentActivityName=".View_CreateFlightPlan" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.utep.cs.pickax.fpms.CreateFlightPlan" />
+                android:value=".View_CreateFlightPlan" />
         </activity>
         <activity
-            android:name=".CustomRoutes"
+            android:name=".View_CustomRoutes"
             android:label="@string/title_activity_custom_routes" >
         </activity>
         <activity
-            android:name=".ManageFlightPlans"
+            android:name=".View_ManageFlightPlans"
             android:label="@string/title_activity_manage_flight_plans"
-            android:parentActivityName=".Start" >
+            android:parentActivityName=".View_Start" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.utep.cs.pickax.fpms.Start" />
+                android:value=".View_Start" />
         </activity>
         <activity
-            android:name=".CreateAircraft"
+            android:name=".View_CreateAircraft"
             android:label="@string/title_activity_create_aircraft" >
         </activity>
         <activity
-            android:name=".ManageResources"
+            android:name=".View_ManageResources"
             android:label="@string/title_activity_manage_resources"
-            android:parentActivityName=".Start" >
+            android:parentActivityName=".View_Start" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.utep.cs.pickax.fpms.Start" />
+                android:value=".View_Start" />
         </activity>
         <activity
             android:name=".View_SetPreferences"
             android:label="@string/title_activity_view__set_preferences"
-            android:parentActivityName=".Start" >
+            android:parentActivityName=".View_Start" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.utep.cs.pickax.fpms.Start" />
+                android:value=".View_Start" />
         </activity>
         <activity
             android:name=".View_StartFlight"
             android:label="@string/title_activity_view__start_flight" >
         </activity>
         <activity
-            android:name=".InFlight"
+            android:name=".View_InFlight"
             android:label="@string/title_activity_in_flight"
-            android:parentActivityName=".Start" >
+            android:parentActivityName=".View_Start" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.utep.cs.pickax.fpms.Start" />
+                android:value=".View_Start" />
         </activity>
     </application>
 

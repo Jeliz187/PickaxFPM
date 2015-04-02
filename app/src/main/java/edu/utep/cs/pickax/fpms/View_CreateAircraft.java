@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class CreateAircraft extends ActionBarActivity {
+public class View_CreateAircraft extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

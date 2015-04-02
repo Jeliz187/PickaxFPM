@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 
-public class CreateFlightPlan extends ActionBarActivity {
+public class View_CreateFlightPlan extends ActionBarActivity {
 
     private EditText et_name;
     private EditText et_flightType;
@@ -57,7 +57,7 @@ public class CreateFlightPlan extends ActionBarActivity {
     private Button btnHome;
     private Button btnSave;
 
-    private FlightPlan myFlightPlan;
+    private Model_FlightPlan myModelFlightPlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +69,7 @@ public class CreateFlightPlan extends ActionBarActivity {
         rb_archived.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(CreateFlightPlan.this, ArchivedRoutes.class);
+                Intent myIntent = new Intent(View_CreateFlightPlan.this, View_ArchivedRoutes.class);
                 startActivity(myIntent);
             }
         });
@@ -77,7 +77,7 @@ public class CreateFlightPlan extends ActionBarActivity {
         rb_custom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(CreateFlightPlan.this, CustomRoutes.class);
+                Intent myIntent = new Intent(View_CreateFlightPlan.this, View_CustomRoutes.class);
                 startActivity(myIntent);
             }
         });
@@ -100,7 +100,7 @@ public class CreateFlightPlan extends ActionBarActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myFlightPlan = new FlightPlan(et_name.getText().toString(), 'I', et_ATandSE.getText().toString(), Integer.parseInt(et_airspeed.getText().toString()),
+                myModelFlightPlan = new Model_FlightPlan(et_name.getText().toString(), 'I', et_ATandSE.getText().toString(), Integer.parseInt(et_airspeed.getText().toString()),
                         sp_departure.getSelectedItem().toString(), sp_destination.getSelectedItem().toString(), getDate(), Integer.parseInt(et_departTime.getText().toString()),
                         Integer.parseInt(et_cruisingAltitude.getText().toString()), Integer.parseInt(et_estTimeEnroute.getText().toString()),
                         Integer.parseInt(et_fuelOnboard.getText().toString()), et_pilotName.getText().toString(), et_contactInfo.getText().toString(),
@@ -116,7 +116,7 @@ public class CreateFlightPlan extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == parent.getCount()-1) {
                     Intent i = new Intent();
-                    i.setClass(CreateFlightPlan.this, CreateAircraft.class);
+                    i.setClass(View_CreateFlightPlan.this, View_CreateAircraft.class);
                     startActivity(i);
                 }
             }

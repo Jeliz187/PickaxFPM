@@ -9,7 +9,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context="edu.utep.cs.pickax.fpms.Start"
+    tools:context="edu.utep.cs.pickax.fpms.View_Start"
     android:gravity="center">
 
             <Button

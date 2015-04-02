@@ -3,8 +3,6 @@ InFlght handles realtime data display and the Google Glass
  */
 package edu.utep.cs.pickax.fpms;
 
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -14,7 +12,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 //TODO: Stop timers when leaving activity
-public class InFlight extends ActionBarActivity {
+public class View_InFlight extends ActionBarActivity {
     private final String TAG = "INFLIGHT";
     private static TextView speed;
     private static TextView altitude;
@@ -44,7 +42,7 @@ public class InFlight extends ActionBarActivity {
         eta = (TextView)findViewById(R.id.ETA);
         rta = (TextView)findViewById(R.id.RTA);
 
-        CoordinateProvider c = new CoordinateProvider();
+        Model_CoordinateProvider c = new Model_CoordinateProvider();
 
         new CountDownTimer(Long.MAX_VALUE, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -58,13 +56,13 @@ public class InFlight extends ActionBarActivity {
     }
 
     private static void updateLabels() {
-        heading.setText("" + CoordinateProvider.getCurrentHeading());
-        speed.setText(""+CoordinateProvider.getCurrentSpeed());
-        altitude.setText(""+CoordinateProvider.getCurrentAltitude());
-        heading.setText(""+CoordinateProvider.getCurrentHeading());
+        heading.setText("" + Model_CoordinateProvider.getCurrentHeading());
+        speed.setText(""+ Model_CoordinateProvider.getCurrentSpeed());
+        altitude.setText(""+ Model_CoordinateProvider.getCurrentAltitude());
+        heading.setText(""+ Model_CoordinateProvider.getCurrentHeading());
         remainingFuel.setText("?");
 
-        double[] coordPair = CoordinateProvider.getCurrentCoordinates();
+        double[] coordPair = Model_CoordinateProvider.getCurrentCoordinates();
         coordinatesLat.setText("Latitude: "+coordPair[0]);
         coordinatesLon.setText("Longitude: "+coordPair[1]);
         coordinatesLat2.setText("Latitude: "+coordPair[0]);

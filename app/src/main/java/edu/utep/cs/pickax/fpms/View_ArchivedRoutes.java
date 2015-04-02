@@ -1,25 +1,34 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class RouteDetails extends ActionBarActivity {
+public class View_ArchivedRoutes extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_route_details);
+        setContentView(R.layout.activity_archived_routes);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_route_details, menu);
+        getMenuInflater().inflate(R.menu.menu_archived_routes, menu);
         return true;
+    }
+
+
+    //Need to pass info pertaining to the route selected
+    public void showRouteDetails(View v) {
+        Intent myIntent = new Intent(View_ArchivedRoutes.this, View_RouteDetails.class);
+        startActivity(myIntent);
     }
 
     @Override
