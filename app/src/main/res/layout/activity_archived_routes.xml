@@ -1,3 +1,4 @@
+<!-- The horizontal scroll view and scroll view contain everything within the page to allow easy scrolling wherever you finger are on the screen-->
 <HorizontalScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,11 +12,11 @@
     android:fillViewport="true">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scrollView"
         android:fillViewport="true">
-
+<!--Table laytout organizes the content into rows and columns-->
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,13 +86,13 @@
                     android:gravity="center_horizontal" />
 
             </TableRow>
-
+<!-- Simple divider graphic to separate the content from the labels-->
             <View
                 style="@style/Divider"
                 android:background="@android:color/darker_gray"
                 android:layout_alignParentEnd="false"
                 android:layout_below="@+id/RouteDistance" />
-
+<!--An extra row added to test the look of the content to be filled in -->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

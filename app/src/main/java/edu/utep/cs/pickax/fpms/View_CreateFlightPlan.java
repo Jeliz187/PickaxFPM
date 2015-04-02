@@ -1,8 +1,8 @@
 package edu.utep.cs.pickax.fpms;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -106,24 +106,22 @@ public class View_CreateFlightPlan extends ActionBarActivity {
             }
         });
 
+//        ac_id.setOnItemSelectedListener(Control_Spinners.spnrlistener_ac(this)); TODO Refactor Spinners
 
         ac_id.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == parent.getCount()-1) {
+                if (position == parent.getCount() - 1) {
                     Intent i = new Intent();
                     i.setClass(View_CreateFlightPlan.this, View_CreateAircraft.class);
                     startActivity(i);
                 }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
                 // TODO Auto-generated method stub
-
             }
         });
-
     }
 
     /**

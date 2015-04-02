@@ -67,3 +67,4 @@ ant.properties
 local.properties
 proguard.cfg
 proguard-project.txt
+.idea/workspace.xml

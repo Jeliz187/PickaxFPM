@@ -1,3 +1,4 @@
+<!-- The horizontal scroll view and scroll view contain everything within the page to allow easy scrolling wherever you finger are on the screen-->
 <HorizontalScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,7 +16,7 @@
         android:layout_height="match_parent"
         android:id="@+id/scrollView"
         android:fillViewport="true">
-
+        <!-- Table layout allows easy filling of content into cells -->
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +68,7 @@
                 android:background="@android:color/darker_gray"
                 android:layout_alignParentEnd="false"
                 android:layout_below="@+id/RouteDistance" />
-
+<!-- Sample text totest out how the content would look filled in-->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
