@@ -56,6 +56,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
 
     private Button btnHome;
     private Button btnSave;
+    private Button btnSubmit;
 
     private Model_FlightPlan myModelFlightPlan;
 
@@ -82,12 +83,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
             }
         });
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        btnHome.setOnClickListener(Control_Buttons.btnListenerHome(this));
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +92,6 @@ public class View_CreateFlightPlan extends ActionBarActivity {
             }
         });
 
-        Button btnSubmit = (Button)findViewById(R.id.btn_submit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -169,6 +164,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         rb_custom = (RadioButton) findViewById(R.id.rb_custom);
         btnHome = (Button) findViewById(R.id.btn_home);
         btnSave = (Button) findViewById(R.id.btn_save);
+        btnSubmit = (Button)findViewById(R.id.btn_submit);
         datepick = (DatePicker) findViewById(R.id.datePicker);
         et_departTime = (EditText) findViewById(R.id.et_depart_time);
         et_cruisingAltitude = (EditText) findViewById(R.id.et_cruising_altitude);
