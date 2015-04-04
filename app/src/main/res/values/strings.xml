@@ -122,4 +122,7 @@
     <string name="remaining_fuel">Remaining Fuel (gallons)</string>
     <string name="current_heading">Current Heading (degrees)</string>
     <string name="current_coordinates">Current Coordinates</string>
+    <string name="enter_name">enter flight plan nickname</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="et_enter_pilot_name">enter pilot name</string>
 </resources>

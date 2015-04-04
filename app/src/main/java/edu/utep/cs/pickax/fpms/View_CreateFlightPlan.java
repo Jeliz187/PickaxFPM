@@ -3,6 +3,7 @@ package edu.utep.cs.pickax.fpms;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +16,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -28,23 +30,28 @@ public class View_CreateFlightPlan extends ActionBarActivity {
     private EditText et_ATandSE; //Aircraft Type & Special Equipment
     private EditText et_airspeed;
     private DatePicker datepick;
+    private TimePicker timepick;
 
     private EditText et_dateOfFlight;
-    private EditText et_departTime;
     private EditText et_cruisingAltitude;
+
     private RadioGroup rg_routeOptions;
     private RadioButton rb_shortest;
     private RadioButton rb_fastest;
     private RadioButton rb_archived;
     private RadioButton rb_custom;
+
     private EditText et_estTimeEnroute;
     private EditText et_fuelOnboard;
     private EditText et_pilotName;
     private EditText et_contactInfo;
+
     private Spinner sp_numberOnboard;
+
     private EditText et_aircraftColor;
     private EditText et_destContactInfo;
     private EditText et_remarks;
+
     private Spinner ac_id;
     private Spinner sp_destination;
     private Spinner sp_departure;
@@ -96,12 +103,25 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myModelFlightPlan = new Model_FlightPlan(et_name.getText().toString(), 'I', et_ATandSE.getText().toString(), Integer.parseInt(et_airspeed.getText().toString()),
-                        sp_departure.getSelectedItem().toString(), sp_destination.getSelectedItem().toString(), getDate(), Integer.parseInt(et_departTime.getText().toString()),
-                        Integer.parseInt(et_cruisingAltitude.getText().toString()), Integer.parseInt(et_estTimeEnroute.getText().toString()),
-                        Integer.parseInt(et_fuelOnboard.getText().toString()), et_pilotName.getText().toString(), et_contactInfo.getText().toString(),
-                        Integer.parseInt(sp_numberOnboard.getSelectedItem().toString()), Integer.parseInt(et_aircraftColor.getText().toString()),
-                        et_destContactInfo.getText().toString(), et_remarks.getText().toString());
+                myModelFlightPlan = new Model_FlightPlan(
+                        et_name.getText().toString(),
+                        'I',
+                        et_ATandSE.getText().toString(),
+                        Integer.parseInt(et_airspeed.getText().toString()),
+                        sp_departure.getSelectedItem().toString(),
+                        sp_destination.getSelectedItem().toString(),
+                        getDate(),
+                        getTime(),
+                        Integer.parseInt(et_cruisingAltitude.getText().toString()),
+                        Integer.parseInt(et_estTimeEnroute.getText().toString()),
+                        Integer.parseInt(et_fuelOnboard.getText().toString()),
+                        et_pilotName.getText().toString(),
+                        et_contactInfo.getText().toString(),
+                        Integer.parseInt(sp_numberOnboard.getSelectedItem().toString()),
+                        Integer.parseInt(et_aircraftColor.getText().toString()),
+                        et_destContactInfo.getText().toString(),
+                        et_remarks.getText().toString());
+
                 finish();
             }
         });
@@ -167,12 +187,23 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         return calendar.getTime();
     }
 
+    //TODO Fix timepicker
+    private Time getTime() {
+        int day = datepick.getDayOfMonth();
+        int month = datepick.getMonth();
+        int year =  datepick.getYear();
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+
+        return getTime();
+    }
+
     /**
      * Creates references to all the relevant views
      */
     private void initializeViews() {
         et_name= (EditText) findViewById(R.id.et_name);
-        et_ATandSE = (EditText) findViewById(R.id.et_at_and_se);
         et_airspeed = (EditText) findViewById(R.id.et_airspeed);
         rb_archived = (RadioButton) findViewById(R.id.rb_archived);
         rb_custom = (RadioButton) findViewById(R.id.rb_custom);
@@ -180,7 +211,6 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         btnSave = (Button) findViewById(R.id.btn_save);
         btnSubmit = (Button)findViewById(R.id.btn_submit);
         datepick = (DatePicker) findViewById(R.id.datePicker);
-        et_departTime = (EditText) findViewById(R.id.et_depart_time);
         et_cruisingAltitude = (EditText) findViewById(R.id.et_cruising_altitude);
         et_estTimeEnroute = (EditText) findViewById(R.id.et_estimated_time);
         et_fuelOnboard = (EditText) findViewById(R.id.et_fuel_onboard);

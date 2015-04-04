@@ -16,11 +16,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+<!-- Route Section -->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/tv_route"
-                android:text="@string/route" />
+                android:text="@string/route"
+                style="@style/create_fp_subheading_first_level"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -48,25 +48,31 @@
                     android:text="@string/custom_route"/>
             </RadioGroup>
 
+<!-- FlightPlan Name-->
+            <TextView
+                android:text="@string/name"
+                style="@style/create_fp_subheading_first_level"/>
+
             <EditText
-                android:paddingTop="@dimen/activity_horizontal_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et_name"
-                android:hint="@string/name" />
+                android:hint="@string/enter_name" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/et_type"
-                android:text="@string/flight_type_IFR"/>
+                android:text="@string/flight_type_IFR"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"
+                android:padding="10dp"/>
 
+<!-- Aircraft Section-->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ac_used"
+                android:text="@string/aircraft"
                 android:id="@+id/tv_ac_used"
-                android:paddingTop="40dp"/>
+                style="@style/create_fp_subheading_first_level" />
 
             <Spinner
                 android:layout_width="match_parent"
@@ -74,31 +80,42 @@
                 android:id="@+id/sp_aircraft_id"
                 android:spinnerMode="dropdown" />
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/et_at_and_se"
-                android:inputType="none"
-                android:clickable="false"
-                android:cursorVisible="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:hint="@string/at_and_se" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/et_airspeed"
-                android:hint="@string/true_airspeed"
-                android:inputType="numberDecimal"/>
+                android:id="@+id/tv_ac_type"
+                android:text="Aircraft Type: "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:padding="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/tv_ac_equipment"
+                android:hint="Aircraft Equipment: "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enter aircraft color"
+                android:id="@+id/et_aircraft_color"
+                android:inputType="none"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+<!-- Trip Section-->
+            <TextView
+                android:text="Trip"
+                style="@style/create_fp_subheading_first_level"/>
+
+            <TextView
                 android:text="@string/departure_city"
                 android:id="@+id/tv_departure_city"
-                android:textStyle="bold"
-                android:paddingTop="40dp"/>
+                style="@style/create_fp_subheading_second_level"/>
 
             <Spinner
                 android:layout_width="match_parent"
@@ -107,25 +124,51 @@
                 android:spinnerMode="dropdown" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="@string/dest_city"
                 android:id="@+id/tv_dest_city"
-                android:textStyle="bold" />
+                style="@style/create_fp_subheading_second_level"/>
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/sp_dest"
+                android:spinnerMode="dropdown"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_alt_airports"
+                android:text="@string/alternative_airports"
+                style="@style/create_fp_subheading_second_level"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_alt_airport1"
                 android:spinnerMode="dropdown"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_alt_airport2"
+                android:spinnerMode="dropdown"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sp_alt_airport3"
+                android:spinnerMode="dropdown"/>
+
+<!--Time/Date Section-->
+            <TextView
+                android:text="Date and Time"
+                style="@style/create_fp_subheading_first_level"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/flight_date"
+                android:text="@string/departure_date"
                 android:id="@+id/et_date_of_flight"
-                android:textSize="20sp"
-                android:paddingTop="40dp"/>
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             <DatePicker
                 android:layout_width="match_parent"
@@ -134,14 +177,27 @@
                 android:datePickerMode="spinner"
                 android:calendarViewShown="false" />
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="time"
-                android:ems="10"
-                android:id="@+id/et_depart_time"
-                android:hint="@string/hint_depart_time"
-                android:editable="false" />
+                android:id="@+id/tv_depart_time"
+                android:text="@string/hint_depart_time"
+                android:paddingTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker"
+                android:layout_gravity="center_horizontal"
+                android:timePickerMode="spinner" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time Zone"
+                android:paddingTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             <Spinner
                 android:layout_width="match_parent"
@@ -152,19 +208,27 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/et_cruising_altitude"
-                android:hint="@string/cruising_altitude"
-                android:inputType="number"
-                android:paddingTop="40dp"/>
+                android:hint="enter estimated time enroute"
+                android:id="@+id/et_estimated_time"/>
 
-
+<!--Flight Details Section-->
+            <TextView
+            android:text="Flight Details"
+            style="@style/create_fp_subheading_first_level"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/estimated_time_enroute"
-                android:id="@+id/et_estimated_time"
-                android:paddingTop="40dp"/>
+                android:id="@+id/et_airspeed"
+                android:hint="enter true airspeed"
+                android:inputType="numberDecimal"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_cruising_altitude"
+                android:hint="enter cruising altitude"
+                android:inputType="number"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -174,89 +238,41 @@
                 android:cursorVisible="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
-                android:hint="@string/fuel_on_board"
+                android:hint="enter fuel onboard"
                 android:id="@+id/et_fuel_onboard"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_alt_airports"
-                android:text="@string/alternative_airports"
-                android:textStyle="bold"
-                android:paddingTop="40dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/alt_ap1"
-                android:id="@+id/tv_alt_ap1" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/sp_alt_airport1"
-               android:spinnerMode="dropdown"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/alt_ap2"
-                android:id="@+id/tv_alt_ap2" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/sp_alt_airport2"
-                android:spinnerMode="dropdown"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/alt_ap3"
-                android:id="@+id/tv_alt_ap3" />
-
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/sp_alt_airport3"
-                android:spinnerMode="dropdown"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/pilot_name"
-                android:id="@+id/et_pilot_name"
-                android:paddingTop="40dp"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/contact_info"
-                android:id="@+id/et_contact_info"/>
 
             <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/sp_number_onboard"
-                android:entries="@array/number_onboard"
-                android:paddingTop="40dp"/>
+                android:entries="@array/number_onboard"/>
+
+<!-- Contact information Section-->
+            <TextView
+                android:text="Emergency Information"
+                style="@style/create_fp_subheading_first_level"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/aircraft_color"
-                android:id="@+id/et_aircraft_color"
-                android:inputType="none"
-                android:clickable="false"
-                android:cursorVisible="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"/>
+                android:hint="@string/et_enter_pilot_name"
+                android:id="@+id/et_pilot_name"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/dest_contact_info"
+                android:hint="enter contact information"
+                android:id="@+id/et_contact_info"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="enter destination contact information"
                 android:id="@+id/et_dest_contact_info"/>
+
+            <TextView
+                android:text="Notes and Remarks"
+                style="@style/create_fp_subheading_first_level"/>
 
             <EditText
                 android:layout_width="match_parent"

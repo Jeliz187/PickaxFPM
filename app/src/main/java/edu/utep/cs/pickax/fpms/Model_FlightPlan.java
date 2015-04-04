@@ -1,5 +1,7 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.text.format.Time;
+
 import java.util.Date;
 import java.util.LinkedList;
 
@@ -16,7 +18,7 @@ public class Model_FlightPlan {
     private String departurePoint;
     private String destination;
     private Date flightDate;
-    private int departureTime;
+    private Time departureTime;
     private int cruisingAlt;
     //private Route route; //Make a Route Class
     private int estTimeEnroute;
@@ -30,11 +32,24 @@ public class Model_FlightPlan {
     private String remarks;
     private boolean TGFApproval = false;
 
-    public Model_FlightPlan(String flightPlanName1, char aircraftID1, String acTypeAndSpecialEquipment1,
-                            int airspeed1, String departurePoint1, String destination1, Date flightDate1,
-                            int departureTime1, int cruisingAlt1, int estTimeEnroute1, int fuelOnBoard1,
-                            String pilotName1, String contactInfo1, int passengersOnBoard1, int aircraftColor1,
-                            String destContactInfo1, String remarks1){
+    public Model_FlightPlan(String flightPlanName1,
+                            char aircraftID1,
+                            String acTypeAndSpecialEquipment1,
+                            int airspeed1,
+                            String departurePoint1,
+                            String destination1,
+                            Date flightDate1,
+                            Time departureTime1,
+                            int cruisingAlt1,
+                            int estTimeEnroute1,
+                            int fuelOnBoard1,
+                            String pilotName1,
+                            String contactInfo1,
+                            int passengersOnBoard1,
+                            int aircraftColor1,
+                            String destContactInfo1,
+                            String remarks1){
+
         flightPlanName = flightPlanName1;
         aircraftID = aircraftID1;
         acTypeAndSpecialEquipment = acTypeAndSpecialEquipment1;
@@ -83,7 +98,7 @@ public class Model_FlightPlan {
         return flightDate;
     }
 
-    public int getDepartureTime(){
+    public Time getDepartureTime(){
         return departureTime;
     }
 
@@ -152,7 +167,7 @@ public class Model_FlightPlan {
         flightDate = flightDate2;
     }
 
-    public void setDepartureTime(int departureTime2){
+    public void setDepartureTime(Time departureTime2){
         departureTime = departureTime2;
     }
 
