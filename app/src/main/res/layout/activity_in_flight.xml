@@ -164,6 +164,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/RTA"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/speed_alert"/>
+
         </LinearLayout>
 
     </LinearLayout>
