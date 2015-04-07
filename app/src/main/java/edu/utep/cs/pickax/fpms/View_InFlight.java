@@ -3,13 +3,16 @@ InFlght handles realtime data display and the Google Glass
  */
 package edu.utep.cs.pickax.fpms;
 
+import android.graphics.Color;
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import java.util.Random;
 
 //TODO: Stop timers when leaving activity
 public class View_InFlight extends ActionBarActivity {
@@ -24,24 +27,15 @@ public class View_InFlight extends ActionBarActivity {
     private static TextView coordinatesLon2;
     private static TextView eta;
     private static TextView rta;
+    private static TextView speedAlert;
+
+    private static Random r = new Random(System.currentTimeMillis());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_flight);
-
-        //TODO: initialize views in separate method
-        speed = (TextView)findViewById(R.id.tv_current_speed);
-        altitude = (TextView)findViewById(R.id.tv_current_altitude);
-        remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
-        heading = (TextView)findViewById(R.id.tv_current_heading);
-        coordinatesLat = (TextView)findViewById(R.id.tv_current_coordinates_lat);
-        coordinatesLon = (TextView)findViewById(R.id.tv_current_coordinates_lon);
-        //Redundant coordinate textviews for weather map card
-        coordinatesLat2 = (TextView)findViewById(R.id.tv_current_coordinates_lat2);
-        coordinatesLon2 = (TextView)findViewById(R.id.tv_current_coordinates_lon2);
-        eta = (TextView)findViewById(R.id.ETA);
-        rta = (TextView)findViewById(R.id.RTA);
+        initializeViews();
 
         //Create instance of Model_CoordinateProvider to start coordinate generation
         Model_CoordinateProvider c = new Model_CoordinateProvider();
@@ -56,6 +50,21 @@ public class View_InFlight extends ActionBarActivity {
             }
         }.start();
 
+    }
+
+    private void initializeViews() {
+        speed = (TextView)findViewById(R.id.tv_current_speed);
+        altitude = (TextView)findViewById(R.id.tv_current_altitude);
+        remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
+        heading = (TextView)findViewById(R.id.tv_current_heading);
+        coordinatesLat = (TextView)findViewById(R.id.tv_current_coordinates_lat);
+        coordinatesLon = (TextView)findViewById(R.id.tv_current_coordinates_lon);
+        //Redundant coordinate textviews for weather map card
+        coordinatesLat2 = (TextView)findViewById(R.id.tv_current_coordinates_lat2);
+        coordinatesLon2 = (TextView)findViewById(R.id.tv_current_coordinates_lon2);
+        eta = (TextView)findViewById(R.id.ETA);
+        rta = (TextView)findViewById(R.id.RTA);
+        speedAlert = (TextView) findViewById(R.id.speed_alert);
     }
 
     /**
@@ -77,6 +86,27 @@ public class View_InFlight extends ActionBarActivity {
 
         eta.setText("ETA: ?");
         rta.setText("RTA: ?");
+        updateSpeedAlert();
+    }
+
+    //TODO: get the ETA and RTA from the appropriate provider
+    //TODO: See if there is an acceptable range to be within the RTA
+    private static void updateSpeedAlert() {
+        //temporary test values
+        int ETA = r.nextInt();
+        int RTA = r.nextInt();
+
+        if (ETA > RTA) { //compare ETA > RTA. Temp fake values are used just for now
+            speedAlert.setText(R.string.speed_speed_up);
+            speedAlert.setTextColor(Color.RED);
+        } else if (ETA < RTA) { //compare ETA < RTA. Temp fake values are used just for now
+            speedAlert.setText(R.string.speed_slow_down);
+            speedAlert.setTextColor(Color.RED);
+        } else {
+            speedAlert.setText(R.string.speed_on_schedule);
+            speedAlert.setTextColor(Color.GREEN);
+        }
+
     }
 
     @Override
