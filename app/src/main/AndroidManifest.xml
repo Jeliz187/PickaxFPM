@@ -84,6 +84,7 @@
         <activity
             android:name=".View_InFlight"
             android:label="@string/title_activity_in_flight"
+            android:screenOrientation="landscape"
             android:parentActivityName=".View_Start" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
