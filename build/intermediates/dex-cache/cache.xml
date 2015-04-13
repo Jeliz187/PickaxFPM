@@ -2,32 +2,165 @@
 <items version="2" >
 
     <item
-        jar="D:\Android\ADK\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-8c88ea81993602be0de8af7e86d92d61de87888a.jar" />
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-b848f10b4c84c5c7ec68b6784ed5c99a75c856a1.jar" />
     </item>
     <item
-        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-568fe2019f7bb3cd80c6937c4b5ae35694ebfd56.jar" />
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-83d93df8846c3f7821606c8327eb55d16666e0e9.jar" />
     </item>
     <item
-        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-6b59eae95eec988a3abed55912ca2dc4fa37b4ed.jar" />
+        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-9864fc89e81ae8598d3a180a923cd85a799406d3.jar" />
     </item>
     <item
-        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-db6617561672aa49c62d3f43e2085653e35d47f4.jar" />
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-10d141c45889d9fd39eb201ff90f018736ea417e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-1c920e08c8f51ce355c1ba57671dfe2b17416a95.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-73df5945125e462c346483111cda99b8ae547682.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-f3888c615785507ed24154e5f05a7dd36b9bf39b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-904df2b8d844cd6714df6d08323786f8d4b5c9da.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-015139c3c979d6d88cecc4b90cb4f36998d44335.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-e7cde0b61dc0d103c2d20aafb90c82a997a6b389.jar" />
+    </item>
+    <item
+        jar="D:\Android\ADK\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\support-annotations-22.0.0-d4cf19e56091458cdd9a39295adea30a9220d758.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-b85197d3dee7842d4433381de91ed3c14c57e6aa.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-82b7b472fc756f215fb287488d60b82935fe5feb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-123002f72a70e1d33fa0138ec6cc7e24e14c6b1b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-984dd15be0f124fb2ab9538fb682ca1e4762f808.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-7650598a2bd192b6242bf84a13c9400ffa8b5885.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-e1acb41d849ac0feef92898e1bb179fa9a46ddd0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-ddb68621f69668f68ec9170335d5166618a37661.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-97ef05de9597a7a82336d107e844869f803c0c10.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-fa735afaf762faf7470d3e4050029cabfd8d00a2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-015ae147d08bfb86a067780fb9a9f34a74964657.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\internal_impl-22.0.0-d49a71de09d1d0dec34734c5ba80a795755eb23b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\Jacob\StudioProjects\PickaxFPM\app\build\intermediates\pre-dexed\release\classes-de1e40515e84c5ac0adc579ad948712d44df9f45.jar" />
     </item>
 
 </items>

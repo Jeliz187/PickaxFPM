@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PickaxFPM.iml" filepath="$PROJECT_DIR$/PickaxFPM.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fpms_backend/fpms_backend.iml" filepath="$PROJECT_DIR$/fpms_backend/fpms_backend.iml" />
     </modules>
   </component>
 </project>
-
