@@ -3,26 +3,15 @@ InFlght handles realtime data display and the Google Glass
  */
 package edu.utep.cs.pickax.fpms;
 
-import java.util.Locale;
-
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
 import static android.support.v4.app.Fragment.instantiate;
 
 //TODO: Stop timers when leaving activity
@@ -53,9 +42,29 @@ public class View_InFlight extends ActionBarActivity {
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
+
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                getSupportActionBar().setTitle(mSectionsPagerAdapter.getPageTitle(position));
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        getSupportActionBar().setTitle(mSectionsPagerAdapter.getPageTitle(0));
+
+
 
     }
 
@@ -117,14 +126,14 @@ public class View_InFlight extends ActionBarActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            Locale l = Locale.getDefault();
+            String name = getResources().getString(R.string.title_activity_in_flight);
             switch (position) {
                 case 0:
-                    //return getString(R.string.title_section1).toUpperCase(l);
+                    return name + ": Map";
                 case 1:
-                    //return getString(R.string.title_section2).toUpperCase(l);
+                    return name + ": Weather Map";
                 case 2:
-                    //return getString(R.string.title_section3).toUpperCase(l);
+                    return name + ": Time";
             }
             return null;
         }
