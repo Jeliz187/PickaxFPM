@@ -3,81 +3,62 @@ InFlght handles realtime data display and the Google Glass
  */
 package edu.utep.cs.pickax.fpms;
 
-import android.os.CountDownTimer;
+import java.util.Locale;
+
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
+
+import static android.support.v4.app.Fragment.instantiate;
 
 //TODO: Stop timers when leaving activity
 public class View_InFlight extends ActionBarActivity {
-    private final String TAG = "INFLIGHT";
-    private static TextView speed;
-    private static TextView altitude;
-    private static TextView remainingFuel;
-    private static TextView heading;
-    private static TextView coordinatesLat;
-    private static TextView coordinatesLon;
-    private static TextView coordinatesLat2;
-    private static TextView coordinatesLon2;
-    private static TextView eta;
-    private static TextView rta;
+    private Context context;
+    /**
+     * The {@link android.support.v4.view.PagerAdapter} that will provide
+     * fragments for each of the sections. We use a
+     * {@link FragmentPagerAdapter} derivative, which will keep every
+     * loaded fragment in memory. If this becomes too memory intensive, it
+     * may be best to switch to a
+     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+    SectionsPagerAdapter mSectionsPagerAdapter;
+
+    /**
+     * The {@link ViewPager} that will host the section contents.
+     */
+    ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_flight);
+        this.context = this;
 
-        //TODO: initialize views in separate method
-        speed = (TextView)findViewById(R.id.tv_current_speed);
-        altitude = (TextView)findViewById(R.id.tv_current_altitude);
-        remainingFuel = (TextView)findViewById(R.id.tv_remaining_fuel);
-        heading = (TextView)findViewById(R.id.tv_current_heading);
-        coordinatesLat = (TextView)findViewById(R.id.tv_current_coordinates_lat);
-        coordinatesLon = (TextView)findViewById(R.id.tv_current_coordinates_lon);
-        //Redundant coordinate textviews for weather map card
-        coordinatesLat2 = (TextView)findViewById(R.id.tv_current_coordinates_lat2);
-        coordinatesLon2 = (TextView)findViewById(R.id.tv_current_coordinates_lon2);
-        eta = (TextView)findViewById(R.id.ETA);
-        rta = (TextView)findViewById(R.id.RTA);
+        // Create the adapter that will return a fragment for each of the three
+        // primary sections of the activity.
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        //Create instance of Model_CoordinateProvider to start coordinate generation
-        Model_CoordinateProvider c = new Model_CoordinateProvider();
-
-        //Use a CountDownTimer to constantly update labels
-        new CountDownTimer(Long.MAX_VALUE, 1000) {
-            public void onTick(long millisUntilFinished) {
-                updateLabels();
-            }
-            public void onFinish() {
-                Log.d(TAG, "countdown done?");
-            }
-        }.start();
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
 
     }
 
-    /**
-     * Labels are on "cards" that contain same info as Google Glass cards
-     * This method updates the values on the labels using the Model_CoordinateProvider
-     */
-    private static void updateLabels() {
-        heading.setText("" + Model_CoordinateProvider.getCurrentHeading());
-        speed.setText(""+ Model_CoordinateProvider.getCurrentSpeed());
-        altitude.setText(""+ Model_CoordinateProvider.getCurrentAltitude());
-        heading.setText(""+ Model_CoordinateProvider.getCurrentHeading());
-        remainingFuel.setText("?");
-
-        double[] coordPair = Model_CoordinateProvider.getCurrentCoordinates();
-        coordinatesLat.setText("Latitude: "+coordPair[0]);
-        coordinatesLon.setText("Longitude: "+coordPair[1]);
-        coordinatesLat2.setText("Latitude: "+coordPair[0]);
-        coordinatesLon2.setText("Longitude: "+coordPair[1]);
-
-        eta.setText("ETA: ?");
-        rta.setText("RTA: ?");
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,4 +81,53 @@ public class View_InFlight extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    /**
+     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+     * one of the sections/tabs/pages.
+     */
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            Fragment fragment =null;
+            switch (position) {
+                case 0:
+                    fragment = instantiate(context, MapCard.class.getName());
+                    break;
+                case 1:
+                    fragment = instantiate(context, WeatherCard.class.getName());
+                    break;
+                case 2:
+                    fragment = instantiate(context, TimeCard.class.getName());
+                    break;          }
+            return fragment;
+        }
+
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 3;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            Locale l = Locale.getDefault();
+            switch (position) {
+                case 0:
+                    //return getString(R.string.title_section1).toUpperCase(l);
+                case 1:
+                    //return getString(R.string.title_section2).toUpperCase(l);
+                case 2:
+                    //return getString(R.string.title_section3).toUpperCase(l);
+            }
+            return null;
+        }
+    }
+
 }
