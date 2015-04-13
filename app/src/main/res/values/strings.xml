@@ -125,4 +125,5 @@
     <string name="enter_name">enter flight plan nickname</string>
     <string name="departure_date">Departure Date</string>
     <string name="et_enter_pilot_name">enter pilot name</string>
+    <string name="skip_sign_in">SKIP</string>
 </resources>
