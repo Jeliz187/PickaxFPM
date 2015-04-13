@@ -125,8 +125,4 @@
     <string name="enter_name">enter flight plan nickname</string>
     <string name="departure_date">Departure Date</string>
     <string name="et_enter_pilot_name">enter pilot name</string>
-
-    <string name="speed_slow_down">Slow down to satisfy RTA</string>
-    <string name="speed_speed_up">Speed up to satisfy RTA</string>
-    <string name="speed_on_schedule">On schedule to meet RTA</string>
 </resources>
