@@ -77,7 +77,7 @@
     <string-array name="array_dept_dest">
         <item>Choose City</item>
         <item>El Paso</item>
-        <item>Las Cruses</item>
+        <item>Las Cruces</item>
         <item>Alamogordo</item>
         <item>Santa Fe</item>
         <item>Albuquerque</item>
@@ -109,7 +109,7 @@
     <string name="title_activity_view__set_preferences">Set Preferences</string>
     <string name="display_waypoints">Display Waypoints</string>
     <string name="flight_preferences">Flight Preferences</string>
-    <string name="terr_above_alt">terriain above altitude (feet)</string>
+    <string name="terr_above_alt">Terrain above altitude (feet)</string>
     <string name="avoid_water">Avoid Flying Over Water</string>
     <string name="map_view_pref">Map View Preferences</string>
     <string name="display_topo_map">Display Topographical Map</string>
