@@ -18,7 +18,7 @@ public class Model_FlightPlan {
     private String departurePoint;
     private String destination;
     private Date flightDate;
-    private Time departureTime;
+    private int departureTime; //24 time as int
     private int cruisingAlt;
     //private Route route; //Make a Route Class
     private int estTimeEnroute;
@@ -32,41 +32,9 @@ public class Model_FlightPlan {
     private String remarks;
     private boolean TGFApproval = false;
 
-    public Model_FlightPlan(String flightPlanName1,
-                            char aircraftID1,
-                            String acTypeAndSpecialEquipment1,
-                            int airspeed1,
-                            String departurePoint1,
-                            String destination1,
-                            Date flightDate1,
-                            Time departureTime1,
-                            int cruisingAlt1,
-                            int estTimeEnroute1,
-                            int fuelOnBoard1,
-                            String pilotName1,
-                            String contactInfo1,
-                            int passengersOnBoard1,
-                            int aircraftColor1,
-                            String destContactInfo1,
-                            String remarks1){
-
-        flightPlanName = flightPlanName1;
-        aircraftID = aircraftID1;
-        acTypeAndSpecialEquipment = acTypeAndSpecialEquipment1;
-        airspeed = airspeed1;
-        departurePoint = departurePoint1;
-        destination = destination1;
-        flightDate = flightDate1;
-        departureTime = departureTime1;
-        cruisingAlt = cruisingAlt1;
-        estTimeEnroute = estTimeEnroute1;
-        fuelOnBoard = fuelOnBoard1;
-        pilotName = pilotName1;
-        contactInfo = contactInfo1;
-        passengersOnBoard = passengersOnBoard1;
-        aircraftColor = aircraftColor1;
-        destContactInfo = destContactInfo1;
-        remarks = remarks1;
+    //
+    public Model_FlightPlan() {
+        //Empty constructor, fields are added one at a time
     }
 
     //Getter methods
@@ -98,7 +66,7 @@ public class Model_FlightPlan {
         return flightDate;
     }
 
-    public Time getDepartureTime(){
+    public int getDepartureTime(){
         return departureTime;
     }
 
@@ -112,6 +80,10 @@ public class Model_FlightPlan {
 
     public int getFuelOnBoard(){
         return fuelOnBoard;
+    }
+
+    public LinkedList<String> getAltAirports(){
+        return altAirports;
     }
 
     public String getPilotName(){
@@ -138,72 +110,77 @@ public class Model_FlightPlan {
         return remarks;
     }
 
+
     //Setter methods
-    public void setFlightPlanName(String flightPlanName2) {
-        flightPlanName = flightPlanName2;
+    public void setFlightPlanName(String flightPlanName) {
+        this.flightPlanName = flightPlanName;
     }
 
-    public void setAircraftID(char aircraftID2){
-        aircraftID = aircraftID2;
+    public void setAircraftID(char aircraftID){
+        this.aircraftID = aircraftID;
     }
 
-    public void setAcTypeAndSpecialEquipment(String acTypeAndSpecialEquipment2){
-        acTypeAndSpecialEquipment = acTypeAndSpecialEquipment2;
+    public void setAcTypeAndSpecialEquipment(String acTypeAndSpecialEquipment){
+        this.acTypeAndSpecialEquipment = acTypeAndSpecialEquipment;
     }
 
-    public void setAirspeed(int airspeed2){
-        airspeed = airspeed2;
+    public void setAirspeed(int airspeed){
+        this.airspeed = airspeed;
     }
 
     public void setDeparturePoint(String departurePoint2){
         departurePoint = departurePoint2;
     }
 
-    public void setDestination(String destination2){
-        destination = destination2;
+    public void setDestination(String destination){
+        this.destination = destination;
     }
 
-    public void setFlightDate(Date flightDate2){
-        flightDate = flightDate2;
+    public void setFlightDate(Date flightDate){
+        this.flightDate = flightDate;
     }
 
-    public void setDepartureTime(Time departureTime2){
-        departureTime = departureTime2;
+    public void setDepartureTime(int departureTime){
+        this.departureTime = departureTime;
     }
 
-    public void setCruisingAlt(int cruisingAlt2){
-        cruisingAlt = cruisingAlt2;
+    public void setCruisingAlt(int cruisingAlt){
+        this.cruisingAlt = cruisingAlt;
     }
 
-    public void setEstTimeEnroute(int estTimeEnroute2){
-        estTimeEnroute = estTimeEnroute2;
+    public void setEstTimeEnroute(int estTimeEnroute){
+        this.estTimeEnroute = estTimeEnroute;
     }
 
-    public void setFuelOnBoard(int fuelOnBoard2){
-        fuelOnBoard = fuelOnBoard2;
+    public void setFuelOnBoard(int fuelOnBoard){
+        this.fuelOnBoard = fuelOnBoard;
     }
 
-    public void setPilotName(String pilotName2){
-        pilotName = pilotName2;
+    public void setAltAirports(LinkedList<String> altAirports){
+        this.altAirports = altAirports;
     }
 
-    public void setContactInfo(String contactInfo2){
-        contactInfo = contactInfo2;
+    public void setPilotName(String pilotName){
+        this.pilotName = pilotName;
     }
 
-    public void setPassengersOnBoard(int passengersOnBoard2){
-        passengersOnBoard = passengersOnBoard2;
+    public void setContactInfo(String contactInfo){
+        this.contactInfo = contactInfo;
     }
 
-    public void setAircraftColor(int aircraftColor2){
-        aircraftColor = aircraftColor2;
+    public void setPassengersOnBoard(int passengersOnBoard){
+        this.passengersOnBoard = passengersOnBoard;
     }
 
-    public void setDestContactInfo(String destContactInfo2){
-        destContactInfo = destContactInfo2;
+    public void setAircraftColor(int aircraftColor){
+        this.aircraftColor = aircraftColor;
     }
 
-    public void setRemarks(String remarks2){
-        remarks = remarks2;
+    public void setDestContactInfo(String destContactInfo){
+        this.destContactInfo = destContactInfo;
+    }
+
+    public void setRemarks(String remarks){
+        this.remarks = remarks;
     }
 }

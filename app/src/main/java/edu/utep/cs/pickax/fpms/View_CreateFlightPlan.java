@@ -20,6 +20,7 @@ import android.widget.TimePicker;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
 
 
 public class View_CreateFlightPlan extends ActionBarActivity {
@@ -99,35 +100,36 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         });
 
         //Using the info on the Create Flight Plan screen, create a new FlightPlan object
-        //TODO: error checking
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myModelFlightPlan = new Model_FlightPlan(
-                        et_name.getText().toString(),
-                        'I',
-                        et_ATandSE.getText().toString(),
-                        Integer.parseInt(et_airspeed.getText().toString()),
-                        sp_departure.getSelectedItem().toString(),
-                        sp_destination.getSelectedItem().toString(),
-                        getDate(),
-                        getTime(),
-                        Integer.parseInt(et_cruisingAltitude.getText().toString()),
-                        Integer.parseInt(et_estTimeEnroute.getText().toString()),
-                        Integer.parseInt(et_fuelOnboard.getText().toString()),
-                        et_pilotName.getText().toString(),
-                        et_contactInfo.getText().toString(),
-                        Integer.parseInt(sp_numberOnboard.getSelectedItem().toString()),
-                        Integer.parseInt(et_aircraftColor.getText().toString()),
-                        et_destContactInfo.getText().toString(),
-                        et_remarks.getText().toString());
+                //TODO Exception handling
+                myModelFlightPlan = new Model_FlightPlan();
+                myModelFlightPlan.setFlightPlanName(et_name.getText().toString());
+                //myModelFlightPlan.setAircraftID(); //TODO get Aircraft information
+                //myModelFlightPlan.setAcTypeAndSpecialEquipment(); //TODO get Aircraft information
+                myModelFlightPlan.setAirspeed(Integer.parseInt(et_airspeed.getText().toString()));
+                myModelFlightPlan.setDeparturePoint(sp_departure.getSelectedItem().toString());
+                myModelFlightPlan.setDestination(sp_destination.getSelectedItem().toString());
+                myModelFlightPlan.setFlightDate(getSpecifiedDate());
+                myModelFlightPlan.setDepartureTime(getSpecifiedTime());
+                myModelFlightPlan.setCruisingAlt(Integer.parseInt(et_cruisingAltitude.getText().toString()));
+                //TODO look into how we handle routes
+                myModelFlightPlan.setEstTimeEnroute(calculateEstTimeEnroute());
+                //myModelFlightPlan.setFuelOnBoard(); //TODO get Aircraft information
+                myModelFlightPlan.setAltAirports(altAirportsAsList());
+                myModelFlightPlan.setPilotName(et_pilotName.getText().toString());
+                myModelFlightPlan.setContactInfo(et_contactInfo.getText().toString());
+                myModelFlightPlan.setPassengersOnBoard(Integer.parseInt(sp_numberOnboard.getSelectedItem().toString()));
+                //myModelFlightPlan.setAircraftColor(); //TODO get Aircraft information
+                myModelFlightPlan.setDestContactInfo(et_destContactInfo.getText().toString());
+                myModelFlightPlan.setRemarks(et_remarks.getText().toString());
 
                 finish();
             }
         });
 
-//        ac_id.setOnItemSelectedListener(Control_Spinners.spnrlistener_ac(this)); TODO Refactor Spinners
-
+        //TODO Refactor Spinners
         ac_id.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -139,9 +141,21 @@ public class View_CreateFlightPlan extends ActionBarActivity {
             }
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
-                // TODO Auto-generated method stub
             }
         });
+    }
+
+    private int calculateEstTimeEnroute(){
+        //TODO calculations
+        return 310;
+    }
+
+    private LinkedList<String> altAirportsAsList(){
+        LinkedList<String> list = new LinkedList<>();
+        list.add(sp_altAirport1.getSelectedItem().toString());
+        list.add(sp_altAirport2.getSelectedItem().toString());
+        list.add(sp_altAirport3.getSelectedItem().toString());
+        return list;
     }
 
     /**
@@ -176,7 +190,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
      * Computes the Date from the DatePicker
      * @return the Date object specified by the DatePicker 'datepick'
      */
-    private Date getDate() {
+    private Date getSpecifiedDate() {
         int day = datepick.getDayOfMonth();
         int month = datepick.getMonth();
         int year =  datepick.getYear();
@@ -187,16 +201,10 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         return calendar.getTime();
     }
 
-    //TODO Fix timepicker
-    private Time getTime() {
-        int day = datepick.getDayOfMonth();
-        int month = datepick.getMonth();
-        int year =  datepick.getYear();
-
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, day);
-
-        return getTime();
+    private int getSpecifiedTime() {
+        String hr = "" + timepick.getCurrentHour();
+        String min = "" + timepick.getCurrentMinute();
+        return Integer.parseInt(hr+min);
     }
 
     /**
@@ -211,6 +219,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         btnSave = (Button) findViewById(R.id.btn_save);
         btnSubmit = (Button)findViewById(R.id.btn_submit);
         datepick = (DatePicker) findViewById(R.id.datePicker);
+        timepick = (TimePicker) findViewById(R.id.timePicker);
         et_cruisingAltitude = (EditText) findViewById(R.id.et_cruising_altitude);
         et_estTimeEnroute = (EditText) findViewById(R.id.et_estimated_time);
         et_fuelOnboard = (EditText) findViewById(R.id.et_fuel_onboard);
@@ -227,6 +236,10 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         sp_altAirport1 = (Spinner) findViewById(R.id.sp_alt_airport1);
         sp_altAirport2 = (Spinner) findViewById(R.id.sp_alt_airport2);
         sp_altAirport3 = (Spinner) findViewById(R.id.sp_alt_airport3);
+        sp_numberOnboard = (Spinner) findViewById(R.id.sp_number_onboard);
+
+        timepick.setIs24HourView(true);
+        timepick.setCurrentHour(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
     }
 
     @Override

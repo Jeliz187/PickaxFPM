@@ -216,7 +216,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="enter estimated time enroute"
-                        android:id="@+id/et_estimated_time"/>
+                        android:id="@+id/et_estimated_time"
+                        android:inputType="numberDecimal"/>
 
                     <!--Flight Details Section-->
                     <TextView
@@ -247,6 +248,13 @@
                         android:focusableInTouchMode="false"
                         android:hint="enter fuel onboard"
                         android:id="@+id/et_fuel_onboard"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_onboard"
+                        android:paddingTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
 
                     <Spinner
                         android:layout_width="match_parent"
