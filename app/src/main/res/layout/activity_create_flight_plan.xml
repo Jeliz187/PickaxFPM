@@ -10,20 +10,20 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="edu.utep.cs.pickax.fpms.View_CreateFlightPlan">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-            <ScrollView
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">>
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <!-- Route Section -->
+                android:layout_height="match_parent">
+                <!-- Route Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -63,9 +63,9 @@
                             android:layout_height="wrap_content"
                             android:text="@string/custom_route"/>
                     </RadioGroup>
-                    </LinearLayout>
+                </LinearLayout>
 
-                    <!-- FlightPlan Name-->
+                <!-- FlightPlan Name-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -92,9 +92,9 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textStyle="bold"
                         android:padding="10dp"/>
-                    </LinearLayout>
+                </LinearLayout>
 
-                    <!-- Aircraft Section-->
+                <!-- Aircraft Section-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -140,9 +140,9 @@
                         android:cursorVisible="false"
                         android:focusable="false"
                         android:focusableInTouchMode="false"/>
-                    </LinearLayout>
+                </LinearLayout>
 
-                    <!-- Trip Section-->
+                <!-- Trip Section-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -200,9 +200,9 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/sp_alt_airport3"
                         android:spinnerMode="dropdown"/>
-                    </LinearLayout>
+                </LinearLayout>
 
-                    <!--Time/Date Section-->
+                <!--Time/Date Section-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -263,9 +263,9 @@
                         android:hint="enter estimated time enroute"
                         android:id="@+id/et_estimated_time"
                         android:inputType="numberDecimal"/>
-                    </LinearLayout>
+                </LinearLayout>
 
-                    <!--Flight Details Section-->
+                <!--Flight Details Section-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -315,9 +315,9 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/sp_number_onboard"
                         android:entries="@array/number_onboard"/>
-                    </LinearLayout>
+                </LinearLayout>
 
-                    <!-- Contact information Section-->
+                <!-- Contact information Section-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -347,8 +347,9 @@
                         android:layout_height="wrap_content"
                         android:hint="enter destination contact information"
                         android:id="@+id/et_dest_contact_info"/>
-                    </LinearLayout>
+                </LinearLayout>
 
+                <!-- Remarks Section-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -366,46 +367,46 @@
                         android:layout_height="100dp"
                         android:hint="@string/remarks"
                         android:id="@+id/et_remarks"/>
-                    </LinearLayout>
-
                 </LinearLayout>
-            </ScrollView>
 
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btn_home"
-                    android:text="@string/home" />
-
-                <Button
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btn_save"
-                    android:text="@string/save"/>
-
-                <Button
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btn_submit"
-                    android:text="@string/submit"/>
-
-                <Button
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btn_clear"
-                    android:text="@string/clear"/>
             </LinearLayout>
+        </ScrollView>
 
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_home"
+                android:text="@string/home" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_save"
+                android:text="@string/save"/>
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_submit"
+                android:text="@string/submit"/>
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_clear"
+                android:text="@string/clear"/>
         </LinearLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>
