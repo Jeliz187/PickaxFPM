@@ -24,6 +24,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <!-- Route Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
+
                     <TextView
                         android:id="@+id/tv_route"
                         android:text="@string/route"
@@ -54,8 +63,17 @@
                             android:layout_height="wrap_content"
                             android:text="@string/custom_route"/>
                     </RadioGroup>
+                    </LinearLayout>
 
                     <!-- FlightPlan Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
                     <TextView
                         android:text="@string/name"
                         style="@style/create_fp_subheading_first_level"/>
@@ -74,8 +92,17 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textStyle="bold"
                         android:padding="10dp"/>
+                    </LinearLayout>
 
                     <!-- Aircraft Section-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
                     <TextView
                         android:text="@string/aircraft"
                         android:id="@+id/tv_ac_used"
@@ -113,8 +140,17 @@
                         android:cursorVisible="false"
                         android:focusable="false"
                         android:focusableInTouchMode="false"/>
+                    </LinearLayout>
 
                     <!-- Trip Section-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
                     <TextView
                         android:text="Trip"
                         style="@style/create_fp_subheading_first_level"/>
@@ -164,8 +200,17 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/sp_alt_airport3"
                         android:spinnerMode="dropdown"/>
+                    </LinearLayout>
 
                     <!--Time/Date Section-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
                     <TextView
                         android:text="Date and Time"
                         style="@style/create_fp_subheading_first_level"/>
@@ -218,8 +263,17 @@
                         android:hint="enter estimated time enroute"
                         android:id="@+id/et_estimated_time"
                         android:inputType="numberDecimal"/>
+                    </LinearLayout>
 
                     <!--Flight Details Section-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
                     <TextView
                         android:text="Flight Details"
                         style="@style/create_fp_subheading_first_level"/>
@@ -261,8 +315,17 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/sp_number_onboard"
                         android:entries="@array/number_onboard"/>
+                    </LinearLayout>
 
                     <!-- Contact information Section-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
                     <TextView
                         android:text="Emergency Information"
                         style="@style/create_fp_subheading_first_level"/>
@@ -284,7 +347,16 @@
                         android:layout_height="wrap_content"
                         android:hint="enter destination contact information"
                         android:id="@+id/et_dest_contact_info"/>
+                    </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin">
                     <TextView
                         android:text="Notes and Remarks"
                         style="@style/create_fp_subheading_first_level"/>
@@ -294,6 +366,8 @@
                         android:layout_height="100dp"
                         android:hint="@string/remarks"
                         android:id="@+id/et_remarks"/>
+                    </LinearLayout>
+
                 </LinearLayout>
             </ScrollView>
 
