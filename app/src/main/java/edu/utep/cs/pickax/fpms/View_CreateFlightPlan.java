@@ -65,7 +65,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
     private Button btnSave;
     private Button btnSubmit;
 
-    private Model_FlightPlan myModelFlightPlan;
+    private static Model_FlightPlan myModelFlightPlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,6 +145,10 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         });
     }
 
+    public static Model_FlightPlan getFlightPlan() {
+        return myModelFlightPlan;
+    }
+
     private int calculateEstTimeEnroute(){
         //TODO calculations
         return 310;
@@ -197,7 +201,6 @@ public class View_CreateFlightPlan extends ActionBarActivity {
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month, day);
-
         return calendar.getTime();
     }
 
