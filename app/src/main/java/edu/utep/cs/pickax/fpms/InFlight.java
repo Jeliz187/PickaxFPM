@@ -4,6 +4,7 @@ InFlght handles realtime data display and the Google Glass
 package edu.utep.cs.pickax.fpms;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,8 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import static android.support.v4.app.Fragment.instantiate;
 
+//TODO Fix crash when returning to map activity
 //TODO: Stop timers when leaving activity
-public class InFlight extends ActionBarActivity {
+public class InFlight extends ActionBarActivity implements GoogleMap.OnFragmentInteractionListener {
     private Context context;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -89,6 +91,11 @@ public class InFlight extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
 

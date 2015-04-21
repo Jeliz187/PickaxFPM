@@ -1,9 +1,44 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="edu.utep.cs.pickax.fpms.WeatherCard">
+    android:layout_height="match_parent" tools:context="edu.utep.cs.pickax.fpms.WeatherCard"
+    android:background="#000000"
+    android:orientation="horizontal"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="WEATHER CARD" />
+    <fragment
+        android:id="@+id/w_map"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        class="edu.utep.cs.pickax.fpms.GoogleMap"
+        android:padding="16dp"
 
-</FrameLayout>
+        >
+
+    </fragment>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:padding="16dp"
+        >
+        <TextView
+            android:text="Speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:id="@+id/w_speedlabel"
+            />
+
+        <TextView
+            android:text="Altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_below="@id/w_speedlabel"
+            android:id="@+id/w_textView3"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

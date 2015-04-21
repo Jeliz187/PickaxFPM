@@ -1,22 +1,42 @@
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="edu.utep.cs.pickax.fpms.MapCard"
-    android:columnCount="20"
-    android:rowCount="11">
+    android:orientation="horizontal"
+    android:background="#000000">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Speed"
-        android:id="@+id/textView2"
-        android:layout_row="0"
-        android:layout_column="0" />
+    <fragment
+        android:id="@+id/m_map"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        class="edu.utep.cs.pickax.fpms.GoogleMap"
+        android:padding="16dp"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Altitude"
-        android:id="@+id/textView3"
-        android:layout_row="0"
-        android:layout_column="2" />
-</GridLayout>
+    </fragment>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:padding="16dp"
+        >
+        <TextView
+            android:text="Speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:id="@+id/speedlabel"
+            />
+
+        <TextView
+            android:text="Altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_below="@id/speedlabel"
+            android:id="@+id/textView3"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
