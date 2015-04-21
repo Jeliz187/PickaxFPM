@@ -3,7 +3,6 @@ package edu.utep.cs.pickax.fpms;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,7 +22,7 @@ import java.util.Date;
 import java.util.LinkedList;
 
 
-public class View_CreateFlightPlan extends ActionBarActivity {
+public class CreateFlightPlan extends ActionBarActivity {
 
     private EditText et_name;
     private EditText et_flightType;
@@ -65,7 +64,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
     private Button btnSave;
     private Button btnSubmit;
 
-    private static Model_FlightPlan myModelFlightPlan;
+    private static FlightPlan myModelFlightPlan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +76,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         rb_archived.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(View_CreateFlightPlan.this, View_ArchivedRoutes.class);
+                Intent myIntent = new Intent(CreateFlightPlan.this, ArchivedRoutes.class);
                 startActivity(myIntent);
             }
         });
@@ -85,7 +84,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         rb_custom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(View_CreateFlightPlan.this, View_CustomRoutes.class);
+                Intent myIntent = new Intent(CreateFlightPlan.this, CustomRoutes.class);
                 startActivity(myIntent);
             }
         });
@@ -104,7 +103,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 //TODO Exception handling
-                myModelFlightPlan = new Model_FlightPlan();
+                myModelFlightPlan = new FlightPlan();
                 myModelFlightPlan.setFlightPlanName(et_name.getText().toString());
                 //myModelFlightPlan.setAircraftID(); //TODO get Aircraft information
                 //myModelFlightPlan.setAcTypeAndSpecialEquipment(); //TODO get Aircraft information
@@ -135,7 +134,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == parent.getCount() - 1) {
                     Intent i = new Intent();
-                    i.setClass(View_CreateFlightPlan.this, View_CreateAircraft.class);
+                    i.setClass(CreateFlightPlan.this, CreateAircraft.class);
                     startActivity(i);
                 }
             }
@@ -145,7 +144,7 @@ public class View_CreateFlightPlan extends ActionBarActivity {
         });
     }
 
-    public static Model_FlightPlan getFlightPlan() {
+    public static FlightPlan getFlightPlan() {
         return myModelFlightPlan;
     }
 

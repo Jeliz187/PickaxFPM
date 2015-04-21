@@ -8,7 +8,7 @@ import java.util.LinkedList;
 /**
  * Created by ruben on 3/17/15.
  */
-public class Model_FlightPlan {
+public class FlightPlan {
     //Fields needed for the flight plan
     private String flightPlanName;
     private final String type = "IFR";
@@ -33,7 +33,7 @@ public class Model_FlightPlan {
     private boolean TGFApproval = false;
 
     //
-    public Model_FlightPlan() {
+    public FlightPlan() {
         //Empty constructor, fields are added one at a time
     }
 

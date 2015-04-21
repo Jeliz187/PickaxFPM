@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class View_Start extends ActionBarActivity {
+public class Start extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class View_Start extends ActionBarActivity {
         flightPlan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(View_Start.this, View_CreateFlightPlan.class);
+                Intent myIntent = new Intent(Start.this, CreateFlightPlan.class);
                 startActivity(myIntent);
             }
         });
@@ -29,7 +29,7 @@ public class View_Start extends ActionBarActivity {
         mng_flight_plan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(View_Start.this, View_ManageFlightPlans.class);
+                Intent myIntent = new Intent(Start.this, ManageFlightPlans.class);
                 startActivity(myIntent);
             }
         });
@@ -38,7 +38,7 @@ public class View_Start extends ActionBarActivity {
         mng_resources.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(View_Start.this, View_ManageResources.class);
+                Intent myIntent = new Intent(Start.this, ManageResources.class);
                 startActivity(myIntent);
             }
         });
@@ -47,7 +47,7 @@ public class View_Start extends ActionBarActivity {
         usr_pref.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(View_Start.this, View_SetPreferences.class);
+                Intent myIntent = new Intent(Start.this, SetPreferences.class);
                 startActivity(myIntent);
             }
         });
@@ -56,7 +56,7 @@ public class View_Start extends ActionBarActivity {
         start_flight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(View_Start.this, View_StartFlight.class);
+                Intent myIntent = new Intent(Start.this, StartFlight.class);
                 startActivity(myIntent);
             }
         });

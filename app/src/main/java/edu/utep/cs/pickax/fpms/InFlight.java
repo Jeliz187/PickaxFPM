@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import static android.support.v4.app.Fragment.instantiate;
 
 //TODO: Stop timers when leaving activity
-public class View_InFlight extends ActionBarActivity {
+public class InFlight extends ActionBarActivity {
     private Context context;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide

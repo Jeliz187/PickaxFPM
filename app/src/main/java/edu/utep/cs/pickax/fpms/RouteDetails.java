@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class View_RouteDetails extends ActionBarActivity {
+public class RouteDetails extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

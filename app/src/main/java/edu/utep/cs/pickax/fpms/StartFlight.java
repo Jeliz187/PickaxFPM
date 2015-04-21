@@ -11,10 +11,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import java.util.Calendar;
 
-
-public class View_StartFlight extends ActionBarActivity {
+public class StartFlight extends ActionBarActivity {
     private Button btnHome;
     private Button btnStartFlight;
     private TableLayout flightsTable;
@@ -32,7 +30,7 @@ public class View_StartFlight extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 //TODO: add alert if there is no flight plan selected
-                Intent myIntent = new Intent(View_StartFlight.this, View_InFlight.class);
+                Intent myIntent = new Intent(StartFlight.this, InFlight.class);
                 startActivity(myIntent);
             }
         });
@@ -40,7 +38,7 @@ public class View_StartFlight extends ActionBarActivity {
     }
 
     private void addFlight() {
-        Model_FlightPlan plan = View_CreateFlightPlan.getFlightPlan();
+        edu.utep.cs.pickax.fpms.FlightPlan plan = CreateFlightPlan.getFlightPlan();
 
         if(plan == null){
             return;

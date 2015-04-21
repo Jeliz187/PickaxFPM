@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.ContentResolver;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -79,7 +78,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         skipSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent myIntent = new Intent(LoginActivity.this, View_Start.class);
+                Intent myIntent = new Intent(LoginActivity.this, Start.class);
                 startActivity(myIntent);
             }
         });

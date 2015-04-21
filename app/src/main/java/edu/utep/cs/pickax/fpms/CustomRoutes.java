@@ -4,28 +4,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-
-import static edu.utep.cs.pickax.fpms.R.id.sp_aircraft_id;
 
 
-public class View_SetPreferences extends ActionBarActivity {
+public class CustomRoutes extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view__set_preferences);
-
-        Spinner ac_id = (Spinner) findViewById(sp_aircraft_id);
-        ArrayAdapter<CharSequence> ac_id_adapter = ArrayAdapter.createFromResource(this, R.array.array_aircraft_id, android.R.layout.simple_spinner_dropdown_item);
-        ac_id.setAdapter(ac_id_adapter);
+        setContentView(R.layout.activity_custom_routes2);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_view__set_preferences, menu);
+        getMenuInflater().inflate(R.menu.menu_custom_routes, menu);
         return true;
     }
 
