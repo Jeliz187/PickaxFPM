@@ -1,4 +1,4 @@
-package edu.utep.cs.pickax.fpms; // TODO Refactor, sumbit, save, and clear
+package edu.utep.cs.pickax.fpms;
 
 import android.app.Activity;
 import android.view.View;
