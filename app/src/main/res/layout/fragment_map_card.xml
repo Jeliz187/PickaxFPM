@@ -21,22 +21,43 @@
         android:layout_width="0dp"
         android:padding="16dp"
         >
-        <TextView
-            android:text="Speed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:id="@+id/speedlabel"
-            />
 
+        <!--Speed-->
         <TextView
-            android:text="Altitude"
+            android:id="@+id/card1_speed_label"
+            android:textColor="#ffffff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/speed_label"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/in_flight_speed"
             android:textColor="#ffffff"
-            android:layout_below="@id/speedlabel"
-            android:id="@+id/textView3"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text=" ..."
+            android:layout_toEndOf="@id/card1_speed_label" />
+
+        <!--Altitude-->
+        <TextView
+            android:id="@+id/card1_altitude_label"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/altitude_label"
+            android:textSize="30sp"
+            android:layout_below="@id/card1_speed_label" />
+        <TextView
+            android:id="@+id/in_flight_altitude"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text=" ..."
+            android:layout_toEndOf="@id/card1_altitude_label"
+            android:layout_below="@id/card1_speed_label" />
+
     </RelativeLayout>
 
 </LinearLayout>
