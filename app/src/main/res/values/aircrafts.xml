@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<aircrafts>
+  <aircraft id="aircraft 1">
+    <color>red</color>
+    <type>jet</type>
+    <equipment>lifeboat</equipment>
+    <max_speed>3000</max_speed>
+    <max_fuel>450</max_fuel>
+    <max_altitude>2000</max_altitude>
+  </aircraft>
+</aircrafts>

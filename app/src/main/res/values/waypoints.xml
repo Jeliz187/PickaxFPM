@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<waypoints>
+   <waypoint id="ELP">
+      <lat></lat>
+      <lon></lon>
+      <name>El Paso</name>
+   </waypoint>
+   <waypoint id="LRU">
+      <lat></lat>
+      <lon></lon>
+      <name>Las Cruces</name>
+   </waypoint>
+</waypoints>
