@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<aircrafts>
+
+  <aircraft>
+    <name></name>
+    <ID>29Q84FB9</ID>
+    <model></model>
+    <color>gold</color>
+    <cruise_speed_min>200</cruise_speed_min>
+    <cruise_speed_normal>250</cruise_speed_normal>
+    <cruise_speed_max>300</cruise_speed_max>
+    <cruise_altitude_min>500</cruise_altitude_min>
+    <cruise_altitude_normal></cruise_altitude_normal>
+    <cruise_altitude_max></cruise_altitude_max>
+    <fuel_consumption></fuel_consumption>
+    <consumption_rate></consumption_rate>
+  </aircraft>
+
+
+</aircrafts>

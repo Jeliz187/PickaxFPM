@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<airports>
+
+  <airport id="ELP">
+    <name>El Paso</name>
+    <waypoint>VPELP</waypoint>
+    <runway_closures></runway_closures>
+    <op_open>700</op_open>
+    <op_close>2000</op_close>
+  </airport>
+
+
+</airports>
