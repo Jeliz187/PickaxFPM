@@ -58,6 +58,45 @@
             android:layout_toEndOf="@id/card1_altitude_label"
             android:layout_below="@id/card1_speed_label" />
 
+
+        <!--Remaining Fuel-->
+        <TextView
+            android:id="@+id/card1_fuel_label"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fuel_label"
+            android:textSize="30sp"
+            android:layout_below="@id/card1_altitude_label" />
+        <TextView
+            android:id="@+id/in_flight_fuel"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text=" ..."
+            android:layout_toEndOf="@id/card1_fuel_label"
+            android:layout_below="@id/card1_altitude_label" />
+
+
+        <!--Heading-->
+        <TextView
+            android:id="@+id/card1_heading_label"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/heading_label"
+            android:textSize="30sp"
+            android:layout_below="@id/card1_fuel_label" />
+        <TextView
+            android:id="@+id/in_flight_heading"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text=" ..."
+            android:layout_toEndOf="@id/card1_heading_label"
+            android:layout_below="@id/card1_fuel_label" />
     </RelativeLayout>
 
 </LinearLayout>

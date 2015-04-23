@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
 import static android.support.v4.app.Fragment.instantiate;
 
 //TODO Fix crash when returning to map activity
@@ -65,8 +67,6 @@ public class InFlight extends ActionBarActivity implements GoogleMap.OnFragmentI
         });
         mViewPager.setAdapter(mSectionsPagerAdapter);
         getSupportActionBar().setTitle(mSectionsPagerAdapter.getPageTitle(0));
-
-
 
     }
 
