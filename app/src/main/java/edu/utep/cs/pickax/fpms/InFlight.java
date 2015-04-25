@@ -11,9 +11,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextClock;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import static android.support.v4.app.Fragment.instantiate;
 
@@ -49,6 +54,7 @@ public class InFlight extends ActionBarActivity implements GoogleMap.OnFragmentI
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
+
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -65,9 +71,11 @@ public class InFlight extends ActionBarActivity implements GoogleMap.OnFragmentI
 
             }
         });
+
         mViewPager.setAdapter(mSectionsPagerAdapter);
         getSupportActionBar().setTitle(mSectionsPagerAdapter.getPageTitle(0));
 
+        //TODO use Display class here (?) to update labels
     }
 
 
@@ -111,7 +119,7 @@ public class InFlight extends ActionBarActivity implements GoogleMap.OnFragmentI
 
         @Override
         public Fragment getItem(int position) {
-            Fragment fragment =null;
+            Fragment fragment = null;
             switch (position) {
                 case 0:
                     fragment = instantiate(context, MapCard.class.getName());
@@ -144,6 +152,8 @@ public class InFlight extends ActionBarActivity implements GoogleMap.OnFragmentI
             }
             return null;
         }
+
     }
+
 
 }
