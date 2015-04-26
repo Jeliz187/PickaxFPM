@@ -1,5 +1,6 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -16,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -102,8 +104,20 @@ public class CreateFlightPlan extends ActionBarActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO Exception handling
+                try {
+                    setFields();
+                } catch (Exception e) {
+                    Context context = getApplicationContext();
+                    CharSequence text = getResources().getString(R.string.missing_field);
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
+            }
+
+            private void setFields() {
                 myModelFlightPlan = new FlightPlan();
+                //TODO Exception handling
                 myModelFlightPlan.setFlightPlanName(et_name.getText().toString());
                 //myModelFlightPlan.setAircraftID(); //TODO get Aircraft information
                 //myModelFlightPlan.setAcTypeAndSpecialEquipment(); //TODO get Aircraft information
