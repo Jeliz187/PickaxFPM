@@ -73,16 +73,11 @@
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/FlightPlan.java" line="31" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dea81e53-5506-4b78-adb8-13691b713417" name="Default" comment="Class for resources">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/GoogleMap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/MapCard.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/TimeCard.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/WeatherCard.java" afterPath="" />
+    <list default="true" id="dea81e53-5506-4b78-adb8-13691b713417" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/LatLngInterpolator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/LoginActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/InFlight.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/InFlight.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_in_flight.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_in_flight.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_map_card.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_map_card.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_weather_card.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_weather_card.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="00b719ec-00e4-4c25-9e57-25e767818401" name="New changelist" comment="" />
@@ -150,52 +145,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InFlight.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/InFlight.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
-              <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6261343" vertical-offset="0" max-vertical-offset="1680">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.24500908" vertical-offset="165" max-vertical-offset="1605">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#977#995#0" expanded="true" />
-                <element signature="e#1245#1275#0" expanded="true" />
-                <element signature="e#1581#1611#0" expanded="true" />
-                <element signature="e#1723#1766#0" expanded="true" />
-                <element signature="e#1874#1912#0" expanded="true" />
-                <element signature="e#2022#2062#0" expanded="true" />
-                <element signature="e#2368#2406#0" expanded="true" />
-                <element signature="e#2519#2563#0" expanded="true" />
-                <element signature="e#2849#2889#0" expanded="true" />
-                <element signature="e#3000#3041#0" expanded="true" />
-                <element signature="e#3327#3373#0" expanded="true" />
-                <element signature="e#3656#3699#0" expanded="true" />
-                <element signature="e#3979#4013#0" expanded="true" />
+                <element signature="e#1237#1267#0" expanded="true" />
+                <element signature="e#1567#1610#0" expanded="true" />
+                <element signature="e#1718#1756#0" expanded="true" />
+                <element signature="e#1866#1906#0" expanded="true" />
+                <element signature="e#2212#2250#0" expanded="true" />
+                <element signature="e#2363#2407#0" expanded="true" />
+                <element signature="e#2693#2733#0" expanded="true" />
+                <element signature="e#2844#2885#0" expanded="true" />
+                <element signature="e#3171#3217#0" expanded="true" />
+                <element signature="e#3500#3543#0" expanded="true" />
+                <element signature="e#3823#3857#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_in_flight.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_in_flight.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8846154" vertical-offset="0" max-vertical-offset="165">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -2734,7 +2703,11 @@
       <created>1429990684310</created>
       <updated>1429990684311</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Removed map things">
+      <created>1430071025753</created>
+      <updated>1430071025753</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2809,7 +2782,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed something that broke when merging." />
     <MESSAGE value="Orientation set to landscape for in flight cards&#10;" />
     <MESSAGE value="Show page name in the actionbar" />
     <MESSAGE value="Small layout change, still working..." />
@@ -2834,7 +2806,8 @@
     <MESSAGE value="map popup files" />
     <MESSAGE value="interpolator from https://gist.github.com/broady/6314689#file-2latlnginterpolator-java to help with map" />
     <MESSAGE value="Inflight changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inflight changes" />
+    <MESSAGE value="Removed map things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed map things" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2921,27 +2894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_aircraft.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3045" max-vertical-offset="3735">
           <caret line="203" column="20" selection-start-line="203" selection-start-column="20" selection-end-line="203" selection-end-column="78" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7777777" vertical-offset="735" max-vertical-offset="1260">
-          <caret line="54" column="75" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -3002,13 +2958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11764706" vertical-offset="97" max-vertical-offset="675">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Control_Buttons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44117647" vertical-offset="0" max-vertical-offset="578">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -3142,13 +3091,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/LatLngInterpolator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28097984" vertical-offset="0" max-vertical-offset="1335">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/XMLParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19056262" vertical-offset="0" max-vertical-offset="551">
@@ -3217,24 +3159,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/Control_Buttons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6261343" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.24500908" vertical-offset="165" max-vertical-offset="1605">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#977#995#0" expanded="true" />
-            <element signature="e#1245#1275#0" expanded="true" />
-            <element signature="e#1581#1611#0" expanded="true" />
-            <element signature="e#1723#1766#0" expanded="true" />
-            <element signature="e#1874#1912#0" expanded="true" />
-            <element signature="e#2022#2062#0" expanded="true" />
-            <element signature="e#2368#2406#0" expanded="true" />
-            <element signature="e#2519#2563#0" expanded="true" />
-            <element signature="e#2849#2889#0" expanded="true" />
-            <element signature="e#3000#3041#0" expanded="true" />
-            <element signature="e#3327#3373#0" expanded="true" />
-            <element signature="e#3656#3699#0" expanded="true" />
-            <element signature="e#3979#4013#0" expanded="true" />
+            <element signature="e#1237#1267#0" expanded="true" />
+            <element signature="e#1567#1610#0" expanded="true" />
+            <element signature="e#1718#1756#0" expanded="true" />
+            <element signature="e#1866#1906#0" expanded="true" />
+            <element signature="e#2212#2250#0" expanded="true" />
+            <element signature="e#2363#2407#0" expanded="true" />
+            <element signature="e#2693#2733#0" expanded="true" />
+            <element signature="e#2844#2885#0" expanded="true" />
+            <element signature="e#3171#3217#0" expanded="true" />
+            <element signature="e#3500#3543#0" expanded="true" />
+            <element signature="e#3823#3857#0" expanded="true" />
           </folding>
         </state>
       </provider>
