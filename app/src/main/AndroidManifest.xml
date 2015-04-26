@@ -21,7 +21,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="put-the-key-here"/>
+            android:value="keyhere"/>
 
         <activity
             android:name=".LoginActivity"
@@ -87,12 +87,15 @@
         </activity>
         <activity
             android:name=".StartFlight"
-            android:label="@string/title_activity_view__start_flight" >
+            android:label="@string/title_activity_view__start_flight"
+            android:parentActivityName=".Start" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Start" />
         </activity>
         <activity
             android:name=".InFlight"
             android:label="@string/title_activity_in_flight"
-            android:screenOrientation="landscape"
             android:parentActivityName=".Start" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

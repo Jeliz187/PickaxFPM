@@ -4,30 +4,27 @@
     android:orientation="horizontal"
     android:background="#000000">
 
-    <!--
     <fragment
         android:id="@+id/m_map"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:layout_width="0dp"
-        class="edu.utep.cs.pickax.fpms.GoogleMap"
-        android:padding="16dp"
-        >
-
-    </fragment>
-    -->
-
-    <!-- Try hosting the fragment directly -->
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/g_map"
-        android:layout_height="match_parent"
-        android:layout_width="0dp"
-        android:layout_weight="1"
         class="com.google.android.gms.maps.MapFragment"
         android:padding="16dp"
         >
 
     </fragment>
+
+    <!--
+    <com.google.android.gms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/g_map"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        >
+    </com.google.android.gms.maps.MapView>
+    -->
 
     <RelativeLayout
         android:layout_height="match_parent"
