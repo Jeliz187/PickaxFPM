@@ -11,6 +11,10 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 
 public class StartFlight extends ActionBarActivity {
     private Button btnHome;
@@ -55,7 +59,12 @@ public class StartFlight extends ActionBarActivity {
         row.setLayoutParams(trParams);
 
         name.setText(plan.getFlightPlanName());
-        date.setText(plan.getFlightDate().getMonth()+"/"+plan.getFlightDate().getDay()+"/"+(plan.getFlightDate().getYear()+1900));
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(plan.getFlightDate());
+
+        date.setText(new SimpleDateFormat("MM/dd/yyyy", Locale.US).format(calendar.getTime()));
+
         departDest.setText(plan.getDeparturePoint()+"-"+plan.getDestination());
         time.setText(plan.getDepartureTime()+"");
 

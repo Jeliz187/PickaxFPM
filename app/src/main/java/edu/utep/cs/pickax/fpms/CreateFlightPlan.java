@@ -142,7 +142,6 @@ public class CreateFlightPlan extends ActionBarActivity {
             }
         });
 
-        //TODO Refactor Spinners
         ac_id.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -256,23 +255,6 @@ public class CreateFlightPlan extends ActionBarActivity {
 
         timepick.setIs24HourView(true);
         timepick.setCurrentHour(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putString("Name", et_name.getText().toString());
-        super.onSaveInstanceState(savedInstanceState);
-    }
-
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        // Restore UI state from the savedInstanceState.
-        // This bundle has also been passed to onCreate.
-        //boolean myBoolean = savedInstanceState.getBoolean("MyBoolean");
-        et_name.setText(savedInstanceState.getString("Name"));
-        Log.d("COOL", "Restored a field - on restore");
-
     }
 
     @Override
