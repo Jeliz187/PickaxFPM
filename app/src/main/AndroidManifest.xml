@@ -94,7 +94,7 @@
             android:parentActivityName=".Start" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Start" />
+                android:value=".StartFlight" />
         </activity>
     </application>
 
