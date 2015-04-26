@@ -1,5 +1,6 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -37,9 +38,26 @@ public class StartFlight extends ActionBarActivity {
         btnStartFlight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
                 Context context = getApplicationContext();
                 Toast toast;
-                if(selectionCount == 1) {
+
+                if (mBluetoothAdapter == null) {
+                    // Device does not support Bluetooth
+                    toast = Toast.makeText(context, "No bluetooth available", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                } else {
+                    if (!mBluetoothAdapter.isEnabled()) {
+                        // Bluetooth is not enabled)
+                        toast = Toast.makeText(context, "Enable bluetooth before continuing", Toast.LENGTH_SHORT);
+                        toast.show();
+                        return;
+                    }
+                }
+
+                //TODO restore if to selectionCount == 1
+                if(true) {
                     Intent myIntent = new Intent(StartFlight.this, InFlight.class);
                     startActivity(myIntent);
                 } else if(selectionCount > 1) {
