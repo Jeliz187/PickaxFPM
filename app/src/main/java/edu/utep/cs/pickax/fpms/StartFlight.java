@@ -1,5 +1,6 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -7,9 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -20,6 +23,7 @@ public class StartFlight extends ActionBarActivity {
     private Button btnHome;
     private Button btnStartFlight;
     private TableLayout flightsTable;
+    private int selectionCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +37,18 @@ public class StartFlight extends ActionBarActivity {
         btnStartFlight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: add alert if there is no flight plan selected
-                Intent myIntent = new Intent(StartFlight.this, InFlight.class);
-                startActivity(myIntent);
+                Context context = getApplicationContext();
+                Toast toast;
+                if(selectionCount == 1) {
+                    Intent myIntent = new Intent(StartFlight.this, InFlight.class);
+                    startActivity(myIntent);
+                } else if(selectionCount > 1) {
+                    toast = Toast.makeText(context, getResources().getString(R.string.multiple_selections), Toast.LENGTH_SHORT);
+                    toast.show();
+                } else if(selectionCount < 1) {
+                    toast = Toast.makeText(context, getResources().getString(R.string.no_selections), Toast.LENGTH_SHORT);
+                    toast.show();
+                }
             }
         });
 
@@ -53,6 +66,8 @@ public class StartFlight extends ActionBarActivity {
         TextView date = new TextView(this);
         TextView departDest = new TextView(this);
         TextView time = new TextView(this);
+        CheckBox selector =  new CheckBox(this);
+        setUpCheckBox(selector);
 
         TableRow.LayoutParams trParams = new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT);
@@ -68,12 +83,27 @@ public class StartFlight extends ActionBarActivity {
         departDest.setText(plan.getDeparturePoint()+"-"+plan.getDestination());
         time.setText(plan.getDepartureTime()+"");
 
+        row.addView(selector);
         row.addView(name);
         row.addView(date);
         row.addView(departDest);
         row.addView(time);
 
         flightsTable.addView(row);
+    }
+
+    private void setUpCheckBox(CheckBox selector) {
+        selector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox thisThing = (CheckBox)v;
+                if (thisThing.isChecked()) {
+                    selectionCount++;
+                } else {
+                    selectionCount--;
+                }
+            }
+        });
     }
 
     private void initializeViews() {

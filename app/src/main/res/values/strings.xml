@@ -134,4 +134,6 @@
     <string name="fuel_label">Remaining Fuel:</string>
     <string name="heading_label">Heading:</string>
     <string name="missing_field">A field was missing. Please ensure all fields are entered and try again.</string>
+    <string name="multiple_selections">Multiple flight plans selected. Please select only one and try again.</string>
+    <string name="no_selections">No flight plan selected. Please select one and try again.</string>
 </resources>

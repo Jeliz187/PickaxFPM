@@ -90,11 +90,7 @@
         </activity>
         <activity
             android:name=".InFlight"
-            android:label="@string/title_activity_in_flight"
-            android:parentActivityName=".Start" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StartFlight" />
+            android:label="@string/title_activity_in_flight">
         </activity>
     </application>
 

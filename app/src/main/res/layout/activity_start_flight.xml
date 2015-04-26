@@ -32,9 +32,14 @@
                     android:layout_height="match_parent"
                     android:paddingTop="20dp"
                     android:paddingBottom="20dp" >
+
+                    <Space
+                        android:layout_width="40dp"
+                        android:layout_column="0" />
+
                     <TextView android:id="@+id/tv_name_col"
                         android:text="@string/name"
-                        android:layout_column="0"
+                        android:layout_column="1"
                         android:textStyle="bold"
                         style="@style/cell_padding"
                         android:gravity="center_horizontal" />
@@ -42,7 +47,7 @@
                     <TextView
                         android:text="@string/narrow_flight_date"
                         android:id="@+id/tv_DOF"
-                        android:layout_column="1"
+                        android:layout_column="2"
                         android:textStyle="bold"
                         style="@style/cell_padding"
                         android:gravity="center_horizontal" />
@@ -50,7 +55,7 @@
                     <TextView
                         android:text="@string/departuredest"
                         android:id="@+id/tv_departure_dest_col"
-                        android:layout_column="2"
+                        android:layout_column="3"
                         android:textStyle="bold"
                         style="@style/cell_padding"
                         android:gravity="center_horizontal" />
@@ -58,7 +63,7 @@
                     <TextView
                         android:text="@string/depart_time"
                         android:id="@+id/tv_depart_time"
-                        android:layout_column="3"
+                        android:layout_column="4"
                         android:textStyle="bold"
                         style="@style/cell_padding"
                         android:textAlignment="center"
