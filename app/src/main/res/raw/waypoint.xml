@@ -1,16 +1,16 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <waypoints>
 
   <waypoint>
     <name>VPElP</name>
-    <lat></lat>
-    <long></long>
+    <lat>12</lat>
+    <long>23</long>
   </waypoint>
 
   <waypoint>
     <name>VPElP</name>
-    <lat></lat>
-    <long></long>
+    <lat>34</lat>
+    <long>23</long>
   </waypoint>
 
 </waypoints>

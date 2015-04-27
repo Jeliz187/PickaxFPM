@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aircrafts>
+
+    <aircraft>
+        <name>UFO</name>
+        <ID>29Q84FB9</ID>
+        <model>model</model>
+        <color>gold</color>
+        <cruise_speed_min>200</cruise_speed_min>
+        <cruise_speed_normal>250</cruise_speed_normal>
+        <cruise_speed_max>300</cruise_speed_max>
+        <cruise_altitude_min>500</cruise_altitude_min>
+        <cruise_altitude_normal>1000</cruise_altitude_normal>
+        <cruise_altitude_max>2000</cruise_altitude_max>
+        <fuel_consumption>5</fuel_consumption>
+        <consumption_rate>5</consumption_rate>
+    </aircraft>
+
+    <aircraft>
+        <name>Gulfstream G550</name>
+        <ID>QBWIFMLC0E</ID>
+        <model>G550</model>
+        <color>orange</color>
+        <cruise_speed_min>300</cruise_speed_min>
+        <cruise_speed_normal>450</cruise_speed_normal>
+        <cruise_speed_max>500</cruise_speed_max>
+        <cruise_altitude_min>900</cruise_altitude_min>
+        <cruise_altitude_normal>1100</cruise_altitude_normal>
+        <cruise_altitude_max>2200</cruise_altitude_max>
+        <fuel_consumption>5</fuel_consumption>
+        <consumption_rate>5</consumption_rate>
+    </aircraft>
+
+    <aircraft>
+        <name>Dassult Falcon 10</name>
+        <ID>MM8J3JJDJ9</ID>
+        <model>Falcon 10</model>
+        <color>white</color>
+        <cruise_speed_min>300</cruise_speed_min>
+        <cruise_speed_normal>450</cruise_speed_normal>
+        <cruise_speed_max>500</cruise_speed_max>
+        <cruise_altitude_min>900</cruise_altitude_min>
+        <cruise_altitude_normal>1100</cruise_altitude_normal>
+        <cruise_altitude_max>2200</cruise_altitude_max>
+        <fuel_consumption>5</fuel_consumption>
+        <consumption_rate>5</consumption_rate>
+    </aircraft>
+
+</aircrafts>

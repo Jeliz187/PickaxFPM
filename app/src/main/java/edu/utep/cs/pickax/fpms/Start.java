@@ -3,13 +3,23 @@ package edu.utep.cs.pickax.fpms;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import org.xml.sax.InputSource;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedList;
+
 
 public class Start extends ActionBarActivity {
+    LinkedList<Aircraft> aircraftList;
+    LinkedList<Airport> airportList;
+    LinkedList<Waypoint> waypointList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +29,8 @@ public class Start extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        loadResouces();
 
         Button flightPlan = (Button)findViewById(R.id.btn_create_fp);
         flightPlan.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +76,44 @@ public class Start extends ActionBarActivity {
                 startActivity(myIntent);
             }
         });
+    }
+
+    private void loadResouces() {
+        InputStream aircraft = null;
+        InputStream airports = null;
+        InputStream waypoints = null;
+
+        int count = 0;
+
+
+        aircraft = getResources().openRawResource(R.raw.aircraftcharacteristic);
+        airports = getResources().openRawResource(R.raw.airport);
+        waypoints = getResources().openRawResource(R.raw.waypoint);
+
+        XMLParser myParser = new XMLParser(aircraft, airports, waypoints);
+        aircraftList = myParser.getAllAircraft();
+        airportList = myParser.getAllAirports();
+        waypointList = myParser.getAllWaypoints();
+
+
+        for(Aircraft a : aircraftList) {
+            count++;
+        }
+        Log.d("START", "LOADED " +count+ " AIRCRAFT FROM FILE");
+        count = 0;
+
+        for(Airport a : airportList) {
+            count++;
+        }
+        Log.d("START", "LOADED " +count+ " AIRPORT(S) FROM FILE");
+        count = 0;
+
+        for(Waypoint a : waypointList) {
+            count++;
+        }
+        Log.d("START", "LOADED " +count+ " WAYPOINT(S) FROM FILE");
+
+
     }
 
 

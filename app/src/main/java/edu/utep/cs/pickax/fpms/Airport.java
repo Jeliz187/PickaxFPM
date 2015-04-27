@@ -15,35 +15,49 @@ public class Airport {
         this.associatedWaypoint = associatedWaypoint;
     }
 
+    public Airport(){
+        //empty constructor
+    }
+
     public String getName() {
         return name;
     }
 
-    public String getRunwayClosures() {
-        return runwayClosures;
-    }
-
-    public int getOpenTime() {
-        return opHoursOpen;
-    }
-
-    public int getCloseTime() {
-        return opHoursClose;
-    }
-
-    public double getLatitude() {
-        return associatedWaypoint.getLatitude();
-    }
-
-    public double getLongitude() {
-        return associatedWaypoint.getLongitude();
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Waypoint getAssociatedWaypoint() {
         return associatedWaypoint;
     }
 
+    public void setAssociatedWaypoint(Waypoint associatedWaypoint) {
+        this.associatedWaypoint = associatedWaypoint;
+    }
 
+    public int getOpHoursClose() {
+        return opHoursClose;
+    }
+
+    public void setOpHoursClose(int opHoursClose) {
+        this.opHoursClose = opHoursClose;
+    }
+
+    public int getOpHoursOpen() {
+        return opHoursOpen;
+    }
+
+    public void setOpHoursOpen(int opHoursOpen) {
+        this.opHoursOpen = opHoursOpen;
+    }
+
+    public String getRunwayClosures() {
+        return runwayClosures;
+    }
+
+    public void setRunwayClosures(String runwayClosures) {
+        this.runwayClosures = runwayClosures;
+    }
 
     public boolean isInOperationHours(int time) {
         return time >= opHoursOpen && time <= opHoursClose;

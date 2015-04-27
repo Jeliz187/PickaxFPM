@@ -32,54 +32,105 @@ public class Aircraft {
 
     }
 
+    public Aircraft(){
+        //empty constructor used for adding fields one at a time
+    }
+
     public String getName() {
         return name;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public int getMinCruiseSpeed() {
-        return minCruiseSpeed;
-    }
-
-    public int getNormalCruiseSpeed() {
-        return normalCruiseSpeed;
-    }
-
-    public int getMaxCruiseSpeed() {
-        return maxCruiseSpeed;
-    }
-
-    public int getMinCruiseAltitude() {
-        return minCruiseAltitude;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getNormalCruiseAltitude() {
         return normalCruiseAltitude;
     }
 
+    public void setNormalCruiseAltitude(int normalCruiseAltitude) {
+        this.normalCruiseAltitude = normalCruiseAltitude;
+    }
+
+    public int getMaxCruiseSpeed() {
+        return maxCruiseSpeed;
+    }
+
+    public void setMaxCruiseSpeed(int maxCruiseSpeed) {
+        this.maxCruiseSpeed = maxCruiseSpeed;
+    }
+
+    public int getMinCruiseAltitude() {
+        return minCruiseAltitude;
+    }
+
+    public void setMinCruiseAltitude(int minCruiseAltitude) {
+        this.minCruiseAltitude = minCruiseAltitude;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getMinCruiseSpeed() {
+        return minCruiseSpeed;
+    }
+
+    public void setMinCruiseSpeed(int minCruiseSpeed) {
+        this.minCruiseSpeed = minCruiseSpeed;
+    }
+
+    public int getNormalCruiseSpeed() {
+        return normalCruiseSpeed;
+    }
+
+    public void setNormalCruiseSpeed(int normalCruiseSpeed) {
+        this.normalCruiseSpeed = normalCruiseSpeed;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public int getMaxCruiseAltitude() {
         return maxCruiseAltitude;
     }
 
-    public int getFuelConsumption() {
-        return fuelConsumption;
+    public void setMaxCruiseAltitude(int maxCruiseAltitude) {
+        this.maxCruiseAltitude = maxCruiseAltitude;
     }
 
     public int getConsumptionRate() {
         return consumptionRate;
     }
 
+    public void setConsumptionRate(int consumptionRate) {
+        this.consumptionRate = consumptionRate;
+    }
+
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
 
     public boolean isSafeSpeed(int speed) {
         return speed>=minCruiseSpeed && speed<=maxCruiseSpeed;
