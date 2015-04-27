@@ -1,13 +1,17 @@
 package edu.utep.cs.pickax.fpms;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
 
-public class CreateAircraft extends ActionBarActivity {
+
+public class CreateAircraft extends ActionBarActivity{
+
+
+
     private Button btnHome;
 
     @Override
@@ -15,7 +19,6 @@ public class CreateAircraft extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_aircraft);
         initializeViews();
-
         btnHome.setOnClickListener(Control_Buttons.btnListenerHome(this));
     }
 
