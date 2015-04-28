@@ -2,16 +2,16 @@
 <aircrafts>
 
     <aircraft>
-        <name>UFO</name>
+        <name>Cessna Citation II</name>
         <ID>29Q84FB9</ID>
-        <model>model</model>
-        <color>gold</color>
-        <cruise_speed_min>200</cruise_speed_min>
-        <cruise_speed_normal>250</cruise_speed_normal>
-        <cruise_speed_max>300</cruise_speed_max>
-        <cruise_altitude_min>500</cruise_altitude_min>
-        <cruise_altitude_normal>1000</cruise_altitude_normal>
-        <cruise_altitude_max>2000</cruise_altitude_max>
+        <model>Citation II</model>
+        <color>white</color>
+        <cruise_speed_min>303</cruise_speed_min>
+        <cruise_speed_normal>403</cruise_speed_normal>
+        <cruise_speed_max>503</cruise_speed_max>
+        <cruise_altitude_min>23000</cruise_altitude_min>
+        <cruise_altitude_normal>33000</cruise_altitude_normal>
+        <cruise_altitude_max>43000</cruise_altitude_max>
         <fuel_consumption>5</fuel_consumption>
         <consumption_rate>5</consumption_rate>
     </aircraft>
@@ -20,28 +20,28 @@
         <name>Gulfstream G550</name>
         <ID>QBWIFMLC0E</ID>
         <model>G550</model>
-        <color>orange</color>
-        <cruise_speed_min>300</cruise_speed_min>
-        <cruise_speed_normal>450</cruise_speed_normal>
-        <cruise_speed_max>500</cruise_speed_max>
-        <cruise_altitude_min>900</cruise_altitude_min>
-        <cruise_altitude_normal>1100</cruise_altitude_normal>
-        <cruise_altitude_max>2200</cruise_altitude_max>
+        <color>gold</color>
+        <cruise_speed_min>400</cruise_speed_min>
+        <cruise_speed_normal>500</cruise_speed_normal>
+        <cruise_speed_max>600</cruise_speed_max>
+        <cruise_altitude_min>31000</cruise_altitude_min>
+        <cruise_altitude_normal>41000</cruise_altitude_normal>
+        <cruise_altitude_max>51000</cruise_altitude_max>
         <fuel_consumption>5</fuel_consumption>
         <consumption_rate>5</consumption_rate>
     </aircraft>
 
     <aircraft>
-        <name>Dassult Falcon 10</name>
+        <name>Dassult Falcon 5X</name>
         <ID>MM8J3JJDJ9</ID>
-        <model>Falcon 10</model>
-        <color>white</color>
-        <cruise_speed_min>300</cruise_speed_min>
-        <cruise_speed_normal>450</cruise_speed_normal>
-        <cruise_speed_max>500</cruise_speed_max>
-        <cruise_altitude_min>900</cruise_altitude_min>
-        <cruise_altitude_normal>1100</cruise_altitude_normal>
-        <cruise_altitude_max>2200</cruise_altitude_max>
+        <model>Falcon 5X</model>
+        <color>gray</color>
+        <cruise_speed_min>270</cruise_speed_min>
+        <cruise_speed_normal>370</cruise_speed_normal>
+        <cruise_speed_max>470</cruise_speed_max>
+        <cruise_altitude_min>31000</cruise_altitude_min>
+        <cruise_altitude_normal>41000</cruise_altitude_normal>
+        <cruise_altitude_max>51000</cruise_altitude_max>
         <fuel_consumption>5</fuel_consumption>
         <consumption_rate>5</consumption_rate>
     </aircraft>

@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <airports>
 
-  <airport id="ELP">
-    <name>El Paso</name>
-    <waypoint>VPELP</waypoint>
-    <runway_closures>none</runway_closures>
-    <op_open>700</op_open>
-    <op_close>2000</op_close>
-  </airport>
+    <airport id="ELP">
+        <name>El Paso International Airport</name>
+        <waypoint>VPELP</waypoint>
+        <runway_closures>none</runway_closures>
+        <op_open>700</op_open>
+        <op_close>2000</op_close>
+    </airport>
 
+    <airport id="LRU">
+        <name>Las Cruces International Airport</name>
+        <waypoint>VPLRU</waypoint>
+        <runway_closures>runway 4</runway_closures>
+        <op_open>800</op_open>
+        <op_close>2100</op_close>
+    </airport>
+
+    <airport id="ALM">
+        <name>Alamogordo–White Sands Regional Airport</name>
+        <waypoint>VPALM</waypoint>
+        <runway_closures>none</runway_closures>
+        <op_open>900</op_open>
+        <op_close>1700</op_close>
+    </airport>
+
+    <airport id="SAF">
+        <name>Santa Fe Municipal Airport</name>
+        <waypoint>VPSAF</waypoint>
+        <runway_closures>none</runway_closures>
+        <op_open>700</op_open>
+        <op_close>2000</op_close>
+    </airport>
+
+    <airport id="ABQ">
+        <name>Albuquerque International Sunport</name>
+        <waypoint>VPABQ</waypoint>
+        <runway_closures>runway 7, runway 8</runway_closures>
+        <op_open>600</op_open>
+        <op_close>2200</op_close>
+    </airport>
 
 </airports>

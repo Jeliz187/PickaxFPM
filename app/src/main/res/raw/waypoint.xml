@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <waypoints>
 
-  <waypoint>
-    <name>VPElP</name>
-    <lat>12</lat>
-    <long>23</long>
-  </waypoint>
+    <waypoint>
+        <name>VPELP</name>
+        <lat>31.805335</lat>
+        <long>-106.382434</long>
+    </waypoint>
 
-  <waypoint>
-    <name>VPElP</name>
-    <lat>34</lat>
-    <long>23</long>
-  </waypoint>
+    <waypoint>
+        <name>VPLRU</name>
+        <lat>32.2838479</lat>
+        <long>-106.9160385</long>
+    </waypoint>
+
+    <waypoint>
+        <name>VPALM</name>
+        <lat>32.839929</lat>
+        <long>-105.9892181</long>
+    </waypoint>
+
+    <waypoint>
+        <name>VPSAF</name>
+        <lat>35.6139667</lat>
+        <long>-106.0795532</long>
+    </waypoint>
+
+    <waypoint>
+        <name>VPABQ</name>
+        <lat>35.0383401</lat>
+        <long>-106.6098352</long>
+    </waypoint>
 
 </waypoints>
