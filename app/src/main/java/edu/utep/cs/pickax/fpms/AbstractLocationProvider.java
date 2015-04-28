@@ -4,11 +4,6 @@ phone/tablet GPS
  */
 package edu.utep.cs.pickax.fpms;
 
-import android.os.CountDownTimer;
-import android.util.Log;
-
-import java.util.Random;
-
 public abstract class AbstractLocationProvider {
 
     abstract double[] CurrentCoordinates();
