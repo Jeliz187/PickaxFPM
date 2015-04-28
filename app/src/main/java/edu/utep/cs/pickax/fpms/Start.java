@@ -25,6 +25,7 @@ public class Start extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         if (getIntent().getBooleanExtra("EXIT", false)) {
             finish();
+            System.exit(0);
         }
 
         super.onCreate(savedInstanceState);
