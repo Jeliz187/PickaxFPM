@@ -2,7 +2,6 @@ package edu.utep.cs.pickax.fpms;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 /**
@@ -10,7 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
  */
 public final class KnowledgeBase {
 
-    private KBHelper dbHelper;
+    private AC_KBHelper dbHelper;
     private SQLiteDatabase database;
 
     //Aircraft KnowledgeBase Variables
@@ -45,7 +44,7 @@ public final class KnowledgeBase {
     public static final String AP_WP = "ap_wp";
 
     public KnowledgeBase(Context context){
-        dbHelper = new KBHelper(context);
+        dbHelper = new AC_KBHelper(context);
         database = dbHelper.getWritableDatabase();
     }
 
@@ -54,34 +53,31 @@ public final class KnowledgeBase {
             Integer normcs, Integer maxcs, Integer minca, Integer normca,
             Integer maxca, Integer fuelcap, Integer fuelrate ){
 
-        ContentValues values = new ContentValues();
-        values.put(AC_NAME, name);
-        values.put(AC_ID, id);
-        values.put(AC_MODEL, model);
-        values.put(AC_COLOR, color);
-        values.put(AC_MIN_CRUISE_SPD, mincs);
-        values.put(AC_NORM_CRUISE_SPD, normcs);
-        values.put(AC_MAX_CRUISE_SPD, maxcs);
-        values.put(AC_MIN_CRUISE_ALT, minca);
-        values.put(AC_NORM_CRUISE_ALT, normca);
-        values.put(AC_MAX_CRUISE_ALT, maxca);
-        values.put(AC_FUEL_CAP, fuelcap);
-        values.put(AC_FUEL_CON_RATE, fuelrate);
-        return database.insert(AC_TABLE, null, values);
+        ContentValues ap_values = new ContentValues();
+        ap_values.put(AC_NAME, name);
+        ap_values.put(AC_ID, id);
+        ap_values.put(AC_MODEL, model);
+        ap_values.put(AC_COLOR, color);
+        ap_values.put(AC_MIN_CRUISE_SPD, mincs);
+        ap_values.put(AC_NORM_CRUISE_SPD, normcs);
+        ap_values.put(AC_MAX_CRUISE_SPD, maxcs);
+        ap_values.put(AC_MIN_CRUISE_ALT, minca);
+        ap_values.put(AC_NORM_CRUISE_ALT, normca);
+        ap_values.put(AC_MAX_CRUISE_ALT, maxca);
+        ap_values.put(AC_FUEL_CAP, fuelcap);
+        ap_values.put(AC_FUEL_CON_RATE, fuelrate);
+
+        return database.insert(AC_TABLE, null, ap_values);
     }
 
-    public Cursor selectRecords() {
-        String[] cols = new String[] {AC_NAME, AC_ID, AC_MODEL, AC_COLOR, AC_MIN_CRUISE_SPD, AC_NORM_CRUISE_SPD,
-        AC_MAX_CRUISE_SPD, AC_MIN_CRUISE_ALT, AC_NORM_CRUISE_ALT, AC_MAX_CRUISE_ALT, AC_FUEL_CAP, AC_FUEL_CON_RATE};
+    public long createWaypointRecords(
+            String wp_name, Integer wp_lat, Integer wp_long, Integer wp_alt ){
 
-        Cursor mCursor = database.query(true, AC_TABLE,cols,null
-                , null, null, null, null, null);
-
-        if (mCursor != null) {
-            mCursor.moveToFirst();
-        }
-
-        return mCursor; // iterate to get each value.
+        ContentValues wp_values = new ContentValues();
+        wp_values.put(WP_NAME, wp_name);
+        wp_values.put(WP_LAT, wp_lat);
+        wp_values.put(WP_LONG, wp_long);
+        wp_values.put(WP_ALT, wp_alt);
+        return database.insert(WP_TABLE, null, wp_values);
     }
-
 }

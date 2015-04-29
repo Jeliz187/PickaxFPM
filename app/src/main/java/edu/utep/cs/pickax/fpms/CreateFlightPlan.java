@@ -177,7 +177,7 @@ public class CreateFlightPlan extends ActionBarActivity {
 
     private void loadSpinnerData() {
         // database handler
-        KBHelper db = new KBHelper(getApplicationContext());
+        AC_KBHelper db = new AC_KBHelper(getApplicationContext());
 
         // Spinner Drop down elements
         List<String> labels = db.getAircrafts();

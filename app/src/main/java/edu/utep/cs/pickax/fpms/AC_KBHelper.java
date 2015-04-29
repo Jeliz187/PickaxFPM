@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by jacob on 4/26/15.
  */
-public class KBHelper extends SQLiteOpenHelper {
+public class AC_KBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "AIRCRAFT.db";
 
     private static final int DATABASE_VERSION = 1;
@@ -33,7 +33,7 @@ public class KBHelper extends SQLiteOpenHelper {
                     " ac_fuel_cap integer not null," +
                     " ac_fuel_con_rate integer not null);";
 
-    public KBHelper(Context context) {
+    public AC_KBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -46,7 +46,7 @@ public class KBHelper extends SQLiteOpenHelper {
     // Method is called during an upgrade of the database,
     @Override
     public void onUpgrade(SQLiteDatabase database,int oldVersion,int newVersion){
-        Log.w(KBHelper.class.getName(),
+        Log.w(AC_KBHelper.class.getName(),
                 "Upgrading database from version " + oldVersion + " to "
                         + newVersion + ", which will destroy all old data");
         database.execSQL("DROP TABLE IF EXISTS AIRCRAFT");
