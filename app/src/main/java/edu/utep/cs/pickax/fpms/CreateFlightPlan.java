@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,6 +21,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.List;
 
 
 public class CreateFlightPlan extends ActionBarActivity {
@@ -74,6 +74,7 @@ public class CreateFlightPlan extends ActionBarActivity {
         setContentView(R.layout.activity_create_flight_plan);
         initializeViews(); //Create references to views
         initializeSpinners(); //Set the adapters for the spinners
+        loadSpinnerData();
 
         rb_archived.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,11 +146,11 @@ public class CreateFlightPlan extends ActionBarActivity {
         ac_id.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == parent.getCount() - 1) {
-                    Intent i = new Intent();
-                    i.setClass(CreateFlightPlan.this, CreateAircraft.class);
-                    startActivity(i);
-                }
+//                if (position == parent.getCount()) {
+//                    Intent i = new Intent();
+//                    i.setClass(CreateFlightPlan.this, CreateAircraft.class);
+//                    startActivity(i);
+//                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
@@ -174,6 +175,23 @@ public class CreateFlightPlan extends ActionBarActivity {
         return list;
     }
 
+    private void loadSpinnerData() {
+        // database handler
+        KBHelper db = new KBHelper(getApplicationContext());
+
+        // Spinner Drop down elements
+        List<String> labels = db.getAircrafts();
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, labels);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        ac_id.setAdapter(dataAdapter);
+    }
     /**
      * Sets the adapters for each of the spinners
      */

@@ -50,7 +50,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/create_ac_aircraft_id"
+                    android:id="@+id/create_ac_id"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:hint="enter aircraft ID"/>
 
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:hint="enter aircraft model"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_acModel" />
+                    android:id="@+id/create_ac_model" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:hint="enter aircraft color"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_acColor" />
+                    android:id="@+id/create_ac_color" />
 
                 <TextView
                     android:layout_width="wrap_content"
