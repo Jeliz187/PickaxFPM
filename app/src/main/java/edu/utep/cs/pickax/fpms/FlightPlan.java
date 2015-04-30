@@ -2,13 +2,14 @@ package edu.utep.cs.pickax.fpms;
 
 import android.text.format.Time;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.LinkedList;
 
 /**
  * Created by ruben on 3/17/15.
  */
-public class FlightPlan {
+public class FlightPlan implements Serializable {
     //Fields needed for the flight plan
     private String flightPlanName;
     private final String type = "IFR";

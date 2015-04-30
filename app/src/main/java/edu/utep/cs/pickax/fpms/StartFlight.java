@@ -25,6 +25,7 @@ public class StartFlight extends ActionBarActivity {
     private Button btnStartFlight;
     private TableLayout flightsTable;
     private int selectionCount;
+    private FlightPlan selectedPlan = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +58,9 @@ public class StartFlight extends ActionBarActivity {
                 }
 
                 //TODO restore if to selectionCount == 1
-                if(true) {
+                if(selectionCount == 1) {
                     Intent myIntent = new Intent(StartFlight.this, InFlight.class);
+                    myIntent.putExtra("flight_plan", selectedPlan);
                     startActivity(myIntent);
                 } else if(selectionCount > 1) {
                     toast = Toast.makeText(context, getResources().getString(R.string.multiple_selections), Toast.LENGTH_SHORT);
@@ -73,7 +75,8 @@ public class StartFlight extends ActionBarActivity {
     }
 
     private void addFlight() {
-        edu.utep.cs.pickax.fpms.FlightPlan plan = CreateFlightPlan.getFlightPlan();
+        //TODO read all plans for the current day and add here
+        FlightPlan plan = CreateFlightPlan.getFlightPlan();
 
         if(plan == null){
             return;
@@ -85,7 +88,7 @@ public class StartFlight extends ActionBarActivity {
         TextView departDest = new TextView(this);
         TextView time = new TextView(this);
         CheckBox selector =  new CheckBox(this);
-        setUpCheckBox(selector);
+        setUpCheckBox(selector, plan);
 
         TableRow.LayoutParams trParams = new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT);
@@ -110,13 +113,14 @@ public class StartFlight extends ActionBarActivity {
         flightsTable.addView(row);
     }
 
-    private void setUpCheckBox(CheckBox selector) {
+    private void setUpCheckBox(CheckBox selector, final FlightPlan plan) {
         selector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CheckBox thisThing = (CheckBox)v;
                 if (thisThing.isChecked()) {
                     selectionCount++;
+                    selectedPlan = plan;
                 } else {
                     selectionCount--;
                 }
