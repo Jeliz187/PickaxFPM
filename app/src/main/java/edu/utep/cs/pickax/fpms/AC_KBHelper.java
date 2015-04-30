@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by jacob on 4/26/15.
  */
-public class AC_KBHelper extends SQLiteOpenHelper {
+public class AC_KBHelper extends Abstract_KBHelper {
     private static final String DATABASE_NAME = "AIRCRAFT.db";
 
     private static final int DATABASE_VERSION = 1;
