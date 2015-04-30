@@ -80,6 +80,7 @@ public class Start extends ActionBarActivity {
     }
 
     private void loadResouces() {
+        KnowledgeBase kb = new KnowledgeBase(this);
         InputStream aircraft = null;
         InputStream airports = null;
         InputStream waypoints = null;
@@ -96,9 +97,10 @@ public class Start extends ActionBarActivity {
         airportList = myParser.getAllAirports();
         waypointList = myParser.getAllWaypoints();
 
-
+        //TODO only add if not already present
         for(Aircraft a : aircraftList) {
             count++;
+            kb.createAircraftRecords(a);
         }
         Log.d("START", "LOADED " +count+ " AIRCRAFT FROM FILE");
         count = 0;

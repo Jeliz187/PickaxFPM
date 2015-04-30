@@ -70,6 +70,24 @@ public final class KnowledgeBase {
         return database.insert(AC_TABLE, null, ap_values);
     }
 
+    public long createAircraftRecords(Aircraft a) {
+        ContentValues ap_values = new ContentValues();
+        ap_values.put(AC_NAME, a.getName());
+        ap_values.put(AC_ID, a.getId());
+        ap_values.put(AC_MODEL, a.getModel());
+        ap_values.put(AC_COLOR, a.getColor());
+        ap_values.put(AC_MIN_CRUISE_SPD, a.getMinCruiseSpeed());
+        ap_values.put(AC_NORM_CRUISE_SPD, a.getNormalCruiseSpeed());
+        ap_values.put(AC_MAX_CRUISE_SPD, a.getMaxCruiseSpeed());
+        ap_values.put(AC_MIN_CRUISE_ALT, a.getMinCruiseAltitude());
+        ap_values.put(AC_NORM_CRUISE_ALT, a.getNormalCruiseAltitude());
+        ap_values.put(AC_MAX_CRUISE_ALT, a.getMaxCruiseAltitude());
+        ap_values.put(AC_FUEL_CAP, a.getFuelConsumption()); //TODO make sure these are correct
+        ap_values.put(AC_FUEL_CON_RATE, a.getConsumptionRate());
+
+        return database.insert(AC_TABLE, null, ap_values);
+    }
+
     public long createWaypointRecords(
             String wp_name, Integer wp_lat, Integer wp_long, Integer wp_alt ){
 

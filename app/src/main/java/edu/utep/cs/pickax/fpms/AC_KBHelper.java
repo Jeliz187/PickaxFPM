@@ -64,7 +64,7 @@ public class AC_KBHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Aircrafts.add(cursor.getString(1));
+                Aircrafts.add(cursor.getString(0)); //0 for ac_name
             } while (cursor.moveToNext());
         }
 
