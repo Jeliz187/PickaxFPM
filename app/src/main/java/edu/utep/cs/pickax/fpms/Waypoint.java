@@ -1,5 +1,7 @@
 package edu.utep.cs.pickax.fpms;
 
+import java.util.LinkedList;
+
 public class Waypoint {
     private String name;
     private double latitude;
@@ -69,5 +71,14 @@ public class Waypoint {
     public double getTimeTo(Waypoint nextWp, double currentGroundSpeed) {
         //Formula from SRS
         return getDistanceTo(nextWp) / currentGroundSpeed;
+    }
+
+    public static Waypoint getWaypointByName(LinkedList<Waypoint> all, String name) {
+        for( Waypoint w : all) {
+            if(w.getName().equalsIgnoreCase(name)){
+                return w;
+            }
+        }
+        return null;
     }
 }

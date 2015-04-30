@@ -22,6 +22,10 @@ public class XMLParser extends Parser{
         this.waypointXML = waypointXML;
     }
 
+    public XMLParser(InputStream waypointXML) {
+        this.waypointXML = waypointXML;
+    }
+
     @Override
     public LinkedList<Aircraft> getAllAircraft() {
         LinkedList<Aircraft> list = new LinkedList<>();
