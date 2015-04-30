@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <waypoints>
-
+    <!-- Corresponding airport waypoints -->
     <waypoint>
         <name>VPELP</name>
         <lat>31.805335</lat>
@@ -29,6 +29,20 @@
         <name>VPABQ</name>
         <lat>35.0383401</lat>
         <long>-106.6098352</long>
+    </waypoint>
+
+    <!-- Waypoints to demonstrate ELP to ABQ -->
+
+    <waypoint>
+        <name>VPRUT</name>
+        <lat>32.170144</lat>
+        <long>-106.535521</long>
+    </waypoint>
+
+    <waypoint>
+        <name>VPTCS</name>
+        <lat>33.165700</lat>
+        <long>-107.164996</long>
     </waypoint>
 
 </waypoints>
