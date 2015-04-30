@@ -245,7 +245,6 @@ public class CreateFlightPlan extends ActionBarActivity {
      */
     private void initializeViews() {
         et_name= (EditText) findViewById(R.id.et_name);
-        et_airspeed = (EditText) findViewById(R.id.et_airspeed);
         rb_archived = (RadioButton) findViewById(R.id.rb_archived);
         rb_custom = (RadioButton) findViewById(R.id.rb_custom);
         btnHome = (Button) findViewById(R.id.btn_home);
@@ -253,12 +252,9 @@ public class CreateFlightPlan extends ActionBarActivity {
         btnSubmit = (Button)findViewById(R.id.btn_submit);
         datepick = (DatePicker) findViewById(R.id.datePicker);
         timepick = (TimePicker) findViewById(R.id.timePicker);
-        et_cruisingAltitude = (EditText) findViewById(R.id.et_cruising_altitude);
         et_estTimeEnroute = (EditText) findViewById(R.id.et_estimated_time);
-        et_fuelOnboard = (EditText) findViewById(R.id.et_fuel_onboard);
         et_pilotName = (EditText) findViewById(R.id.et_pilot_name);
         et_contactInfo = (EditText) findViewById(R.id.et_contact_info);
-        et_aircraftColor = (EditText) findViewById(R.id.et_aircraft_color);
         et_destContactInfo = (EditText) findViewById(R.id.et_dest_contact_info);
         et_remarks = (EditText) findViewById(R.id.et_remarks);
 

@@ -2,165 +2,165 @@
 <items version="2" >
 
     <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-e980faf6867384fc62e9cbd46cdf6df7736fd500.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-83086ca7df779da8e953ae0c546fcf690335ee40.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-12f7a032b4809ee821ed3f88610cc0a2eb34071f.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-46278b6a4e678d3eb3eeb078abb470b9560bfde6.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-1292c4faf29acc26acd4c3528c4037b241d49d6e.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-19566a0a0f86a266ea58f223c033f29cd3e73147.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-1fd42d8680552c2f4579ff1fd3f5fc047a9bbd68.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-2be53573991562e26be0c14d716955c2828eae5c.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-2c401d6a895eecc7e035c05d06b929c421b5ace1.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-c731fb37aa9c955f797fa3782b36cfec89dbf76d.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-944ff65708463c242a2c027749fabe636f40f3e1.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="055783146ba9654a725442563be78cad303aad1f">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-fdc28f0b695df0114cc257b87699665961b37b04.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-ef4fef5b5fb4aba933ec5fd9644ea7de019e53ed.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-5d20ebb4de98f56a4b80623719f6eceb85cc51f3.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-9fdfb91a27aceaa9977891cca4329ed47055350a.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.0.0/classes.jar"
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-c1ae17161568f0bd8d2c3281e37a972805827af9.jar" />
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-b40496856fc53190dba3cd4a5e8a45f6a81256c5.jar" />
     </item>
     <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.0.0/classes.jar"
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-1778767032f3155a8da4815f258d70e32d8fa8f4.jar" />
+        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-55d01c12ab55c86a8530a58befddf96b311e230f.jar" />
     </item>
     <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.0.0/classes.jar"
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-0c9202da36135eca508bb67b245f62cde166594e.jar" />
+        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-5ccbf73758dc7eb4323b7a2a09e2939943bddd6a.jar" />
     </item>
     <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.0.0/classes.jar"
+        jar="C:\Users\jelizondo3\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-0cf2132164e6b1569c6d8091e28d796cefaf8c3e.jar" />
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-8d510eb1c74cf1e8bcc3bf92f25768c1eada02be.jar" />
     </item>
     <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.0.0/classes.jar"
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-7130a5566b851b18372f58e82f7b1d3d1c539bab.jar" />
+        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-2ec486b225eecdde6b72ff563a2f1f099fc38ccf.jar" />
     </item>
     <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-a23352af2d6c56431452273cab4168a1fc358f99.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-499973e1cf2f1b622c7c90a65d42845f47adbfd5.jar" />
-    </item>
-    <item
-        jar="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.0.0/classes.jar"
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
-        <dex dex="/home/jacob/Documents/Android Projects/PickaxFPM/app/build/intermediates/pre-dexed/debug/classes-c65fdb845ef6f2efd3c228aae3429bd7743a80ab.jar" />
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-5a163d095e2642282f789b7ade9a775289561bec.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-5a5208b24007a4959e9620ae28a4b152107d0e50.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-333f7ee070712af4b654df546168e748eed13ede.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-e0d80d6a23ff62abf536877f8fb574f5617357d2.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-19ad418c9fd677231b2b93d1cad5964393cda2b3.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="055783146ba9654a725442563be78cad303aad1f">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-ff5955fed3cae306cd5dc196bb53a958aa8352ca.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-6996c65d28bf478318b17b13ee4fbb142070e87a.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-aec53073a78cd6a51a74debf09ac28f359fb0d5b.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-d5a7edc1bbb48f18bd0d45ae734f3516ab82f572.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-088a646e408de3e893b984ef12960ca31f52efe2.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-2f10221d61a76211e377d3eed8086d0dfcae64aa.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-f92ca4230eab4eb23838f8da9b636d4069ded862.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-88ab164c11eaed02ac9e05b3b784c69413ca94c2.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-93f26db443587a73aee175b9216e303ae714455e.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-1313ca260e18476ea5d85134ddc046e20ab0d80f.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-9248f2373f65f518480a6ef4da7f33ca666f3340.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-956ee316a10f29a1cb2f085644eb47a75afeff09.jar" />
+    </item>
+    <item
+        jar="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\jelizondo3\Studio Projects\PickaxFPM\app\build\intermediates\pre-dexed\debug\classes-70b2945abf30f25989ea8a8bd2440be3913f28f3.jar" />
     </item>
 
 </items>
