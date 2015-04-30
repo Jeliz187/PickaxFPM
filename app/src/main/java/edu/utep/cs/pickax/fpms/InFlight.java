@@ -9,12 +9,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.LinkedList;
+
 import static android.support.v4.app.Fragment.instantiate;
 
-//TODO Fix crash when returning to map activity
 //TODO: Stop timers when leaving activity
 public class InFlight extends ActionBarActivity{
     private Context context;
@@ -24,9 +26,24 @@ public class InFlight extends ActionBarActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_flight);
 
+        //Test data
+        TestLocationProvider tcp = new TestLocationProvider();
+
+        //
+        Waypoint departure = Waypoint.getWaypointByName(Start.waypointList, "VPELP");
+        Waypoint destination = Waypoint.getWaypointByName(Start.waypointList, "VPABQ");
+        Waypoint next = null;
+
+        Log.d("INFLIGHT", "ep to alb: " + departure.getDistanceTo(destination));
+        Log.d("INFLIGHT", "ep to alb time : "+departure.getTimeTo(destination, 200));
+
+        LinkedList<Waypoint> myRoute = Route.computeShortestRoute(Start.waypointList, departure, destination);
+        for(Waypoint w : myRoute){
+            Log.d("ROUTE", w.getName());
+        }
+
         //TODO use Display class here to update labels
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

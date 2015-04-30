@@ -17,9 +17,10 @@ import java.util.LinkedList;
 
 
 public class Start extends ActionBarActivity {
-    LinkedList<Aircraft> aircraftList;
-    LinkedList<Airport> airportList;
-    LinkedList<Waypoint> waypointList;
+    //accessible lists for any class that needs to use them.
+    public static LinkedList<Aircraft> aircraftList;
+    public static LinkedList<Airport> airportList;
+    public static LinkedList<Waypoint> waypointList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
