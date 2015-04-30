@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.LinkedList;
 
@@ -19,12 +20,17 @@ import static android.support.v4.app.Fragment.instantiate;
 
 //TODO: Stop timers when leaving activity
 public class InFlight extends ActionBarActivity{
-    private Context context;
+    private FlightPlan flightPlan = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_flight);
+
+        flightPlan = (FlightPlan) getIntent().getSerializableExtra("flight_plan");
+
+        Toast toast = Toast.makeText(this, flightPlan.getFlightPlanName()+" is being used", Toast.LENGTH_SHORT);
+        toast.show();
 
         //Test data
         TestLocationProvider tcp = new TestLocationProvider();

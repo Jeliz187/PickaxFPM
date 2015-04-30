@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,6 +20,9 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
@@ -107,6 +112,9 @@ public class CreateFlightPlan extends ActionBarActivity {
             public void onClick(View v) {
                 try {
                     setFields();
+                    //Save serialized FlightPlan object to KB
+                    writeFPToKB(serializeFlightPlan());
+                    finish();
                 } catch (Exception e) {
                     Context context = getApplicationContext();
                     CharSequence text = getResources().getString(R.string.missing_field);
@@ -138,8 +146,6 @@ public class CreateFlightPlan extends ActionBarActivity {
                 //myModelFlightPlan.setAircraftColor(); //TODO get Aircraft information
                 myModelFlightPlan.setDestContactInfo(et_destContactInfo.getText().toString());
                 myModelFlightPlan.setRemarks(et_remarks.getText().toString());
-
-                finish();
             }
         });
 
@@ -156,6 +162,20 @@ public class CreateFlightPlan extends ActionBarActivity {
             public void onNothingSelected(AdapterView<?> arg0) {
             }
         });
+    }
+
+    private void writeFPToKB(String encoded) {
+        KnowledgeBase kb = new KnowledgeBase(this);
+        long r = kb.createFlightPlanRecord(encoded);
+        Log.d("CREATE", "Saved fp tp db: " + r);
+    }
+
+    private String serializeFlightPlan() throws IOException {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream( baos );
+        oos.writeObject( myModelFlightPlan );
+        oos.close();
+        return new String( Base64.encode(baos.toByteArray(), Base64.DEFAULT) );
     }
 
     public static FlightPlan getFlightPlan() {
@@ -237,6 +257,7 @@ public class CreateFlightPlan extends ActionBarActivity {
     private int getSpecifiedTime() {
         String hr = "" + timepick.getCurrentHour();
         String min = "" + timepick.getCurrentMinute();
+        //TODO represent times when minutes > 10
         return Integer.parseInt(hr+min);
     }
 

@@ -8,8 +8,10 @@ import android.database.sqlite.SQLiteDatabase;
  * Created by jacob on 4/26/15.
  */
 public final class KnowledgeBase {
+    private Context c;
 
-    private AC_KBHelper dbHelper;
+    private Abstract_KBHelper dbHelper;
+
     private SQLiteDatabase database;
 
     //Aircraft KnowledgeBase Variables
@@ -43,15 +45,21 @@ public final class KnowledgeBase {
     public static final String AP_NAME = "ap_name";
     public static final String AP_WP = "ap_wp";
 
+    //FlightPlan KnowledgeBase Variables
+    public static final String FP_TABLE = "FLIGHTPLAN";
+    public static final String FP_SERIALIZED_DATA = "fp_serialized_data";
+
     public KnowledgeBase(Context context){
-        dbHelper = new AC_KBHelper(context);
-        database = dbHelper.getWritableDatabase();
+        c = context;
     }
 
     public long createAircraftRecords(
             String name, String id, String model, String color, Integer mincs,
             Integer normcs, Integer maxcs, Integer minca, Integer normca,
             Integer maxca, Integer fuelcap, Integer fuelrate ){
+
+        dbHelper = new AC_KBHelper(c);
+        database = dbHelper.getWritableDatabase();
 
         ContentValues ap_values = new ContentValues();
         ap_values.put(AC_NAME, name);
@@ -71,6 +79,9 @@ public final class KnowledgeBase {
     }
 
     public long createAircraftRecords(Aircraft a) {
+        dbHelper = new AC_KBHelper(c);
+        database = dbHelper.getWritableDatabase();
+
         ContentValues ap_values = new ContentValues();
         ap_values.put(AC_NAME, a.getName());
         ap_values.put(AC_ID, a.getId());
@@ -88,8 +99,9 @@ public final class KnowledgeBase {
         return database.insert(AC_TABLE, null, ap_values);
     }
 
-    public long createWaypointRecords(
-            String wp_name, Integer wp_lat, Integer wp_long, Integer wp_alt ){
+    public long createWaypointRecords(String wp_name, Integer wp_lat, Integer wp_long, Integer wp_alt ){
+        //dbHelper = new WP_KBHelper(c);
+        //database = dbHelper.getWritableDatabase();
 
         ContentValues wp_values = new ContentValues();
         wp_values.put(WP_NAME, wp_name);
@@ -97,5 +109,16 @@ public final class KnowledgeBase {
         wp_values.put(WP_LONG, wp_long);
         wp_values.put(WP_ALT, wp_alt);
         return database.insert(WP_TABLE, null, wp_values);
+    }
+
+    public long createFlightPlanRecord(String data) {
+        dbHelper = new FP_KBHelper(c);
+        database = dbHelper.getWritableDatabase();
+
+        ContentValues fp_values = new ContentValues();
+
+        fp_values.put(FP_SERIALIZED_DATA, data);
+
+        return database.insert(FP_TABLE, null, fp_values);
     }
 }
