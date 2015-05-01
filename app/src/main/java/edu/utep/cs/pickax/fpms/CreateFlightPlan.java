@@ -124,26 +124,30 @@ public class CreateFlightPlan extends ActionBarActivity {
                 }
             }
 
-            private void setFields() {
-                myModelFlightPlan = new FlightPlan();
+            private void setFields() throws Exception {
                 //TODO Exception handling
+                //TODO get Aircraft information
+                //TODO look into how we handle routes
+                myModelFlightPlan = new FlightPlan();
+                if(et_name.getText().toString().trim().equals("")){
+                    throw new Exception();
+                }
                 myModelFlightPlan.setFlightPlanName(et_name.getText().toString());
-                //myModelFlightPlan.setAircraftID(); //TODO get Aircraft information
-                //myModelFlightPlan.setAcTypeAndSpecialEquipment(); //TODO get Aircraft information
-                myModelFlightPlan.setAirspeed(Integer.parseInt(et_airspeed.getText().toString()));
+                //myModelFlightPlan.setAircraftID();
+                //myModelFlightPlan.setAcTypeAndSpecialEquipment();
+                //myModelFlightPlan.setAirspeed(Integer.parseInt(et_airspeed.getText().toString()));
                 myModelFlightPlan.setDeparturePoint(sp_departure.getSelectedItem().toString());
                 myModelFlightPlan.setDestination(sp_destination.getSelectedItem().toString());
                 myModelFlightPlan.setFlightDate(getSpecifiedDate());
                 myModelFlightPlan.setDepartureTime(getSpecifiedTime());
-                myModelFlightPlan.setCruisingAlt(Integer.parseInt(et_cruisingAltitude.getText().toString()));
-                //TODO look into how we handle routes
+                //myModelFlightPlan.setCruisingAlt(Integer.parseInt(et_cruisingAltitude.getText().toString()));
                 myModelFlightPlan.setEstTimeEnroute(calculateEstTimeEnroute());
-                //myModelFlightPlan.setFuelOnBoard(); //TODO get Aircraft information
+                //myModelFlightPlan.setFuelOnBoard();
                 myModelFlightPlan.setAltAirports(altAirportsAsList());
                 myModelFlightPlan.setPilotName(et_pilotName.getText().toString());
                 myModelFlightPlan.setContactInfo(et_contactInfo.getText().toString());
                 myModelFlightPlan.setPassengersOnBoard(Integer.parseInt(sp_numberOnboard.getSelectedItem().toString()));
-                //myModelFlightPlan.setAircraftColor(); //TODO get Aircraft information
+                //myModelFlightPlan.setAircraftColor();
                 myModelFlightPlan.setDestContactInfo(et_destContactInfo.getText().toString());
                 myModelFlightPlan.setRemarks(et_remarks.getText().toString());
             }
@@ -313,5 +317,4 @@ public class CreateFlightPlan extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }

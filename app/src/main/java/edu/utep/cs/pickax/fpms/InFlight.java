@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.LinkedList;
@@ -26,6 +27,8 @@ public class InFlight extends ActionBarActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_flight);
+        TextView info = (TextView) findViewById(R.id.flight_info);
+        String flightInfo = "";
 
         flightPlan = (FlightPlan) getIntent().getSerializableExtra("flight_plan");
 
@@ -35,19 +38,23 @@ public class InFlight extends ActionBarActivity{
         //Test data
         TestLocationProvider tcp = new TestLocationProvider();
 
-        //
-        Waypoint departure = Waypoint.getWaypointByName(Start.waypointList, "VPELP");
-        Waypoint destination = Waypoint.getWaypointByName(Start.waypointList, "VPABQ");
+        flightInfo = flightInfo + flightPlan.getDeparturePoint() + " to ";
+        flightInfo = flightInfo + flightPlan.getDestination() +"\n\n";
+
+
+        Waypoint departure = Waypoint.getWaypointByName(Start.waypointList, "VP"+flightPlan.getDeparturePoint());
+        Waypoint destination = Waypoint.getWaypointByName(Start.waypointList, "VP"+flightPlan.getDestination());
+        LinkedList<Waypoint> myRoute = Route.computeShortestRoute(Start.waypointList, departure, destination);
         Waypoint next = null;
 
-        Log.d("INFLIGHT", "ep to alb: " + departure.getDistanceTo(destination));
-        Log.d("INFLIGHT", "ep to alb time : "+departure.getTimeTo(destination, 200));
+        flightInfo = flightInfo + departure.getDistanceTo(destination) + " nm\n";
+        flightInfo = flightInfo + departure.getTimeTo(destination, 200) + " hrs\n\n";
 
-        LinkedList<Waypoint> myRoute = Route.computeShortestRoute(Start.waypointList, departure, destination);
         for(Waypoint w : myRoute){
-            Log.d("ROUTE", w.getName());
+            flightInfo = flightInfo + w.getName() + "\n";
         }
 
+        info.setText(flightInfo);
         //TODO use Display class here to update labels
     }
 

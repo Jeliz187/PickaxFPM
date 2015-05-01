@@ -75,12 +75,11 @@
     </string-array>
 
     <string-array name="array_dept_dest">
-        <item>Choose City</item>
-        <item>El Paso</item>
-        <item>Las Cruces</item>
-        <item>Alamogordo</item>
-        <item>Santa Fe</item>
-        <item>Albuquerque</item>
+        <item>ELP</item>
+        <item>LRU</item>
+        <item>SAF</item>
+        <item>ABQ</item>
+        <item>ALM</item>
     </string-array>
 
     <string-array name="array_time_zone">
