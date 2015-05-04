@@ -101,7 +101,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter minimum crusing speed"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_min_crusing_speed" />
+                    android:id="@+id/create_ac_min_crusing_speed"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -116,7 +117,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter normal crusing speed"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_norm_crusing_speed" />
+                    android:id="@+id/create_ac_norm_crusing_speed"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,7 +133,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter maximum crusing speed"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_max_crusing_speed" />
+                    android:id="@+id/create_ac_max_crusing_speed"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -146,7 +149,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter minimum crusing altitude"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_min_crusing_altitude" />
+                    android:id="@+id/create_ac_min_crusing_altitude"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -161,7 +165,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter normal crusing altitude"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_norm_crusing_altitude" />
+                    android:id="@+id/create_ac_norm_crusing_altitude"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -176,7 +181,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter maximum crusing altitude"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_max_crusing_altitude" />
+                    android:id="@+id/create_ac_max_crusing_altitude"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -191,7 +197,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter fuel consumption"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_fuel_consumption" />
+                    android:id="@+id/create_ac_fuel_consumption"
+                    android:inputType="number" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -206,7 +213,8 @@
                     android:layout_height="wrap_content"
                     android:hint="enter fuel consumption rate"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:id="@+id/create_ac_fuel_consumption_rate" />
+                    android:id="@+id/create_ac_fuel_consumption_rate"
+                    android:inputType="number" />
 
             </LinearLayout>
             </ScrollView>
