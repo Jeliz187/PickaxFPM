@@ -40,17 +40,24 @@ public class activity_Inflight extends Activity {
         mCards = new ArrayList<CardBuilder>();
 
         mCards.add(new CardBuilder(this, CardBuilder.Layout.TEXT)
-                .setText("This card has a footer.")
-                .setFootnote("Flight Plan Management System"));
-
-        mCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION)
-                .setText("Route:")
-                .setFootnote("Flight Plan Management System"));
+                .setText("Flight Plan\nManagement System")
+                .setFootnote("Pickax FPMS"));
 
         mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                .setText("ETA:")
-                .setText("RTA:")
-                .setFootnote("Flight Plan Management System"));
+                .setText("Speed:\n\nRm Fuel:")
+                .setFootnote("Pickax FPMS"));
+
+        mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                .setText("Heading:\n\nAltitude")
+                .setFootnote("Pickax FPMS"));
+
+        mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                .setText("ETA:\n\nRTA:")
+                .setFootnote("Pickax FPMS"));
+
+        mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
+                .setText("Weather:")
+                .setFootnote("Pickax FPMS"));
     }
 
     private class ExampleCardScrollAdapter extends CardScrollAdapter {
@@ -76,7 +83,7 @@ public class activity_Inflight extends Activity {
         }
 
         @Override
-        public int getItemViewType(int position) {
+        public int getItemViewType(int position){
             return mCards.get(position).getItemViewType();
         }
 

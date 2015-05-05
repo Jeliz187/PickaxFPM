@@ -72,38 +72,8 @@
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/edu/utep/cs/pickax/fpms/FlightPlan.java" line="31" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dea81e53-5506-4b78-adb8-13691b713417" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/drawable-hdpi/ic_glass_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/drawable-hdpi/ic_stop.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/androidTest/java/com/example/fpmsglass/ApplicationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/FPMS_InFlight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/LiveCardMenuActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/LiveCardRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/activity_Inflight.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/values/attrs_activity__inflight.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/menu/fpms__in_flight.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/proguard-rules.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/layout/sample_activity__inflight.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/values/strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/values/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpmsglass/src/main/res/xml/voice_trigger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PickaxFPM.iml" afterPath="$PROJECT_DIR$/PickaxFPM.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+    <list default="true" id="dea81e53-5506-4b78-adb8-13691b713417" name="Default" comment="Google Glass">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/activity_Inflight.java" afterPath="$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/activity_Inflight.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="00b719ec-00e4-4c25-9e57-25e767818401" name="New changelist" comment="" />
@@ -244,19 +214,10 @@
       <file leaf-file-name="activity_Inflight.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/activity_Inflight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1591512" vertical-offset="0" max-vertical-offset="1410">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state vertical-scroll-proportion="3.3023872" vertical-offset="0" max-vertical-offset="1365">
+              <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
               <folding>
-                <element signature="e#1742#1743#0" expanded="true" />
-                <element signature="e#1793#1794#0" expanded="true" />
-                <element signature="e#1844#1845#0" expanded="true" />
-                <element signature="e#1888#1889#0" expanded="true" />
-                <element signature="e#1953#1954#0" expanded="true" />
-                <element signature="e#2004#2005#0" expanded="true" />
-                <element signature="e#2063#2064#0" expanded="true" />
-                <element signature="e#2124#2125#0" expanded="true" />
-                <element signature="e#2194#2195#0" expanded="true" />
-                <element signature="e#2263#2264#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -3240,7 +3201,11 @@
       <created>1430102942532</created>
       <updated>1430102942533</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Google Glass">
+      <created>1430491788905</created>
+      <updated>1430491788905</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -3310,12 +3275,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Show page name in the actionbar" />
     <MESSAGE value="Small layout change, still working..." />
     <MESSAGE value="Fix ability to create a flight plan" />
     <MESSAGE value="Fixed typos" />
@@ -3340,7 +3303,9 @@
     <MESSAGE value="Inflight changes" />
     <MESSAGE value="Removed map things" />
     <MESSAGE value="Removed cloud backend, started sqlite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed cloud backend, started sqlite" />
+    <MESSAGE value="Google Glass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Google Glass" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3741,19 +3706,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fpmsglass/src/main/java/com/example/fpmsglass/activity_Inflight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1591512" vertical-offset="0" max-vertical-offset="1410">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state vertical-scroll-proportion="3.3023872" vertical-offset="0" max-vertical-offset="1365">
+          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
           <folding>
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1888#1889#0" expanded="true" />
-            <element signature="e#1953#1954#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-            <element signature="e#2124#2125#0" expanded="true" />
-            <element signature="e#2194#2195#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
