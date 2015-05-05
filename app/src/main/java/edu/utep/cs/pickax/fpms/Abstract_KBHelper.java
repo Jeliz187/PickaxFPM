@@ -10,6 +10,9 @@ public abstract class Abstract_KBHelper extends SQLiteOpenHelper {
         super(context, name, factory, version);
     }
 
+    //May be beneficial to have KBhelper superclass with actual imlpementation instead.
+    //The following 2 methods are implemented the same in all classes that extend this class
+
     @Override
     public abstract void onCreate(SQLiteDatabase db);
 

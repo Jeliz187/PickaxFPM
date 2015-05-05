@@ -76,6 +76,7 @@ public class Waypoint implements Serializable {
         return getDistanceTo(nextWp) / currentGroundSpeed;
     }
 
+    //Return the waypoint object that has the provided name.
     public static Waypoint getWaypointByName(LinkedList<Waypoint> all, String name) {
         for( Waypoint w : all) {
             if(w.getName().equalsIgnoreCase(name.trim())){

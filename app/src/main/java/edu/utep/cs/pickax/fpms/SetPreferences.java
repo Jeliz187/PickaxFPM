@@ -9,7 +9,7 @@ import android.widget.Spinner;
 
 import static edu.utep.cs.pickax.fpms.R.id.sp_aircraft_id;
 
-
+//TODO save setting to KB
 public class SetPreferences extends ActionBarActivity {
 
     @Override

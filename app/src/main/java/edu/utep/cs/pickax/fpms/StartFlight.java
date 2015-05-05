@@ -33,7 +33,8 @@ public class StartFlight extends ActionBarActivity {
         setContentView(R.layout.activity_start_flight);
         initializeViews();
 
-        addFlight();
+        addFlight(); //Add flights to the table
+
         btnHome.setOnClickListener(Control_Buttons.btnListenerHome(this));
 
         btnStartFlight.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +58,6 @@ public class StartFlight extends ActionBarActivity {
                     }
                 }
 
-                //TODO restore if to selectionCount == 1
                 if(selectionCount == 1) {
                     Intent myIntent = new Intent(StartFlight.this, InFlight.class);
                     myIntent.putExtra("flight_plan", selectedPlan);
@@ -76,6 +76,8 @@ public class StartFlight extends ActionBarActivity {
 
     private void addFlight() {
         //TODO read all plans for the current day and add here
+        //TODO read flight plan from database
+
         FlightPlan plan = CreateFlightPlan.getFlightPlan();
 
         if(plan == null){

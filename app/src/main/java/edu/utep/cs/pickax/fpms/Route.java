@@ -1,17 +1,12 @@
 package edu.utep.cs.pickax.fpms;
 
-import android.content.Context;
 import android.util.Log;
-
-import java.io.InputStream;
 import java.util.LinkedList;
 
 /**
  * Created by ruben on 4/30/15.
  */
 public class Route {
-
-
 
     //TODO fix so that route is actually the shortest
     public static LinkedList<Waypoint> computeShortestRoute(LinkedList<Waypoint> allWaypoints, Waypoint departure, Waypoint destination) {
@@ -38,6 +33,8 @@ public class Route {
                 distance = current.getDistanceTo(w); //Possible waypoint has to be close
                 distanceToDest = w.getDistanceTo(destination); //Possible waypoint has to be close to destination
 
+                //1. Next waypoint has to be close to current, and
+                //2. Next waypoint has to be closer to the destination than the current
                 if (distance < shortestDistance && distanceToDest < shortestDistanceToDest) {
                     shortestDistance = distance;
                     shortestDistanceToDest = distanceToDest;

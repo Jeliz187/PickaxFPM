@@ -80,43 +80,35 @@ public class Start extends ActionBarActivity {
         });
     }
 
+    //Parse resources and save to database
     private void loadResouces() {
         KnowledgeBase kb = new KnowledgeBase(this);
-        InputStream aircraft = null;
-        InputStream airports = null;
-        InputStream waypoints = null;
+        InputStream aircraftFile = null;
+        InputStream airportsFile = null;
+        InputStream waypointsFile = null;
 
-        int count = 0;
+        aircraftFile = getResources().openRawResource(R.raw.aircraftcharacteristic);
+        airportsFile = getResources().openRawResource(R.raw.airport);
+        waypointsFile = getResources().openRawResource(R.raw.waypoint);
 
-
-        aircraft = getResources().openRawResource(R.raw.aircraftcharacteristic);
-        airports = getResources().openRawResource(R.raw.airport);
-        waypoints = getResources().openRawResource(R.raw.waypoint);
-
-        XMLParser myParser = new XMLParser(aircraft, airports, waypoints);
+        XMLParser myParser = new XMLParser(aircraftFile, airportsFile, waypointsFile);
         aircraftList = myParser.getAllAircraft();
         airportList = myParser.getAllAirports();
         waypointList = myParser.getAllWaypoints();
 
         //TODO only add if not already present
+
         for(Aircraft a : aircraftList) {
-            count++;
             kb.createAircraftRecords(a);
         }
-        Log.d("START", "LOADED " +count+ " AIRCRAFT FROM FILE");
-        count = 0;
 
         for(Airport a : airportList) {
-            count++;
+            //TODO add airport record
         }
-        Log.d("START", "LOADED " +count+ " AIRPORT(S) FROM FILE");
-        count = 0;
 
         for(Waypoint a : waypointList) {
-            count++;
+            //TODO add waypoint record
         }
-        Log.d("START", "LOADED " +count+ " WAYPOINT(S) FROM FILE");
-
 
     }
 

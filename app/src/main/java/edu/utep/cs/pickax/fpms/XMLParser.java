@@ -11,7 +11,7 @@ import java.util.LinkedList;
 /**
  * Implements the ability to parse our example XML files
  */
-public class XMLParser extends Parser{
+public class XMLParser extends AbstractParser {
     private InputStream aircraftXML = null;
     private InputStream airportXML = null;
     private InputStream waypointXML = null;

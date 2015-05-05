@@ -59,6 +59,7 @@ public class Airport {
         this.runwayClosures = runwayClosures;
     }
 
+    //returns true if the given time falls within operation hours for the airport
     public boolean isInOperationHours(int time) {
         return time >= opHoursOpen && time <= opHoursClose;
     }

@@ -59,7 +59,7 @@ public class CreateFlightPlan extends ActionBarActivity {
     private EditText et_destContactInfo;
     private EditText et_remarks;
 
-    private Spinner ac_id;
+    private Spinner ac_id; //TODO actionlistener that populates fields for a given aircraft
     private Spinner sp_destination;
     private Spinner sp_departure;
     private Spinner sp_timeZone;
@@ -151,12 +151,11 @@ public class CreateFlightPlan extends ActionBarActivity {
 
     //Sets all the relevant (need to finish) fields that make up the FlightPlan object
     private void setFields() throws Exception {
-        //TODO Exception handling
+        //TODO better exception handling
         //TODO get Aircraft information
-        //TODO look into how we handle routes
         myModelFlightPlan = new FlightPlan();
         if(et_name.getText().toString().trim().equals("")){
-            throw new Exception();
+            throw new Exception(); //Exception if no flight plan name
         }
         myModelFlightPlan.setFlightPlanName(et_name.getText().toString());
         //myModelFlightPlan.setAircraftID();
@@ -181,6 +180,10 @@ public class CreateFlightPlan extends ActionBarActivity {
 
     private void setRouteType() throws Exception {
         int selection = rg_routeOptions.getCheckedRadioButtonId();
+
+        if(sp_departure.getSelectedItem().toString().equals(sp_destination.getSelectedItem().toString())) {
+            throw new Exception(); //exception if departure == destination
+        }
 
         Waypoint departure = Waypoint.getWaypointByName(Start.waypointList, "VP"+sp_departure.getSelectedItem().toString());
         Waypoint destination = Waypoint.getWaypointByName(Start.waypointList, "VP"+sp_destination.getSelectedItem().toString());
@@ -299,6 +302,7 @@ public class CreateFlightPlan extends ActionBarActivity {
         return calendar.getTime();
     }
 
+    //Returns the time as an int that is represented by the time picker
     private int getSpecifiedTime() {
         String hr = "" + timepick.getCurrentHour();
         String min = "" + timepick.getCurrentMinute();

@@ -4,6 +4,10 @@ phone/tablet GPS
  */
 package edu.utep.cs.pickax.fpms;
 
+/**
+ * Concrete subclasses of AbstractLocationProvider are used to implement the methods to
+ * provide realtime updates. Can be used to read from device GPS, external GPS, etc...
+ */
 public abstract class AbstractLocationProvider {
 
     abstract double[] CurrentCoordinates();
