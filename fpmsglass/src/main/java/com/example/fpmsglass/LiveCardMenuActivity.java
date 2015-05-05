@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.glass.timeline.LiveCard;
-
 /**
  * A transparent {@link Activity} displaying a "Stop" options menu to remove the {@link LiveCard}.
  */

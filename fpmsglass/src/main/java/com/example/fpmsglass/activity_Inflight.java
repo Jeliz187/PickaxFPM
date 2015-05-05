@@ -1,95 +1,191 @@
 package com.example.fpmsglass;
 
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.text.TextPaint;
+import android.util.AttributeSet;
 import android.view.View;
-import android.view.ViewGroup;
-
-import com.google.android.glass.widget.CardBuilder;
-import com.google.android.glass.widget.CardScrollAdapter;
-import com.google.android.glass.widget.CardScrollView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
  * TODO: document your custom view class.
  */
-public class activity_Inflight extends Activity {
+public class activity_Inflight extends View {
+    private String mExampleString; // TODO: use a default from R.string...
+    private int mExampleColor = Color.RED; // TODO: use a default from R.color...
+    private float mExampleDimension = 0; // TODO: use a default from R.dimen...
+    private Drawable mExampleDrawable;
 
-    private List<CardBuilder> mCards;
-    private CardScrollView mCardScrollView;
-    private ExampleCardScrollAdapter mAdapter;
+    private TextPaint mTextPaint;
+    private float mTextWidth;
+    private float mTextHeight;
+
+    public activity_Inflight(Context context) {
+        super(context);
+        init(null, 0);
+    }
+
+    public activity_Inflight(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(attrs, 0);
+    }
+
+    public activity_Inflight(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        init(attrs, defStyle);
+    }
+
+    private void init(AttributeSet attrs, int defStyle) {
+        // Load attributes
+        final TypedArray a = getContext().obtainStyledAttributes(
+                attrs, R.styleable.activity_Inflight, defStyle, 0);
+
+        mExampleString = a.getString(
+                R.styleable.activity_Inflight_exampleString);
+        mExampleColor = a.getColor(
+                R.styleable.activity_Inflight_exampleColor,
+                mExampleColor);
+        // Use getDimensionPixelSize or getDimensionPixelOffset when dealing with
+        // values that should fall on pixel boundaries.
+        mExampleDimension = a.getDimension(
+                R.styleable.activity_Inflight_exampleDimension,
+                mExampleDimension);
+
+        if (a.hasValue(R.styleable.activity_Inflight_exampleDrawable)) {
+            mExampleDrawable = a.getDrawable(
+                    R.styleable.activity_Inflight_exampleDrawable);
+            mExampleDrawable.setCallback(this);
+        }
+
+        a.recycle();
+
+        // Set up a default TextPaint object
+        mTextPaint = new TextPaint();
+        mTextPaint.setFlags(Paint.ANTI_ALIAS_FLAG);
+        mTextPaint.setTextAlign(Paint.Align.LEFT);
+
+        // Update TextPaint and text measurements from attributes
+        invalidateTextPaintAndMeasurements();
+    }
+
+    private void invalidateTextPaintAndMeasurements() {
+        mTextPaint.setTextSize(mExampleDimension);
+        mTextPaint.setColor(mExampleColor);
+        mTextWidth = mTextPaint.measureText(mExampleString);
+
+        Paint.FontMetrics fontMetrics = mTextPaint.getFontMetrics();
+        mTextHeight = fontMetrics.bottom;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
 
-        createCards();
+        // TODO: consider storing these as member variables to reduce
+        // allocations per draw cycle.
+        int paddingLeft = getPaddingLeft();
+        int paddingTop = getPaddingTop();
+        int paddingRight = getPaddingRight();
+        int paddingBottom = getPaddingBottom();
 
-        mCardScrollView = new CardScrollView(this);
-        mAdapter = new ExampleCardScrollAdapter();
-        mCardScrollView.setAdapter(mAdapter);
-        mCardScrollView.activate();
-        setContentView(mCardScrollView);
+        int contentWidth = getWidth() - paddingLeft - paddingRight;
+        int contentHeight = getHeight() - paddingTop - paddingBottom;
+
+        // Draw the text.
+        canvas.drawText(mExampleString,
+                paddingLeft + (contentWidth - mTextWidth) / 2,
+                paddingTop + (contentHeight + mTextHeight) / 2,
+                mTextPaint);
+
+        // Draw the example drawable on top of the text.
+        if (mExampleDrawable != null) {
+            mExampleDrawable.setBounds(paddingLeft, paddingTop,
+                    paddingLeft + contentWidth, paddingTop + contentHeight);
+            mExampleDrawable.draw(canvas);
+        }
     }
 
-    private void createCards() {
-        mCards = new ArrayList<CardBuilder>();
-
-        mCards.add(new CardBuilder(this, CardBuilder.Layout.TEXT)
-                .setText("Flight Plan\nManagement System")
-                .setFootnote("Pickax FPMS"));
-
-        mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                .setText("Speed:\n\nRm Fuel:")
-                .setFootnote("Pickax FPMS"));
-
-        mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                .setText("Heading:\n\nAltitude")
-                .setFootnote("Pickax FPMS"));
-
-        mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                .setText("ETA:\n\nRTA:")
-                .setFootnote("Pickax FPMS"));
-
-        mCards.add(new CardBuilder(this, CardBuilder.Layout.COLUMNS)
-                .setText("Weather:")
-                .setFootnote("Pickax FPMS"));
+    /**
+     * Gets the example string attribute value.
+     *
+     * @return The example string attribute value.
+     */
+    public String getExampleString() {
+        return mExampleString;
     }
 
-    private class ExampleCardScrollAdapter extends CardScrollAdapter {
+    /**
+     * Sets the view's example string attribute value. In the example view, this string
+     * is the text to draw.
+     *
+     * @param exampleString The example string attribute value to use.
+     */
+    public void setExampleString(String exampleString) {
+        mExampleString = exampleString;
+        invalidateTextPaintAndMeasurements();
+    }
 
-        @Override
-        public int getPosition(Object item) {
-            return mCards.indexOf(item);
-        }
+    /**
+     * Gets the example color attribute value.
+     *
+     * @return The example color attribute value.
+     */
+    public int getExampleColor() {
+        return mExampleColor;
+    }
 
-        @Override
-        public int getCount() {
-            return mCards.size();
-        }
+    /**
+     * Sets the view's example color attribute value. In the example view, this color
+     * is the font color.
+     *
+     * @param exampleColor The example color attribute value to use.
+     */
+    public void setExampleColor(int exampleColor) {
+        mExampleColor = exampleColor;
+        invalidateTextPaintAndMeasurements();
+    }
 
-        @Override
-        public Object getItem(int position) {
-            return mCards.get(position);
-        }
+    /**
+     * Gets the example dimension attribute value.
+     *
+     * @return The example dimension attribute value.
+     */
+    public float getExampleDimension() {
+        return mExampleDimension;
+    }
 
-        @Override
-        public int getViewTypeCount() {
-            return CardBuilder.getViewTypeCount();
-        }
+    /**
+     * Sets the view's example dimension attribute value. In the example view, this dimension
+     * is the font size.
+     *
+     * @param exampleDimension The example dimension attribute value to use.
+     */
+    public void setExampleDimension(float exampleDimension) {
+        mExampleDimension = exampleDimension;
+        invalidateTextPaintAndMeasurements();
+    }
 
-        @Override
-        public int getItemViewType(int position){
-            return mCards.get(position).getItemViewType();
-        }
+    /**
+     * Gets the example drawable attribute value.
+     *
+     * @return The example drawable attribute value.
+     */
+    public Drawable getExampleDrawable() {
+        return mExampleDrawable;
+    }
 
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            return mCards.get(position).getView(convertView, parent);
-        }
+    /**
+     * Sets the view's example drawable attribute value. In the example view, this drawable is
+     * drawn above the text.
+     *
+     * @param exampleDrawable The example drawable attribute value to use.
+     */
+    public void setExampleDrawable(Drawable exampleDrawable) {
+        mExampleDrawable = exampleDrawable;
     }
 }
