@@ -1,8 +1,11 @@
 package edu.utep.cs.pickax.fpms;
 
+import android.util.Log;
+
+import java.io.Serializable;
 import java.util.LinkedList;
 
-public class Waypoint {
+public class Waypoint implements Serializable {
     private String name;
     private double latitude;
     private double longitude;
@@ -75,7 +78,7 @@ public class Waypoint {
 
     public static Waypoint getWaypointByName(LinkedList<Waypoint> all, String name) {
         for( Waypoint w : all) {
-            if(w.getName().equalsIgnoreCase(name)){
+            if(w.getName().equalsIgnoreCase(name.trim())){
                 return w;
             }
         }

@@ -19,7 +19,6 @@ import java.util.LinkedList;
 
 import static android.support.v4.app.Fragment.instantiate;
 
-//TODO: Stop timers when leaving activity
 public class InFlight extends ActionBarActivity{
     private FlightPlan flightPlan = null;
 
@@ -30,23 +29,22 @@ public class InFlight extends ActionBarActivity{
         TextView info = (TextView) findViewById(R.id.flight_info);
         String flightInfo = "";
 
+        //TODO read from the database instead of intent
         flightPlan = (FlightPlan) getIntent().getSerializableExtra("flight_plan");
 
         Toast toast = Toast.makeText(this, flightPlan.getFlightPlanName()+" is being used", Toast.LENGTH_SHORT);
         toast.show();
 
         //Test data
-        TestLocationProvider tcp = new TestLocationProvider();
+        TestLocationProvider realTime = new TestLocationProvider();
 
         flightInfo = flightInfo + flightPlan.getDeparturePoint() + " to ";
         flightInfo = flightInfo + flightPlan.getDestination() +"\n\n";
 
-
         Waypoint departure = Waypoint.getWaypointByName(Start.waypointList, "VP"+flightPlan.getDeparturePoint());
-        Waypoint destination = Waypoint.getWaypointByName(Start.waypointList, "VP"+flightPlan.getDestination());
-        LinkedList<Waypoint> myRoute = Route.computeShortestRoute(Start.waypointList, departure, destination);
-        Waypoint next = null;
-
+        Waypoint destination = Waypoint.getWaypointByName(Start.waypointList, "VP" + flightPlan.getDestination());
+        LinkedList<Waypoint> myRoute = flightPlan.getRoute();
+        Waypoint next = null; //Used to represent the next waypoint in the plan
         flightInfo = flightInfo + departure.getDistanceTo(destination) + " nm\n";
         flightInfo = flightInfo + departure.getTimeTo(destination, 200) + " hrs\n\n";
 
@@ -81,6 +79,7 @@ public class InFlight extends ActionBarActivity{
     }
 
     @Override
+    //Provide a small alert to confirm quitting the application
     public void onBackPressed() {
         new AlertDialog.Builder(this)
             .setTitle("Quit")

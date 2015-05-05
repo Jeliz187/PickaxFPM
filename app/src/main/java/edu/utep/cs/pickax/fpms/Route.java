@@ -19,7 +19,10 @@ public class Route {
         LinkedList<Waypoint> route = new LinkedList<>();
         route.add(departure);
 
-        allWaypoints.remove(departure); //We don't need to compare to the departure
+        //Make a copy to keep original list intact
+        LinkedList<Waypoint> allWaypointsList = (LinkedList<Waypoint>)allWaypoints.clone();
+
+        allWaypointsList.remove(departure); //We don't need to compare to the departure
 
         Waypoint current = route.get(0);
         Waypoint nextCandidate = null;
@@ -31,7 +34,7 @@ public class Route {
 
         while(keepAdding) {
             Log.d("ROUTE", "IN LOOP, route length is " + route.size());
-            for (Waypoint w : allWaypoints) {
+            for (Waypoint w : allWaypointsList) {
                 distance = current.getDistanceTo(w); //Possible waypoint has to be close
                 distanceToDest = w.getDistanceTo(destination); //Possible waypoint has to be close to destination
 
@@ -55,7 +58,7 @@ public class Route {
             } else {
                 route.add(nextCandidate);
                 current = route.getLast(); //We will find the shortest distance waypoint from this waypoint
-                allWaypoints.remove(nextCandidate); //We don't need to compare to the current
+                allWaypointsList.remove(nextCandidate); //We don't need to compare to the current
             }
         }
 

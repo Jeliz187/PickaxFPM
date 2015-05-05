@@ -72,6 +72,7 @@ public class CreateFlightPlan extends ActionBarActivity {
     private Button btnSubmit;
 
     private static FlightPlan myModelFlightPlan;
+    private static LinkedList<Waypoint> myRoute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +82,11 @@ public class CreateFlightPlan extends ActionBarActivity {
         initializeSpinners(); //Set the adapters for the spinners
         loadSpinnerData();
 
+        //Set shortest route as default option
+        //rb_shortest.setSelected(true);
+        rg_routeOptions.check(rg_routeOptions.getChildAt(0).getId());
+
+        //Listeners for route options selection
         rb_archived.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,45 +117,19 @@ public class CreateFlightPlan extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 try {
+                    setRouteType();
                     setFields();
                     //Save serialized FlightPlan object to KB
                     writeFPToKB(serializeFlightPlan());
                     finish();
                 } catch (Exception e) {
+                    e.printStackTrace();
                     Context context = getApplicationContext();
                     CharSequence text = getResources().getString(R.string.missing_field);
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(context, text, duration);
                     toast.show();
                 }
-            }
-
-            private void setFields() throws Exception {
-                //TODO Exception handling
-                //TODO get Aircraft information
-                //TODO look into how we handle routes
-                myModelFlightPlan = new FlightPlan();
-                if(et_name.getText().toString().trim().equals("")){
-                    throw new Exception();
-                }
-                myModelFlightPlan.setFlightPlanName(et_name.getText().toString());
-                //myModelFlightPlan.setAircraftID();
-                //myModelFlightPlan.setAcTypeAndSpecialEquipment();
-                //myModelFlightPlan.setAirspeed(Integer.parseInt(et_airspeed.getText().toString()));
-                myModelFlightPlan.setDeparturePoint(sp_departure.getSelectedItem().toString());
-                myModelFlightPlan.setDestination(sp_destination.getSelectedItem().toString());
-                myModelFlightPlan.setFlightDate(getSpecifiedDate());
-                myModelFlightPlan.setDepartureTime(getSpecifiedTime());
-                //myModelFlightPlan.setCruisingAlt(Integer.parseInt(et_cruisingAltitude.getText().toString()));
-                myModelFlightPlan.setEstTimeEnroute(calculateEstTimeEnroute());
-                //myModelFlightPlan.setFuelOnBoard();
-                myModelFlightPlan.setAltAirports(altAirportsAsList());
-                myModelFlightPlan.setPilotName(et_pilotName.getText().toString());
-                myModelFlightPlan.setContactInfo(et_contactInfo.getText().toString());
-                myModelFlightPlan.setPassengersOnBoard(Integer.parseInt(sp_numberOnboard.getSelectedItem().toString()));
-                //myModelFlightPlan.setAircraftColor();
-                myModelFlightPlan.setDestContactInfo(et_destContactInfo.getText().toString());
-                myModelFlightPlan.setRemarks(et_remarks.getText().toString());
             }
         });
 
@@ -162,10 +142,71 @@ public class CreateFlightPlan extends ActionBarActivity {
 //                    startActivity(i);
 //                }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
             }
         });
+    }
+
+    //Sets all the relevant (need to finish) fields that make up the FlightPlan object
+    private void setFields() throws Exception {
+        //TODO Exception handling
+        //TODO get Aircraft information
+        //TODO look into how we handle routes
+        myModelFlightPlan = new FlightPlan();
+        if(et_name.getText().toString().trim().equals("")){
+            throw new Exception();
+        }
+        myModelFlightPlan.setFlightPlanName(et_name.getText().toString());
+        //myModelFlightPlan.setAircraftID();
+        //myModelFlightPlan.setAcTypeAndSpecialEquipment();
+        //myModelFlightPlan.setAirspeed(Integer.parseInt(et_airspeed.getText().toString()));
+        myModelFlightPlan.setDeparturePoint(sp_departure.getSelectedItem().toString());
+        myModelFlightPlan.setDestination(sp_destination.getSelectedItem().toString());
+        myModelFlightPlan.setFlightDate(getSpecifiedDate());
+        myModelFlightPlan.setDepartureTime(getSpecifiedTime());
+        //myModelFlightPlan.setCruisingAlt(Integer.parseInt(et_cruisingAltitude.getText().toString()));
+        myModelFlightPlan.setEstTimeEnroute(calculateEstTimeEnroute());
+        //myModelFlightPlan.setFuelOnBoard();
+        myModelFlightPlan.setAltAirports(altAirportsAsList());
+        myModelFlightPlan.setPilotName(et_pilotName.getText().toString());
+        myModelFlightPlan.setContactInfo(et_contactInfo.getText().toString());
+        myModelFlightPlan.setPassengersOnBoard(Integer.parseInt(sp_numberOnboard.getSelectedItem().toString()));
+        //myModelFlightPlan.setAircraftColor();
+        myModelFlightPlan.setDestContactInfo(et_destContactInfo.getText().toString());
+        myModelFlightPlan.setRemarks(et_remarks.getText().toString());
+        myModelFlightPlan.setRoute(myRoute);
+    }
+
+    private void setRouteType() throws Exception {
+        int selection = rg_routeOptions.getCheckedRadioButtonId();
+
+        Waypoint departure = Waypoint.getWaypointByName(Start.waypointList, "VP"+sp_departure.getSelectedItem().toString());
+        Waypoint destination = Waypoint.getWaypointByName(Start.waypointList, "VP"+sp_destination.getSelectedItem().toString());
+
+        switch (selection){
+            case R.id.rb_shortest:
+                //Shortest
+                Log.d("Create Flight Plan", "SELECTED shortest");
+                myRoute = Route.computeShortestRoute(Start.waypointList, departure, destination);
+                break;
+            case R.id.rb_fastest:
+                //Fastest
+                Log.d("Create Flight Plan", "SELECTED fastest (not implemented yet)");
+                throw new Exception(); //Not implemented yet
+            case R.id.rb_archived:
+                //Archived
+                Log.d("Create Flight Plan", "SELECTED archived (not implemented yet)");
+                throw new Exception(); //Not implemented yet
+            case R.id.rb_custom:
+                //Custom
+                Log.d("Create Flight Plan", "SELECTED custom (not implemented yet)");
+                throw new Exception(); //Not implemented yet
+            default:
+                Log.d("Create Flight Plan", "oooops no route option selected");
+                throw new Exception();
+        }
     }
 
     private void writeFPToKB(String encoded) {
@@ -270,8 +311,11 @@ public class CreateFlightPlan extends ActionBarActivity {
      */
     private void initializeViews() {
         et_name= (EditText) findViewById(R.id.et_name);
+        rg_routeOptions = (RadioGroup) findViewById(R.id.rg_route_options);
         rb_archived = (RadioButton) findViewById(R.id.rb_archived);
         rb_custom = (RadioButton) findViewById(R.id.rb_custom);
+        rb_shortest = (RadioButton) findViewById(R.id.rb_shortest);
+        rb_fastest = (RadioButton) findViewById(R.id.rb_fastest);
         btnHome = (Button) findViewById(R.id.btn_home);
         btnSave = (Button) findViewById(R.id.btn_save);
         btnSubmit = (Button)findViewById(R.id.btn_submit);

@@ -21,7 +21,7 @@ public class FlightPlan implements Serializable {
     private Date flightDate;
     private int departureTime; //24 time as int
     private int cruisingAlt;
-    //private Route route; //Make a Route Class
+    private LinkedList<Waypoint> route;
     private int estTimeEnroute;
     private int fuelOnBoard;
     private LinkedList<String> altAirports;
@@ -111,6 +111,10 @@ public class FlightPlan implements Serializable {
         return remarks;
     }
 
+    public LinkedList<Waypoint> getRoute() {
+        return route;
+    }
+
 
     //Setter methods
     public void setFlightPlanName(String flightPlanName) {
@@ -183,5 +187,9 @@ public class FlightPlan implements Serializable {
 
     public void setRemarks(String remarks){
         this.remarks = remarks;
+    }
+
+    public void setRoute(LinkedList<Waypoint> route) {
+        this.route = route;
     }
 }
